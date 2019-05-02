@@ -1,21 +1,49 @@
 package MyGUI;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class GUIForm extends JFrame implements Runnable {
-    private JPanel TopPanel;
-    private JToolBar MainToolBar;
+    private JPanel Panel;
+    private JMenuBar MenuBar;
 
-    private static void createGUI() {
+    private GUIForm() {
+        setSize(400,400);
+    }
+
+    private void createGUI() {
         // Set up window
-        JFrame mainFrame = new JFrame("VEC Drawer");
-        mainFrame.setContentPane(new GUIForm().MainToolBar);
-        mainFrame.setContentPane(new GUIForm().TopPanel);
+        super.setTitle("VEC Drawer");
+        this.setPreferredSize(new Dimension(400, 400));
+        this.setLocation(new Point(300, 300));
+        JMenuBar MenuBar = new JMenuBar();
+        this.setJMenuBar(MenuBar);
 
-        mainFrame.pack();
-        mainFrame.setVisible(true);
+        JMenu file = new JMenu("File");
+        JMenuItem exit = new JMenuItem("Exit");
+        MenuBar.add(file);
 
-        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        file.add(exit);
+
+        class exitAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        }
+
+        exit.addActionListener(new exitAction());
+
+        JMenu help = new JMenu("Help");
+
+        MenuBar.add(help);
+
+        this.setContentPane(new GUIForm().Panel);
+        this.pack();
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     @Override
@@ -24,8 +52,7 @@ public class GUIForm extends JFrame implements Runnable {
     }
 
     public static void main(String[] args) {
-        GUIForm TopForm = new GUIForm();
-        SwingUtilities.invokeLater((Runnable) new GUIForm());
+        SwingUtilities.invokeLater(new GUIForm());
     }
 
 
