@@ -3,6 +3,8 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GUIForm extends JFrame implements Runnable {
     private JPanel Panel;
@@ -12,6 +14,10 @@ public class GUIForm extends JFrame implements Runnable {
     }
 
     private void createGUI() {
+        ArrayList<ArrayList<Integer>> coordinates = new ArrayList<>();
+        ArrayList<Integer> x_coords = new ArrayList<>();
+        ArrayList<Integer> y_coords = new ArrayList<>();
+
         // Set up window
         this.setPreferredSize(new Dimension(400, 400));
         this.setLocation(new Point(300, 300));
@@ -43,7 +49,12 @@ public class GUIForm extends JFrame implements Runnable {
         panel.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
-                System.out.println(e);
+                x_coords.add(e.getX());
+                y_coords.add(e.getY());
+                coordinates.clear();
+                coordinates.add(x_coords);
+                coordinates.add(y_coords);
+                System.out.println(coordinates);
             }
             @Override
             public void mouseReleased(MouseEvent e) {
