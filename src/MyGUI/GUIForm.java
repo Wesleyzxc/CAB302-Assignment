@@ -6,6 +6,10 @@ import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.io.File;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileSystemView;
+
 public class GUIForm extends JFrame implements Runnable {
     private JPanel Panel;
 
@@ -65,12 +69,29 @@ public class GUIForm extends JFrame implements Runnable {
         this.pack();
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        class openAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                final JFileChooser fc = new JFileChooser();
+                int returnVal = fc.showOpenDialog(fc);
+                if(returnVal==JFileChooser.APPROVE_OPTION) {
+                    File file = fc.getSelectedFile();
+                    String filename = file.getAbsolutePath();
+                } else if(returnVal==JFileChooser.CANCEL_OPTION) {
+                }
+            }
+        }
+
+        open.addActionListener(new openAction());
     }
 
     @Override
     public void run() {
         createGUI();
     }
+
+
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new GUIForm());
