@@ -2,25 +2,17 @@ package MyGUI;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.util.ArrayList;
-import java.util.List;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileSystemView;
 
 public class GUIForm extends JFrame implements Runnable {
-    private JPanel Panel;
 
     private GUIForm() {
         super("VEC Drawer");
     }
 
     private void createGUI() {
-        ArrayList<ArrayList<Integer>> coordinates = new ArrayList<>();
-        ArrayList<Integer> x_coords = new ArrayList<>();
-        ArrayList<Integer> y_coords = new ArrayList<>();
 
         // Set up window
         this.setPreferredSize(new Dimension(400, 400));
@@ -47,24 +39,9 @@ public class GUIForm extends JFrame implements Runnable {
 
         exit.addActionListener(new exitAction());
 
-        JPanel panel = new JPanel();
+        DrawArea panel = new DrawArea();
         this.add(panel, BorderLayout.CENTER);
-        panel.setBackground(Color.BLACK); // black so that it's obvious for now
-        panel.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mousePressed(MouseEvent e) {
-                x_coords.add(e.getX());
-                y_coords.add(e.getY());
-                coordinates.clear();
-                coordinates.add(x_coords);
-                coordinates.add(y_coords);
-                System.out.println(coordinates);
-            }
-            @Override
-            public void mouseReleased(MouseEvent e) {
-                System.out.println(e);
-            }
-        });
+
 
         this.pack();
         this.setVisible(true);
