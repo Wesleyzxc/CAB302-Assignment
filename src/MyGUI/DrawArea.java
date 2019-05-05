@@ -10,21 +10,33 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+
 public class DrawArea extends JPanel {
     private ArrayList<ArrayList<Integer>> coordinates = new ArrayList<>();
     private ArrayList<Integer> x_coords = new ArrayList<>();
     private ArrayList<Integer> y_coords = new ArrayList<>();
     private List<Dot> dots = new LinkedList<Dot>();
+    private List<Line> lines = new LinkedList<Line>();
+
 
     public void addDot(Dot dot) {
         dots.add(dot);
         this.repaint();
     }
 
+    public void addLine(Line line) {
+        lines.add(line);
+        this.repaint();
+    }
+
     @Override
     public void paint(Graphics g) {
+        super.paint(g);
         for (Dot eachDot: dots) {
             eachDot.draw(g);
+        }
+        for (Line eachLine: lines){
+            eachLine.draw(g, eachLine.getX1(),eachLine.getY1(),eachLine.getX2(),eachLine.getY2());
         }
     }
 
@@ -42,6 +54,14 @@ public class DrawArea extends JPanel {
                 addDot(new Dot(e.getX(), e.getY(), 10, Color.BLACK));
             }
 
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
         });
     }
 
