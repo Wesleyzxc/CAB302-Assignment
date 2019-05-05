@@ -6,18 +6,26 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-public class GUIForm extends JFrame implements Runnable {
+public class GUIForm{
 
-    private GUIForm() {
-        super("VEC Drawer");
-    }
+    /**
+     * Create the GUI and show it. For thread safety, this method should be
+     * invoked from the event-dispatching thread.
+     */
+    private static void createGUI() {
+        // Create and set up window
+        JFrame frame = new JFrame("VEC DRAWER");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-    private void createGUI() {
-        // Set up window
-        this.setPreferredSize(new Dimension(400, 400));
-        this.setLocation(new Point(300, 300));
+        //Display window
+        frame.setPreferredSize(new Dimension(400, 400));
+        frame.setLocation(new Point(300, 300));
+        frame.pack();
+        frame.setVisible(true);
+
+        //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
-        this.setJMenuBar(MenuBar);
+        frame.setJMenuBar(MenuBar);
         JMenu file = new JMenu("File");
         JMenuItem exit = new JMenuItem("Exit");
         JMenuItem open = new JMenuItem("Open File");
@@ -26,17 +34,15 @@ public class GUIForm extends JFrame implements Runnable {
         file.add(open);
         file.add(save);
         file.add(exit);
-
         JMenu help = new JMenu("Help");
         MenuBar.add(help);
 
-        class exitAction implements ActionListener{
+  /*      class exitAction implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         }
-        exit.addActionListener(new exitAction());
 
         class openAction implements ActionListener{
             @Override
@@ -51,28 +57,27 @@ public class GUIForm extends JFrame implements Runnable {
             }
         }
         open.addActionListener(new openAction());
+        exit.addActionListener(new exitAction());*/
 
+        //Draw dot
         DrawArea panel = new DrawArea();
-        this.setContentPane(panel);
+        frame.setContentPane(panel);
         panel.addMouseListener(new DrawDotListener(panel));
 
 
-        this.pack();
-        this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-
     }
 
-    @Override
-    public void run() {
-        createGUI();
-    }
 
 
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(new GUIForm());
+        // Schedule a job for the event-dispatching thread:
+        // creating and showing this application's GUI.
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createGUI();
+            }
+        });
     }
 
 

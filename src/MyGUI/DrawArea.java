@@ -23,6 +23,7 @@ public class DrawArea extends JPanel {
 
     @Override
     public void paint(Graphics g) {
+        super.paint(g);
         for (Dot eachDot: dots) {
             eachDot.draw(g);
         }
