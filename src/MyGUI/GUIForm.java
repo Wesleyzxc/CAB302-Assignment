@@ -13,7 +13,6 @@ public class GUIForm extends JFrame implements Runnable {
     }
 
     private void createGUI() {
-
         // Set up window
         this.setPreferredSize(new Dimension(400, 400));
         this.setLocation(new Point(300, 300));
@@ -30,22 +29,14 @@ public class GUIForm extends JFrame implements Runnable {
 
         JMenu help = new JMenu("Help");
         MenuBar.add(help);
+
         class exitAction implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
             }
         }
-
         exit.addActionListener(new exitAction());
-
-        DrawArea panel = new DrawArea();
-        this.add(panel, BorderLayout.CENTER);
-
-
-        this.pack();
-        this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         class openAction implements ActionListener{
             @Override
@@ -59,8 +50,18 @@ public class GUIForm extends JFrame implements Runnable {
                 }
             }
         }
-
         open.addActionListener(new openAction());
+
+        DrawArea panel = new DrawArea();
+        this.setContentPane(panel);
+        panel.addMouseListener(new DrawDotListener(panel));
+
+
+        this.pack();
+        this.setVisible(true);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
     }
 
     @Override
