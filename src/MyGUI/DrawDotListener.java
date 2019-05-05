@@ -5,9 +5,10 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
-
+//Draw Listener - includes listening for dots and lines
 public class DrawDotListener extends MouseAdapter {
     private DrawArea panel;
+    private int x1,x2,y1,y2;
 
     public DrawDotListener(DrawArea panel) {
         super();
@@ -27,6 +28,8 @@ public class DrawDotListener extends MouseAdapter {
         System.out.print(' ');
         System.out.print(e.getY());
         System.out.println(' ');
+        x1 = e.getX();
+        y1 = e.getY();
     }
     @Override
     public void mouseReleased(MouseEvent e) {
@@ -35,5 +38,11 @@ public class DrawDotListener extends MouseAdapter {
         System.out.print(' ');
         System.out.print(e.getY());
         System.out.println(' ');
+        x2 = e.getX();
+        y2 = e.getY();
+
+        if (x1 != x2 && y1 != y2){
+            panel.addLine(new Line(x1,y1,x2,y2, Color.black));
+        }
     }
 }

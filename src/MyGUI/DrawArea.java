@@ -16,10 +16,16 @@ public class DrawArea extends JPanel {
     private ArrayList<Integer> x_coords = new ArrayList<>();
     private ArrayList<Integer> y_coords = new ArrayList<>();
     private List<Dot> dots = new LinkedList<Dot>();
-    private Integer x1,y1,x2,y2;
+    private List<Line> lines = new LinkedList<Line>();
+
 
     public void addDot(Dot dot) {
         dots.add(dot);
+        this.repaint();
+    }
+
+    public void addLine(Line line) {
+        lines.add(line);
         this.repaint();
     }
 
@@ -28,6 +34,9 @@ public class DrawArea extends JPanel {
         super.paint(g);
         for (Dot eachDot: dots) {
             eachDot.draw(g);
+        }
+        for (Line eachLine: lines){
+            eachLine.draw(g, eachLine.getX1(),eachLine.getY1(),eachLine.getX2(),eachLine.getY2());
         }
     }
 
@@ -47,13 +56,11 @@ public class DrawArea extends JPanel {
 
             @Override
             public void mousePressed(MouseEvent e) {
-                x1 = e.getX();
-                y1 = e.getY();
+
             }
             @Override
             public void mouseReleased(MouseEvent e) {
-                x2 = e.getX();
-                y2 = e.getY();
+
             }
         });
     }
