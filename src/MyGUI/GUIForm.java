@@ -37,7 +37,7 @@ public class GUIForm{
         JMenu help = new JMenu("Help");
         MenuBar.add(help);
 
-  /*      class exitAction implements ActionListener{
+        class exitAction implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.exit(0);
@@ -57,7 +57,7 @@ public class GUIForm{
             }
         }
         open.addActionListener(new openAction());
-        exit.addActionListener(new exitAction());*/
+        exit.addActionListener(new exitAction());
 
         //Draw dot
         DrawArea panel = new DrawArea();
