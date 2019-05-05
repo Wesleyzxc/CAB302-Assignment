@@ -1,9 +1,9 @@
 package MyGUI;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.io.File;
 
 public class GUIForm{
@@ -59,12 +59,21 @@ public class GUIForm{
         open.addActionListener(new openAction());
         exit.addActionListener(new exitAction());
 
+        // Trying out JToolbar
+        JToolBar toolbar = new JToolBar();
+        toolbar.setFloatable(false);
+        JButton lineButton = new JButton();
+        JButton rectButton = new JButton();
+        JButton ellipseButton = new JButton();
+        toolbar.add(lineButton);
+        toolbar.add(rectButton);
+        toolbar.add(ellipseButton);
+        frame.add(toolbar, BorderLayout.NORTH);
+
         //Draw dot
         DrawArea panel = new DrawArea();
-        frame.setContentPane(panel);
-        panel.addMouseListener(new DrawDotListener(panel));
-
-
+        frame.add(panel);
+        panel.addMouseListener(new DrawObjectListener(panel));
     }
 
 

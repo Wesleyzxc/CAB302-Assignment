@@ -25,7 +25,7 @@ public class Dot {
     }
 
     public int getY() {
-        return y;
+        return y-12;
     }
 
     public int getDiameter() {

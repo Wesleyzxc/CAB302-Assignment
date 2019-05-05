@@ -4,8 +4,7 @@ import com.sun.source.util.DocTreeScanner;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -42,6 +41,7 @@ public class DrawArea extends JPanel {
 
     public DrawArea() {
         setBackground(Color.BLUE);
+
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -50,18 +50,18 @@ public class DrawArea extends JPanel {
                 coordinates.clear();
                 coordinates.add(x_coords);
                 coordinates.add(y_coords);
-                System.out.println(coordinates);
-                addDot(new Dot(e.getX(), e.getY(), 10, Color.BLACK));
             }
 
             @Override
             public void mousePressed(MouseEvent e) {
 
             }
+
             @Override
             public void mouseReleased(MouseEvent e) {
 
             }
+
         });
     }
 
