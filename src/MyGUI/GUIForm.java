@@ -75,8 +75,11 @@ public class GUIForm{
             public void mouseClicked(MouseEvent e) {
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
+                System.out.println(colour.getColor());
+
             }
         });
+
         //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);

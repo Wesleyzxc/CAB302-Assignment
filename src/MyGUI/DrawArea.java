@@ -37,9 +37,19 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
+    void dragEllipse(Ellipse ellipse){ //overload
+        drag = ellipse;
+        this.repaint();
+    }
+
 
     void addLine(Rectangle rect) { //overload
         rects.add(rect);
+        this.repaint();
+    }
+
+    void addLine(Ellipse ellipse) { //overload
+        ovals.add(ellipse);
         this.repaint();
     }
 

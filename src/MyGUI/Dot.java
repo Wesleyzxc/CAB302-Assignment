@@ -6,6 +6,11 @@ public class Dot {
     private int x;
     private int y;
     private int diameter;
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
     private Color color;
 
     public Dot(int x, int y, int diameter, Color color) {

@@ -41,7 +41,6 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-
         if (shape == Shape.LINE){
             panel.addLine(new Line(x1,y1,x2,y2, Color.black));
             System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
@@ -69,6 +68,7 @@ public class DrawObjectListener extends MouseAdapter{
             case RECTANGLE:
                 drag = new Rectangle(x1,y1,x2,y2, Color.black);
                 panel.dragLine(drag);
+                break;
             case ELLIPSE:
                 drag = new Ellipse(x1,y1,x2,y2, Color.black);
                 panel.dragLine(drag);
