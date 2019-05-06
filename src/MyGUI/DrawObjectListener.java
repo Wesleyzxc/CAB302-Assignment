@@ -50,6 +50,10 @@ public class DrawObjectListener extends MouseAdapter{
         if (shape == Shape.RECTANGLE){
             panel.addLine(new Rectangle(x1,y1,x2,y2, Color.black));
         }
+
+        if (shape == Shape.ELLIPSE){
+            panel.addLine(new Ellipse(x1,y1,x2,y2, Color.black));
+        }
     }
 
     @Override
@@ -66,6 +70,8 @@ public class DrawObjectListener extends MouseAdapter{
                 drag = new Rectangle(x1,y1,x2,y2, Color.black);
                 panel.dragLine(drag);
             case ELLIPSE:
+                drag = new Ellipse(x1,y1,x2,y2, Color.black);
+                panel.dragLine(drag);
                 break;
             case STAR:
                 break;

@@ -2,11 +2,11 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Rectangle extends Line{ //maybe subclass of line?
-    private int x1,y1,x2,y2,x3,y3,x4,y4;
+public class Ellipse extends Line{ //maybe subclass of line?
+    private int x1,y1,x2,y2;
     private Color color;
 
-    public Rectangle(int x1, int y1, int x2, int y2, Color color) {
+    public Ellipse(int x1, int y1, int x2, int y2, Color color) {
         super(x1,y1,x2,y2, color);
         this.x1 = x1;
         this.y1 = y1;
@@ -17,7 +17,7 @@ public class Rectangle extends Line{ //maybe subclass of line?
 
     public void draw(Graphics g){
         g.setColor(color);
-        g.drawRect(x1, y1, x2-x1, y2-y1);
+        g.drawOval(x1, y1, x2-x1, y2-y1);
     }
 
 }

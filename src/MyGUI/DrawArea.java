@@ -14,6 +14,7 @@ public class DrawArea extends JPanel {
     private List<Dot> dots = new LinkedList<>();
     private List<Line> lines = new LinkedList<>();
     private List<Rectangle> rects = new LinkedList<>();
+    private List<Ellipse> ovals = new LinkedList<>();
     private Line drag;
 
     void addDot(Dot dot) {
@@ -55,6 +56,10 @@ public class DrawArea extends JPanel {
 
         for (Rectangle eachRect: rects){
             eachRect.draw(g);
+        }
+
+        for (Ellipse eachOval: ovals){
+            eachOval.draw(g);
         }
         // Draws temporary line if user drags line
         if (drag != null) {
