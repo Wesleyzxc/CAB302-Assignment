@@ -13,7 +13,7 @@ import java.util.List;
 public class DrawArea extends JPanel {
     private List<Dot> dots = new LinkedList<>();
     private List<Line> lines = new LinkedList<>();
-
+    private Line drag;
 
     void addDot(Dot dot) {
         dots.add(dot);
@@ -25,6 +25,11 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
+    void dragLine(Line line){
+        drag = line;
+        this.repaint();
+    }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);
@@ -33,6 +38,9 @@ public class DrawArea extends JPanel {
         }
         for (Line eachLine: lines){
             eachLine.draw(g, eachLine.getX1(),eachLine.getY1(),eachLine.getX2(),eachLine.getY2());
+        }
+        if (drag != null) {
+            drag.draw(g, drag.getX1(), drag.getY1(), drag.getX2(), drag.getY2());
         }
     }
 

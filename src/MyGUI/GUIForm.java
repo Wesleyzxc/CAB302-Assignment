@@ -87,7 +87,9 @@ public class GUIForm{
         //Draw dot
         DrawArea panel = new DrawArea();
         frame.add(panel);
-        panel.addMouseListener(new DrawObjectListener(panel));
+        DrawObjectListener handler = new DrawObjectListener(panel);
+        panel.addMouseListener(handler);
+        panel.addMouseMotionListener(handler);
     }
 
 
