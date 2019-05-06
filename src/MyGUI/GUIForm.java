@@ -77,6 +77,7 @@ public class GUIForm{
                 String name = JOptionPane.showInputDialog(colour);
             }
         });
+        //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
@@ -84,14 +85,40 @@ public class GUIForm{
 //        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 
-        //Draw dot
+
+        //Draw
         DrawArea panel = new DrawArea();
         frame.add(panel);
+        //Create DrawObjectListener
         DrawObjectListener handler = new DrawObjectListener(panel);
         // MouseClick and others require MouseListener
         panel.addMouseListener(handler);
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
+
+        //Create separate class later
+        class chooseShapeAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (e.getSource() == lineButton){
+                    handler.ChooseShape(DrawObjectListener.Shape.LINE);
+                    System.out.println('1');
+                }
+                if (e.getSource() == rectButton){
+                    handler.ChooseShape(DrawObjectListener.Shape.RECTANGLE);
+                    System.out.println('2');
+                }
+                if (e.getSource() == ellipseButton){
+                    handler.ChooseShape(DrawObjectListener.Shape.ELLIPSE);
+                    System.out.println('3');
+                }
+            }
+        }
+
+        chooseShapeAction chooseShape = new chooseShapeAction();
+        lineButton.addActionListener(chooseShape);
+        rectButton.addActionListener(chooseShape);
+        ellipseButton.addActionListener(chooseShape);
     }
 
 

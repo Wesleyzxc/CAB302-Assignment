@@ -7,13 +7,19 @@ import java.awt.event.MouseEvent;
 
 //Draw Listener - includes listening for dots and lines
 public class DrawObjectListener extends MouseAdapter{
+    public enum Shape { LINE, RECTANGLE, ELLIPSE, STAR}
     private DrawArea panel;
     private int x1,x2,y1,y2;
-    private Point mousePt;
+    private Shape shape = Shape.LINE; //Default shape is line
+
 
     public DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
+    }
+
+    public void ChooseShape(Shape shape){
+        this.shape = shape;
     }
 
     @Override
