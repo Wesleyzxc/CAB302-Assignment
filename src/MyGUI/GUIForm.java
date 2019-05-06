@@ -101,16 +101,16 @@ public class GUIForm{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == lineButton){
-                    handler.ChooseShape(DrawObjectListener.Shape.LINE);
-                    System.out.println('1');
+                    handler.chooseShape(DrawObjectListener.Shape.LINE);
+                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == rectButton){
-                    handler.ChooseShape(DrawObjectListener.Shape.RECTANGLE);
-                    System.out.println('2');
+                    handler.chooseShape(DrawObjectListener.Shape.RECTANGLE);
+                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == ellipseButton){
-                    handler.ChooseShape(DrawObjectListener.Shape.ELLIPSE);
-                    System.out.println('3');
+                    handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
+                    System.out.println(handler.getShape());
                 }
             }
         }
