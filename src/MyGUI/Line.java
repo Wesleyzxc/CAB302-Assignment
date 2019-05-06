@@ -7,6 +7,7 @@ public class Line {
     private int y1;
     private int x2;
     private int y2;
+    private int[] coords;
     private Color color;
 
     public Line(int x1, int y1, int x2, int y2, Color color) {
@@ -14,10 +15,11 @@ public class Line {
         this.y1 = y1;
         this.x2 = x2;
         this.y2 = y2;
+        coords = new int[] {x1,y1,x2,y2};
         this.color = color;
     }
 
-    public void draw(Graphics g, int x1, int y1, int x2, int y2){
+    public void draw(Graphics g){
         g.setColor(color);
         g.drawLine(x1, y1, x2, y2);
     }
@@ -37,6 +39,8 @@ public class Line {
     public int getY2() {
         return y2;
     }
+
+    public int[] getCoords() { return (coords);}
 
     public Color getColor() {
         return color;
