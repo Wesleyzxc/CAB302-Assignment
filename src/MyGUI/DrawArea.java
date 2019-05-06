@@ -11,19 +11,16 @@ import java.util.List;
 
 
 public class DrawArea extends JPanel {
-    private ArrayList<ArrayList<Integer>> coordinates = new ArrayList<>();
-    private ArrayList<Integer> x_coords = new ArrayList<>();
-    private ArrayList<Integer> y_coords = new ArrayList<>();
-    private List<Dot> dots = new LinkedList<Dot>();
-    private List<Line> lines = new LinkedList<Line>();
+    private List<Dot> dots = new LinkedList<>();
+    private List<Line> lines = new LinkedList<>();
 
 
-    public void addDot(Dot dot) {
+    void addDot(Dot dot) {
         dots.add(dot);
         this.repaint();
     }
 
-    public void addLine(Line line) {
+    void addLine(Line line) {
         lines.add(line);
         this.repaint();
     }
@@ -39,29 +36,14 @@ public class DrawArea extends JPanel {
         }
     }
 
-    public DrawArea() {
+    DrawArea() {
         setBackground(Color.BLUE);
-
-        addMouseListener(new MouseAdapter() {
+        addKeyListener(new KeyAdapter() {
             @Override
-            public void mouseClicked(MouseEvent e) {
-                x_coords.add(e.getX());
-                y_coords.add(e.getY());
-                coordinates.clear();
-                coordinates.add(x_coords);
-                coordinates.add(y_coords);
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                System.out.println(e);
             }
-
-            @Override
-            public void mousePressed(MouseEvent e) {
-
-            }
-
-            @Override
-            public void mouseReleased(MouseEvent e) {
-
-            }
-
         });
     }
 

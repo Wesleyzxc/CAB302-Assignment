@@ -1,10 +1,14 @@
 package MyGUI;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class GUIForm{
 
@@ -62,12 +66,22 @@ public class GUIForm{
         // Trying out JToolbar
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
-        JButton lineButton = new JButton();
-        JButton rectButton = new JButton();
-        JButton ellipseButton = new JButton();
+        JButton lineButton = new JButton("Line");
+        JButton rectButton = new JButton("Rectangle");
+        JButton ellipseButton = new JButton("Ellipse");
+        JButton colourButton = new JButton("Pen colour");
+        colourButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JColorChooser colour = new JColorChooser();
+                String name = JOptionPane.showInputDialog(colour);
+            }
+        });
         toolbar.add(lineButton);
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
+        toolbar.add(colourButton, BorderLayout.EAST);
+//        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 
         //Draw dot

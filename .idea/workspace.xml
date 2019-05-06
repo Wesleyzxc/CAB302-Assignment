@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/n9972676.xml" afterDir="false" />
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Added colour picker that does nothing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Dot.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawDotListener.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1exitAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1exitAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1openAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1openAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Dot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawDotListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,12 +24,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state relative-caret-position="170">
+              <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3029#3030#0" expanded="true" />
-                <element signature="e#3072#3073#0" expanded="true" />
+                <element signature="e#2450#2629#0" expanded="true" />
+                <element signature="e#2628#2629#0" expanded="true" />
+                <element signature="e#3362#3363#0" expanded="true" />
+                <element signature="e#3405#3406#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,10 +40,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="134">
+              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1115#1287#0" expanded="true" />
+                <element signature="e#1286#1287#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -53,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
+            <state relative-caret-position="377">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -142,9 +143,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="740" />
-    <option name="y" value="117" />
-    <option name="width" value="964" />
+    <option name="x" value="955" />
+    <option name="y" value="37" />
+    <option name="width" value="965" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectView">
@@ -172,13 +173,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CAB302 Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CAB302-Assignment" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="GUIForm" type="e9f4de52:FormNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -186,7 +180,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557099715669" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557102092613" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -264,14 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557097411405</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added toolbar to frame instead of panel. Have to change setcontentpane to add">
+      <created>1557099781841</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1557099781841</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="740" y="117" width="964" height="877" extended-state="0" />
+    <frame x="955" y="37" width="965" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26687765" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2665964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -280,7 +281,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39425588" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31853786" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3994778" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -288,7 +289,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.33289817" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.40992168" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -305,7 +306,9 @@
     <MESSAGE value="Stores x,y coordinates sets in 2D array &quot;coordinates&quot;" />
     <MESSAGE value="Added new class DrawArea extends JPanel for drawing" />
     <MESSAGE value="Merge branch 'master' of https://github.com/Wesleyzxc/CAB302-Assignment&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/A2/MyGUI/GUIForm$1exitAction.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/Wesleyzxc/CAB302-Assignment&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/A2/MyGUI/GUIForm$1exitAction.class" />
+    <MESSAGE value="Added toolbar to frame instead of panel. Have to change setcontentpane to add" />
+    <MESSAGE value="Added colour picker that does nothing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added colour picker that does nothing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -338,7 +341,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
+        <state relative-caret-position="377">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -350,22 +353,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="134">
+          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1115#1287#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        <state relative-caret-position="170">
+          <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3029#3030#0" expanded="true" />
-            <element signature="e#3072#3073#0" expanded="true" />
+            <element signature="e#2450#2629#0" expanded="true" />
+            <element signature="e#2628#2629#0" expanded="true" />
+            <element signature="e#3362#3363#0" expanded="true" />
+            <element signature="e#3405#3406#0" expanded="true" />
           </folding>
         </state>
       </provider>
