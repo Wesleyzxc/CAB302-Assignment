@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Added colour picker that does nothing">
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
@@ -9,8 +9,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1exitAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1exitAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1openAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1openAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,7 +22,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="404">
               <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -180,7 +178,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557102092613" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557102103897" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -265,12 +263,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557099781841</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added colour picker that does nothing">
+      <created>1557102137197</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1557102137197</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="955" y="37" width="965" height="877" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2665964" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -289,7 +293,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.40992168" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.40992168" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -365,7 +369,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
+        <state relative-caret-position="404">
           <caret line="98" column="47" selection-start-line="98" selection-start-column="47" selection-end-line="98" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
