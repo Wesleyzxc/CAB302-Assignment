@@ -70,26 +70,26 @@ public class GUIForm{
         JButton rectButton = new JButton("Rectangle");
         JButton ellipseButton = new JButton("Ellipse");
         JButton colourButton = new JButton("Pen colour");
-        colourButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                JColorChooser colour = new JColorChooser();
-                String name = JOptionPane.showInputDialog(colour);
-                System.out.println(colour.getColor());
 
-            }
-        });
 
         //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
         toolbar.add(colourButton, BorderLayout.EAST);
+        colourButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JColorChooser colour = new JColorChooser();
+                String name = JOptionPane.showInputDialog(colour);
+                System.out.println(colour.getColor());
+            }
+        });
 //        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 
 
-        //Draw
+        //Draw area
         DrawArea panel = new DrawArea();
         frame.add(panel);
         //Create DrawObjectListener
@@ -98,6 +98,7 @@ public class GUIForm{
         panel.addMouseListener(handler);
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
+
 
         //Create separate class later
         class chooseShapeAction implements ActionListener{

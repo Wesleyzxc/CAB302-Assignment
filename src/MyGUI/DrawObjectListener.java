@@ -11,6 +11,7 @@ public class DrawObjectListener extends MouseAdapter{
     private DrawArea panel;
     private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
     private Shape shape = Shape.LINE; //Default shape is line
+    private Color colour = new Color(0,0,0);
 
 
     public DrawObjectListener(DrawArea panel) {
@@ -26,9 +27,13 @@ public class DrawObjectListener extends MouseAdapter{
         return shape;
     }
 
+    public void setColour(Color colour) {
+        this.colour = colour;
+    }
+
     @Override
     public void mouseClicked(MouseEvent e) {
-        panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, Color.BLACK));
+        panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, colour));
         // maybe x1 = ...
     }
 

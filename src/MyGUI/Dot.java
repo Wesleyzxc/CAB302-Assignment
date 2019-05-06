@@ -6,22 +6,23 @@ public class Dot {
     private int x;
     private int y;
     private int diameter;
+    private Color colour;
 
-    public void setColor(Color color) {
-        this.color = color;
+    public void setColour(Color color) {
+        this.colour = color;
     }
 
-    private Color color;
+
 
     public Dot(int x, int y, int diameter, Color color) {
         this.x = x;
         this.y = y;
         this.diameter = diameter;
-        this.color = color;
+        this.colour = color;
     }
 
     public void draw(Graphics g){
-        g.setColor(color);
+        g.setColor(colour);
         g.fillOval(x, y, diameter, diameter);
     }
 
@@ -37,7 +38,7 @@ public class Dot {
         return diameter;
     }
 
-    public Color getColor() {
-        return color;
+    public Color getColour() {
+        return colour;
     }
 }

@@ -45,4 +45,6 @@ public class Line {
     public Color getColor() {
         return color;
     }
+
+
 }
