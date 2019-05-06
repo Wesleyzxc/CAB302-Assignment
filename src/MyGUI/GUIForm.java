@@ -88,7 +88,9 @@ public class GUIForm{
         DrawArea panel = new DrawArea();
         frame.add(panel);
         DrawObjectListener handler = new DrawObjectListener(panel);
+        // MouseClick and others require MouseListener
         panel.addMouseListener(handler);
+        // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
     }
 

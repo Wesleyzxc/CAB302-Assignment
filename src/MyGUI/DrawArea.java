@@ -39,6 +39,7 @@ public class DrawArea extends JPanel {
         for (Line eachLine: lines){
             eachLine.draw(g, eachLine.getX1(),eachLine.getY1(),eachLine.getX2(),eachLine.getY2());
         }
+        // Draws temporary line if user drags line
         if (drag != null) {
             drag.draw(g, drag.getX1(), drag.getY1(), drag.getX2(), drag.getY2());
         }

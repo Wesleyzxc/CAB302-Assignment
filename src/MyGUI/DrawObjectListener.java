@@ -3,7 +3,6 @@ package MyGUI;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionListener;
 
 
 //Draw Listener - includes listening for dots and lines
@@ -45,7 +44,6 @@ public class DrawObjectListener extends MouseAdapter{
         y2 = e.getY();
         Line drag = new Line(x1,y1,x2,y2, Color.black);
         panel.dragLine(drag);
-        //System.out.println('1');
     }
 
 
