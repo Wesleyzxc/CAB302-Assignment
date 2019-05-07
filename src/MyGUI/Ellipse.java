@@ -26,6 +26,8 @@ public class Ellipse extends Line{ //maybe subclass of line?
         } else {
             g.setColor(fillColor);
             g.fillOval(x1, y1, x2-x1, y2-y1);
+            g.setColor(color);
+            g.drawOval(x1, y1, x2 - x1, y2 - y1);
         }
     }
 

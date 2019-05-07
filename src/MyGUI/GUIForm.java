@@ -72,7 +72,7 @@ public class GUIForm{
         JButton polyButton = new JButton("Polygons");
         JButton penColourButton = new JButton("Pen colour");
         JButton fillColourButton = new JButton("Fill colour");
-        JButton clearFillButton = new JButton("Clear fill colour");
+        JButton clearFillButton = new JButton("Fill off");
         polyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
