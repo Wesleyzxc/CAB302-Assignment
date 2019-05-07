@@ -11,8 +11,8 @@ public class DrawObjectListener extends MouseAdapter{
     private DrawArea panel;
     private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
     private Shape shape = Shape.LINE; //Default shape is line
-    private Color colour = new Color(0,0,0);
-
+    private Color penColour = new Color(0,0,0);
+    private Color fillColour = new Color(0,0,0);
 
     public DrawObjectListener(DrawArea panel) {
         super();
@@ -27,13 +27,17 @@ public class DrawObjectListener extends MouseAdapter{
         return shape;
     }
 
-    public void setColour(Color colour) {
-        this.colour = colour;
+    public void setPenColour(Color colour) {
+        this.penColour = colour;
+    }
+
+    public void setFillColour(Color colour) {
+        this.fillColour = colour;
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, colour));
+        panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, penColour));
         // maybe x1 = ...
     }
 
@@ -47,16 +51,16 @@ public class DrawObjectListener extends MouseAdapter{
         x2 = e.getX();
         y2 = e.getY();
         if (shape == Shape.LINE){
-            panel.addLine(new Line(x1,y1,x2,y2, Color.black));
+            panel.addLine(new Line(x1,y1,x2,y2, penColour));
             System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
         }
 
         if (shape == Shape.RECTANGLE){
-            panel.addLine(new Rectangle(x1,y1,x2,y2, Color.black));
+            panel.addLine(new Rectangle(x1,y1,x2,y2, penColour));
         }
 
         if (shape == Shape.ELLIPSE){
-            panel.addLine(new Ellipse(x1,y1,x2,y2, Color.black));
+            panel.addLine(new Ellipse(x1,y1,x2,y2, penColour));
         }
     }
 
@@ -67,15 +71,15 @@ public class DrawObjectListener extends MouseAdapter{
         Line drag;
         switch (shape) {
             case LINE:
-                drag = new Line(x1,y1,x2,y2, Color.black);
+                drag = new Line(x1,y1,x2,y2, penColour);
                 panel.dragLine(drag);
                 break;
             case RECTANGLE:
-                drag = new Rectangle(x1,y1,x2,y2, Color.black);
+                drag = new Rectangle(x1,y1,x2,y2, penColour);
                 panel.dragLine(drag);
                 break;
             case ELLIPSE:
-                drag = new Ellipse(x1,y1,x2,y2, Color.black);
+                drag = new Ellipse(x1,y1,x2,y2, penColour);
                 panel.dragLine(drag);
                 break;
             case STAR:

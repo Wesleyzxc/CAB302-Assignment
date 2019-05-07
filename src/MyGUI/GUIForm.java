@@ -80,6 +80,17 @@ public class GUIForm{
         });
 
 
+        //Draw area
+        DrawArea panel = new DrawArea();
+        frame.add(panel);
+        //Create DrawObjectListener
+        DrawObjectListener handler = new DrawObjectListener(panel);
+        // MouseClick and others require MouseListener
+        panel.addMouseListener(handler);
+        // MouseDragged requires MouseMotionListener
+        panel.addMouseMotionListener(handler);
+
+
         //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
@@ -91,22 +102,15 @@ public class GUIForm{
             public void mouseClicked(MouseEvent e) {
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
-                System.out.println(colour.getColor());
+                handler.setPenColour(colour.getColor());
+                //System.out.println(colour.getColor());
             }
         });
 //        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 
 
-        //Draw area
-        DrawArea panel = new DrawArea();
-        frame.add(panel);
-        //Create DrawObjectListener
-        DrawObjectListener handler = new DrawObjectListener(panel);
-        // MouseClick and others require MouseListener
-        panel.addMouseListener(handler);
-        // MouseDragged requires MouseMotionListener
-        panel.addMouseMotionListener(handler);
+
 
 
         //Create separate class later
