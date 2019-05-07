@@ -69,13 +69,22 @@ public class GUIForm{
         JButton lineButton = new JButton("Line");
         JButton rectButton = new JButton("Rectangle");
         JButton ellipseButton = new JButton("Ellipse");
+        JButton polyButton = new JButton("Polygons");
         JButton colourButton = new JButton("Pen colour");
+        polyButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String s = JOptionPane.showInputDialog("Number of edges: ");
+                System.out.println(s);
+            }
+        });
 
 
         //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
+        toolbar.add(polyButton);
         toolbar.add(colourButton, BorderLayout.EAST);
         colourButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -116,6 +125,10 @@ public class GUIForm{
                     handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
                     System.out.println(handler.getShape());
                 }
+                if (e.getSource() == polyButton){
+                    System.out.println(handler.getShape());
+                }
+
             }
         }
 
