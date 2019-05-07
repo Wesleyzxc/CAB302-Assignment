@@ -70,7 +70,9 @@ public class GUIForm{
         JButton rectButton = new JButton("Rectangle");
         JButton ellipseButton = new JButton("Ellipse");
         JButton polyButton = new JButton("Polygons");
-        JButton colourButton = new JButton("Pen colour");
+        JButton penColourButton = new JButton("Pen colour");
+        JButton fillColourButton = new JButton("Fill colour");
+        JButton clearFillButton = new JButton("Clear fill colour");
         polyButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,8 +98,10 @@ public class GUIForm{
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
         toolbar.add(polyButton);
-        toolbar.add(colourButton, BorderLayout.EAST);
-        colourButton.addMouseListener(new MouseAdapter() {
+        toolbar.add(penColourButton, BorderLayout.EAST);
+        toolbar.add(fillColourButton, BorderLayout.EAST);
+        toolbar.add(clearFillButton);
+        penColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 JColorChooser colour = new JColorChooser();
@@ -106,6 +110,23 @@ public class GUIForm{
                 //System.out.println(colour.getColor());
             }
         });
+        fillColourButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                handler.toggleFill(true);
+                JColorChooser colour = new JColorChooser();
+                String name = JOptionPane.showInputDialog(colour);
+                handler.setFillColour(colour.getColor());
+                //System.out.println(colour.getColor());
+            }
+        });
+        clearFillButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                handler.toggleFill(false);
+            }
+        });
+
 //        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 

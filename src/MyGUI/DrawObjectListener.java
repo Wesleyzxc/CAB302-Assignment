@@ -12,6 +12,7 @@ public class DrawObjectListener extends MouseAdapter{
     private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
     private Shape shape = Shape.LINE; //Default shape is line
     private Color penColour = new Color(0,0,0);
+    private boolean fill = false;
     private Color fillColour = new Color(0,0,0);
 
     public DrawObjectListener(DrawArea panel) {
@@ -35,6 +36,8 @@ public class DrawObjectListener extends MouseAdapter{
         this.fillColour = colour;
     }
 
+    public void toggleFill(boolean fill){ this.fill = fill; }
+
     @Override
     public void mouseClicked(MouseEvent e) {
         panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, penColour));
@@ -56,11 +59,11 @@ public class DrawObjectListener extends MouseAdapter{
         }
 
         if (shape == Shape.RECTANGLE){
-            panel.addLine(new Rectangle(x1,y1,x2,y2, penColour));
+            panel.addLine(new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill));
         }
 
         if (shape == Shape.ELLIPSE){
-            panel.addLine(new Ellipse(x1,y1,x2,y2, penColour));
+            panel.addLine(new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill));
         }
     }
 
@@ -75,11 +78,11 @@ public class DrawObjectListener extends MouseAdapter{
                 panel.dragLine(drag);
                 break;
             case RECTANGLE:
-                drag = new Rectangle(x1,y1,x2,y2, penColour);
+                drag = new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill);
                 panel.dragLine(drag);
                 break;
             case ELLIPSE:
-                drag = new Ellipse(x1,y1,x2,y2, penColour);
+                drag = new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill);
                 panel.dragLine(drag);
                 break;
             case STAR:
