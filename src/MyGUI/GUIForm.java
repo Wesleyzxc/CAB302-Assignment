@@ -1,14 +1,9 @@
 package MyGUI;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class GUIForm{
 
@@ -18,6 +13,7 @@ public class GUIForm{
      */
     private static void createGUI() {
         // Create and set up window
+
         JFrame frame = new JFrame("VEC DRAWER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -70,32 +66,9 @@ public class GUIForm{
         JButton rectButton = new JButton("Rectangle");
         JButton ellipseButton = new JButton("Ellipse");
         JButton polyButton = new JButton("Polygons");
-        JButton colourButton = new JButton("Pen colour");
-        polyButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String s = JOptionPane.showInputDialog("Number of edges: ");
-                System.out.println(s);
-            }
-        });
-
-
-        //Add shapes to toolbar
-        toolbar.add(lineButton);
-        toolbar.add(rectButton);
-        toolbar.add(ellipseButton);
-        toolbar.add(polyButton);
-        toolbar.add(colourButton, BorderLayout.EAST);
-        colourButton.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                JColorChooser colour = new JColorChooser();
-                String name = JOptionPane.showInputDialog(colour);
-                System.out.println(colour.getColor());
-            }
-        });
-//        toolbar.add(new JColorChooser());
-        frame.add(toolbar, BorderLayout.NORTH);
+        JButton penColourButton = new JButton("Pen colour");
+        JButton fillColourButton = new JButton("Fill colour");
+        JButton clearFillButton = new JButton("Fill off");
 
 
         //Draw area
@@ -107,6 +80,44 @@ public class GUIForm{
         panel.addMouseListener(handler);
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
+
+
+        //Add shapes to toolbar
+        toolbar.add(lineButton);
+        toolbar.add(rectButton);
+        toolbar.add(ellipseButton);
+        toolbar.add(polyButton);
+        toolbar.add(penColourButton, BorderLayout.EAST);
+        toolbar.add(fillColourButton, BorderLayout.EAST);
+        toolbar.add(clearFillButton);
+        penColourButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                JColorChooser colour = new JColorChooser();
+                String name = JOptionPane.showInputDialog(colour);
+                handler.setPenColour(colour.getColor());
+                //System.out.println(colour.getColor());
+            }
+        });
+        fillColourButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                handler.toggleFill(true);
+                JColorChooser colour = new JColorChooser();
+                String name = JOptionPane.showInputDialog(colour);
+                handler.setFillColour(colour.getColor());
+                //System.out.println(colour.getColor());
+            }
+        });
+        clearFillButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                handler.toggleFill(false);
+            }
+        });
+
+//        toolbar.add(new JColorChooser());
+        frame.add(toolbar, BorderLayout.NORTH);
 
 
         //Create separate class later
@@ -126,6 +137,7 @@ public class GUIForm{
                     System.out.println(handler.getShape());
                 }
                 if (e.getSource() == polyButton){
+                    handler.chooseShape(DrawObjectListener.Shape.POLYGON);
                     System.out.println(handler.getShape());
                 }
 
@@ -136,6 +148,7 @@ public class GUIForm{
         lineButton.addActionListener(chooseShape);
         rectButton.addActionListener(chooseShape);
         ellipseButton.addActionListener(chooseShape);
+        polyButton.addActionListener(chooseShape);
     }
 
 
