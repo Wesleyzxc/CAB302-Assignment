@@ -15,6 +15,7 @@ public class DrawArea extends JPanel {
     private List<Line> lines = new LinkedList<>();
     private List<Rectangle> rects = new LinkedList<>();
     private List<Ellipse> ovals = new LinkedList<>();
+    private List<PolygonShape> polys = new LinkedList<>();
     private Line drag;
 
     void addDot(Dot dot) {
@@ -22,7 +23,7 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
-    void addLine(Line line) {
+    void addShape(Line line) {
         lines.add(line);
         this.repaint();
     }
@@ -32,15 +33,21 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
-    void addLine(Rectangle rect) { //overload
+    void addShape(Rectangle rect) { //overload
         rects.add(rect);
         this.repaint();
     }
 
-    void addLine(Ellipse ellipse) { //overload
+    void addShape(Ellipse ellipse) { //overload
         ovals.add(ellipse);
         this.repaint();
     }
+
+    void addShape(PolygonShape poly) { //overload
+        polys.add(poly);
+        this.repaint();
+    }
+
 
 
     @Override
@@ -59,6 +66,9 @@ public class DrawArea extends JPanel {
 
         for (Ellipse eachOval: ovals){
             eachOval.draw(g);
+        }
+        for (PolygonShape eachPoly: polys){
+            eachPoly.draw(g);
         }
         // Draws temporary line if user drags line
         if (drag != null) {

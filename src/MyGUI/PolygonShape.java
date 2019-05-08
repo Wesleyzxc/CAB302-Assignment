@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PolygonShape {
-    Polygon polygon = new Polygon();
     private int[] x,y;
     private Color color;
     private Color fillColor;
@@ -20,7 +19,16 @@ public class PolygonShape {
 
     void drawPolygon(Graphics g){
         g.setColor(color);
-        g.drawPolygon(polygon);
+        g.drawPolygon(x, y, x.length);
+    }
 
+    public void draw(Graphics g) {
+        if (!toggleFill) {
+            g.setColor(color);
+            g.drawPolygon(x, y, x.length);
+        } else {
+            g.setColor(fillColor);
+            g.drawPolygon(x, y, x.length);
+        }
     }
 }

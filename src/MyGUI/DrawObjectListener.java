@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.List;
 
 
 //Draw Listener - includes listening for dots and lines
@@ -16,7 +15,8 @@ public class DrawObjectListener extends MouseAdapter{
     private Color penColour = new Color(0,0,0);
     private boolean fill = false;
     private Color fillColour = new Color(0,0,0);
-    private ArrayList<Integer> polyCoords = new ArrayList<Integer>();
+    private ArrayList<Integer> polyCoordsX = new ArrayList<Integer>();
+    private ArrayList<Integer> polyCoordsY = new ArrayList<Integer>();
 
 
     public DrawObjectListener(DrawArea panel) {
@@ -49,14 +49,18 @@ public class DrawObjectListener extends MouseAdapter{
         // maybe x1 = ...
         if (shape == Shape.POLYGON) {
             if (e.getButton() == MouseEvent.BUTTON1){
-                polyCoords.add(e.getX());
-                polyCoords.add(e.getY());
+                polyCoordsX.add(e.getX());
+                polyCoordsY.add(e.getY());
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
                 System.out.println("Right Click");
-                System.out.println(polyCoords);
-                polyCoords.clear();
+                System.out.println(polyCoordsX);
+                int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
+                int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
+                panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
 
+                polyCoordsX.clear();
+                polyCoordsY.clear();
             }
         }
     }
@@ -71,19 +75,19 @@ public class DrawObjectListener extends MouseAdapter{
         x2 = e.getX();
         y2 = e.getY();
         if (shape == Shape.LINE){
-            panel.addLine(new Line(x1,y1,x2,y2, penColour));
+            panel.addShape(new Line(x1,y1,x2,y2, penColour));
             System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
         }
 
         if (shape == Shape.RECTANGLE){
-            panel.addLine(new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill));
+            panel.addShape(new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill));
         }
 
         if (shape == Shape.ELLIPSE){
-            panel.addLine(new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill));
+            panel.addShape(new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill));
         }
         if (shape == Shape.POLYGON) {
-//          panel.addLine(new PolygonShape(testArray, testArray, penColour));
+//          panel.addShape(new PolygonShape(testArray, testArray, penColour));
         }
     }
 
