@@ -75,6 +75,7 @@ public class GUIForm{
         JButton penColourButton = new JButton("Pen colour");
         JButton fillColourButton = new JButton("Fill colour");
         JButton clearFillButton = new JButton("Fill off");
+        JButton undoButton = new JButton("Undo");
 
 
         //Draw area

@@ -2,7 +2,7 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Dot {
+public class Dot implements AllShapes {
     private int x;
     private int y;
     private int diameter;
@@ -31,13 +31,14 @@ public class Dot {
     }
 
     public int getY() {
-        return y-12;
+        return y;
     }
 
     public int getDiameter() {
         return diameter;
     }
 
+    @Override
     public Color getColour() {
         return colour;
     }

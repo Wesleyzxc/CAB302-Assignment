@@ -3,7 +3,7 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.*;
 
-public class PolygonShape {
+public class PolygonShape implements AllShapes{
     private int[] x,y;
     private Color color;
     private Color fillColor;
@@ -32,5 +32,10 @@ public class PolygonShape {
             g.setColor(color);
             g.drawPolygon(x, y, x.length);
         }
+    }
+
+    @Override
+    public Color getColour() {
+        return color;
     }
 }

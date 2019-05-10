@@ -16,15 +16,18 @@ public class DrawArea extends JPanel {
     private List<Ellipse> ovals = new LinkedList<>();
     private List<PolygonShape> polys = new LinkedList<>();
     private List<Dot> polygonMarker = new LinkedList<>();
+    private List<AllShapes> history = new LinkedList<>();
     private Line drag;
 
     void addDot(Dot dot) {
         dots.add(dot);
+        history.add(dot);
         this.repaint();
     }
 
     void addShape(Line line) {
         lines.add(line);
+        history.add(line);
         this.repaint();
     }
 
@@ -35,27 +38,45 @@ public class DrawArea extends JPanel {
 
     void addShape(Rectangle rect) { //overload
         rects.add(rect);
+        history.add(rect);
         this.repaint();
     }
 
     void addShape(Ellipse ellipse) { //overload
         ovals.add(ellipse);
+        history.add(ellipse);
         this.repaint();
     }
 
     void addShape(PolygonShape poly) { //overload
         polys.add(poly);
+        history.add(poly);
         this.repaint();
     }
 
     void addMarker(Dot poly) { //overload
         polygonMarker.add(poly);
+        history.add(poly);
         this.repaint();
     }
 
-    void clearMarker() { //overload
+    void clearMarker() {
         polygonMarker.clear();
         this.repaint();
+    }
+
+    void removeEach(List<?> individualArrays) {
+        if (individualArrays.contains(history.get(history.size()-1))) {
+            individualArrays.remove(individualArrays.get(individualArrays.indexOf(history.size()-1)));
+        }
+    }
+
+    public void removeAll(){
+        removeEach(dots);
+        removeEach(rects);
+        removeEach(ovals);
+        removeEach(lines);
+        removeEach(polys);
     }
 
 

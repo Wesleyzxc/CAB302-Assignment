@@ -45,7 +45,14 @@ public class DrawObjectListener extends MouseAdapter{
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (shape == Shape.LINE) panel.addDot(new Dot(e.getX()-5, e.getY()-5, 10, penColour));
+        if (shape == Shape.LINE) {
+            if (e.getButton() == MouseEvent.BUTTON1) {
+                panel.addDot(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour));
+            }
+            else if (e.getButton() == MouseEvent.BUTTON3) {
+                panel.removeAll();
+            }
+        }
         // maybe x1 = ...
         if (shape == Shape.POLYGON) {
             if (e.getButton() == MouseEvent.BUTTON1){

@@ -2,7 +2,7 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Line {
+public class Line implements AllShapes{
     private int x1;
     private int y1;
     private int x2;
@@ -42,9 +42,10 @@ public class Line {
 
     public int[] getCoords() { return (coords);}
 
-    public Color getColor() {
+
+    @Override
+    public Color getColour() {
         return color;
     }
-
 
 }
