@@ -7,7 +7,7 @@ public class PolygonShape implements AllShapes{
     private int[] x,y;
     private Color color;
     private Color fillColor;
-    private boolean toggleFill = false;
+    private boolean toggleFill;
 
     public PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill) {
         this.x = x;
@@ -15,11 +15,6 @@ public class PolygonShape implements AllShapes{
         this.color = color;
         this.fillColor = fillColor;
         this.toggleFill = toggleFill;
-    }
-
-    void drawPolygon(Graphics g){
-        g.setColor(color);
-        g.drawPolygon(x, y, x.length);
     }
 
     public void draw(Graphics g) {

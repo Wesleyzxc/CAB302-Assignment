@@ -62,7 +62,6 @@ public class DrawObjectListener extends MouseAdapter{
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
                 System.out.println("Right Click");
-                System.out.println(polyCoordsX);
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
@@ -85,7 +84,7 @@ public class DrawObjectListener extends MouseAdapter{
         if (e.getButton() == MouseEvent.BUTTON1) {
             if (shape == Shape.LINE) {
                 panel.addShape(new Line(x1, y1, x2, y2, penColour));
-                System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
+//                System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
             }
 
             if (shape == Shape.RECTANGLE) {
@@ -103,7 +102,6 @@ public class DrawObjectListener extends MouseAdapter{
         x2 = e.getX(); //Not actually x2, just the end of the click
         y2 = e.getY(); //Not actually y2, just the end of the click
         Line drag;
-
         if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) {
             switch (shape) {
                 case LINE:

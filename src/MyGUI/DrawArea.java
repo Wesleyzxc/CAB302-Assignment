@@ -10,23 +10,13 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class DrawArea extends JPanel {
-    private List<Dot> dots = new LinkedList<>();
-    private List<Line> lines = new LinkedList<>();
-    private List<Rectangle> rects = new LinkedList<>();
-    private List<Ellipse> ovals = new LinkedList<>();
-    private List<PolygonShape> polys = new LinkedList<>();
     private List<Dot> polygonMarker = new LinkedList<>();
     private List<AllShapes> history = new LinkedList<>();
     private Line drag;
 
-    void addShape(Dot dot) {
-        dots.add(dot);
-        this.repaint();
-    }
-
-    void addShape(Line line) {
-        lines.add(line);
-        history.add(line);
+    void addShape(AllShapes shape) {
+        history.add(shape);
+        System.out.println("addshape");
         this.repaint();
     }
 
@@ -35,20 +25,14 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
-    void addShape(PolygonShape poly) { //overload
-        polys.add(poly);
-        history.add(poly);
-        this.repaint();
-    }
-
-    void addMarker(Dot poly) { //overload
+    void addMarker(Dot poly) {
         polygonMarker.add(poly);
         this.repaint();
     }
 
     void clearMarker() {
         polygonMarker.clear();
-        this.repaint();
+//        this.repaint();
     }
 
     void removeEach(List<?> individualArrays) {
@@ -58,43 +42,25 @@ public class DrawArea extends JPanel {
 //        }
     }
 
-    public void removeAll(){
-        removeEach(lines);
-
-    }
-
-
 
     @Override
-    public void paint(Graphics g) {
-        super.paint(g);
-//        for (Dot eachDot: dots) {
-//            eachDot.draw(g);
-//        }
-//        for (Line eachLine: lines){
-//            eachLine.draw(g);
-//        }
-//
-//        for (Rectangle eachRect: rects){
-//            eachRect.draw(g);
-//        }
-//
-//        for (Ellipse eachOval: ovals){
-//            eachOval.draw(g);
-//        }
-//        for (PolygonShape eachPoly: polys){
-//            eachPoly.draw(g);
-//        }
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        System.out.println("drawshape");
+
         for (AllShapes eachShape: history){
             eachShape.draw(g);
         }
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g);
         }
-        // Draws temporary line if user drags line
-        if (drag != null) {
-            drag.draw(g);
-        }
+//        //         Draws temporary line if user drags line
+//        if (drag != null) {
+//            drag.draw(g);
+//        }
+
+//        drag = null;
+
     }
 
     DrawArea() {
