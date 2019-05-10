@@ -24,19 +24,25 @@ public class GUIForm{
         frame.setVisible(true);
 
         //menu bar and items
+
+
         JMenuBar MenuBar = new JMenuBar();
-        frame.setJMenuBar(MenuBar);
+
+        JMenu help = new JMenu("Help");
         JMenu file = new JMenu("File");
+        JMenuItem save = new JMenuItem("Save File");
         JMenuItem exit = new JMenuItem("Exit");
         JMenuItem open = new JMenuItem("Open File");
-        JMenuItem save = new JMenuItem("Save File");
+        // shortcut key
+        open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));;
+        frame.setJMenuBar(MenuBar);
+
         MenuBar.add(file);
+
         file.add(open);
         file.add(save);
         file.add(exit);
-        JMenu help = new JMenu("Help");
         MenuBar.add(help);
-
         class exitAction implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
