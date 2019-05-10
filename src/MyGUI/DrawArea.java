@@ -19,9 +19,8 @@ public class DrawArea extends JPanel {
     private List<AllShapes> history = new LinkedList<>();
     private Line drag;
 
-    void addDot(Dot dot) {
+    void addShape(Dot dot) {
         dots.add(dot);
-        history.add(dot);
         this.repaint();
     }
 
@@ -36,18 +35,6 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
-    void addShape(Rectangle rect) { //overload
-        rects.add(rect);
-        history.add(rect);
-        this.repaint();
-    }
-
-    void addShape(Ellipse ellipse) { //overload
-        ovals.add(ellipse);
-        history.add(ellipse);
-        this.repaint();
-    }
-
     void addShape(PolygonShape poly) { //overload
         polys.add(poly);
         history.add(poly);
@@ -56,7 +43,6 @@ public class DrawArea extends JPanel {
 
     void addMarker(Dot poly) { //overload
         polygonMarker.add(poly);
-        history.add(poly);
         this.repaint();
     }
 
@@ -66,17 +52,15 @@ public class DrawArea extends JPanel {
     }
 
     void removeEach(List<?> individualArrays) {
-        if (individualArrays.contains(history.get(history.size()-1))) {
-            individualArrays.remove(individualArrays.get(individualArrays.indexOf(history.size()-1)));
-        }
+        System.out.println(history.size());
+//        if (individualArrays.contains(history.get(history.size()-1))) {
+//            individualArrays.remove(individualArrays.get(individualArrays.indexOf(history.size()-1)));
+//        }
     }
 
     public void removeAll(){
-        removeEach(dots);
-        removeEach(rects);
-        removeEach(ovals);
         removeEach(lines);
-        removeEach(polys);
+
     }
 
 
@@ -84,22 +68,25 @@ public class DrawArea extends JPanel {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        for (Dot eachDot: dots) {
-            eachDot.draw(g);
-        }
-        for (Line eachLine: lines){
-            eachLine.draw(g);
-        }
-
-        for (Rectangle eachRect: rects){
-            eachRect.draw(g);
-        }
-
-        for (Ellipse eachOval: ovals){
-            eachOval.draw(g);
-        }
-        for (PolygonShape eachPoly: polys){
-            eachPoly.draw(g);
+//        for (Dot eachDot: dots) {
+//            eachDot.draw(g);
+//        }
+//        for (Line eachLine: lines){
+//            eachLine.draw(g);
+//        }
+//
+//        for (Rectangle eachRect: rects){
+//            eachRect.draw(g);
+//        }
+//
+//        for (Ellipse eachOval: ovals){
+//            eachOval.draw(g);
+//        }
+//        for (PolygonShape eachPoly: polys){
+//            eachPoly.draw(g);
+//        }
+        for (AllShapes eachShape: history){
+            eachShape.draw(g);
         }
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g);
@@ -116,7 +103,7 @@ public class DrawArea extends JPanel {
             @Override
             public void keyPressed(KeyEvent e) {
                 super.keyPressed(e);
-                System.out.println(e);
+//                System.out.println(e);
             }
         });
     }

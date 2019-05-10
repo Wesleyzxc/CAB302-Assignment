@@ -47,7 +47,7 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseClicked(MouseEvent e) {
         if (shape == Shape.LINE) {
             if (e.getButton() == MouseEvent.BUTTON1) {
-                panel.addDot(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour));
+                panel.addShape(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour));
             }
             else if (e.getButton() == MouseEvent.BUTTON3) {
                 panel.removeAll();
@@ -82,17 +82,19 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        if (shape == Shape.LINE){
-            panel.addShape(new Line(x1,y1,x2,y2, penColour));
-            System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
-        }
+        if (e.getButton() == MouseEvent.BUTTON1) {
+            if (shape == Shape.LINE) {
+                panel.addShape(new Line(x1, y1, x2, y2, penColour));
+                System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
+            }
 
-        if (shape == Shape.RECTANGLE){
-            panel.addShape(new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill));
-        }
+            if (shape == Shape.RECTANGLE) {
+                panel.addShape(new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill));
+            }
 
-        if (shape == Shape.ELLIPSE){
-            panel.addShape(new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill));
+            if (shape == Shape.ELLIPSE) {
+                panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill));
+            }
         }
     }
 
@@ -101,23 +103,25 @@ public class DrawObjectListener extends MouseAdapter{
         x2 = e.getX(); //Not actually x2, just the end of the click
         y2 = e.getY(); //Not actually y2, just the end of the click
         Line drag;
-        switch (shape) {
-            case LINE:
-                drag = new Line(x1,y1,x2,y2, penColour);
-                panel.dragLine(drag);
-                break;
-            case RECTANGLE:
-                drag = new Rectangle(x1,y1,x2,y2, penColour, fillColour, fill);
-                panel.dragLine(drag);
-                break;
-            case ELLIPSE:
-                drag = new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill);
-                panel.dragLine(drag);
-                break;
-            case POLYGON:
-                break;
-        }
 
+        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) {
+            switch (shape) {
+                case LINE:
+                    drag = new Line(x1, y1, x2, y2, penColour);
+                    panel.dragLine(drag);
+                    break;
+                case RECTANGLE:
+                    drag = new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill);
+                    panel.dragLine(drag);
+                    break;
+                case ELLIPSE:
+                    drag = new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill);
+                    panel.dragLine(drag);
+                    break;
+                case POLYGON:
+                    break;
+            }
+        }
 
 
     }

@@ -26,6 +26,9 @@ public class Rectangle extends Line implements AllShapes{ //maybe subclass of li
         } else {
             g.setColor(fillColor);
             g.fillRect(x1, y1, x2-x1, y2-y1);
+            g.setColor(color);
+            g.drawRect(x1, y1, x2 - x1, y2 - y1);
+
         }
     }
 }
