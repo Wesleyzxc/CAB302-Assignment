@@ -28,6 +28,8 @@ public class PolygonShape {
             g.drawPolygon(x, y, x.length);
         } else {
             g.setColor(fillColor);
+            g.fillPolygon(x, y, x.length);
+            g.setColor(color);
             g.drawPolygon(x, y, x.length);
         }
     }

@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-
 public class DrawArea extends JPanel {
     private List<Dot> dots = new LinkedList<>();
     private List<Line> lines = new LinkedList<>();
     private List<Rectangle> rects = new LinkedList<>();
     private List<Ellipse> ovals = new LinkedList<>();
     private List<PolygonShape> polys = new LinkedList<>();
+    private List<Dot> polygonMarker = new LinkedList<>();
     private Line drag;
 
     void addDot(Dot dot) {
@@ -48,6 +48,16 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
+    void addMarker(Dot poly) { //overload
+        polygonMarker.add(poly);
+        this.repaint();
+    }
+
+    void clearMarker() { //overload
+        polygonMarker.clear();
+        this.repaint();
+    }
+
 
 
     @Override
@@ -70,6 +80,9 @@ public class DrawArea extends JPanel {
         for (PolygonShape eachPoly: polys){
             eachPoly.draw(g);
         }
+        for (Dot eachDot: polygonMarker){
+            eachDot.draw(g);
+        }
         // Draws temporary line if user drags line
         if (drag != null) {
             drag.draw(g);
@@ -77,7 +90,7 @@ public class DrawArea extends JPanel {
     }
 
     DrawArea() {
-        setBackground(Color.BLUE);
+        setBackground(Color.WHITE);
         addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {

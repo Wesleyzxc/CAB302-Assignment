@@ -51,6 +51,7 @@ public class DrawObjectListener extends MouseAdapter{
             if (e.getButton() == MouseEvent.BUTTON1){
                 polyCoordsX.add(e.getX());
                 polyCoordsY.add(e.getY());
+                panel.addMarker(new Dot(e.getX(), e.getY(), 3, penColour));
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
                 System.out.println("Right Click");
@@ -58,7 +59,7 @@ public class DrawObjectListener extends MouseAdapter{
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
-
+                panel.clearMarker();
                 polyCoordsX.clear();
                 polyCoordsY.clear();
             }
@@ -85,9 +86,6 @@ public class DrawObjectListener extends MouseAdapter{
 
         if (shape == Shape.ELLIPSE){
             panel.addShape(new Ellipse(x1,y1,x2,y2, penColour, fillColour, fill));
-        }
-        if (shape == Shape.POLYGON) {
-//          panel.addShape(new PolygonShape(testArray, testArray, penColour));
         }
     }
 
