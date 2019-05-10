@@ -14,6 +14,16 @@ public class DrawArea extends JPanel {
     private List<AllShapes> history = new LinkedList<>();
     private Line drag;
 
+    public boolean isDragging() {
+        return dragging;
+    }
+
+    public void setDragging(boolean dragging) {
+        this.dragging = dragging;
+    }
+
+    private boolean dragging;
+
     void addShape(AllShapes shape) {
         history.add(shape);
         System.out.println("addshape");
@@ -46,7 +56,6 @@ public class DrawArea extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        System.out.println("drawshape");
 
         for (AllShapes eachShape: history){
             eachShape.draw(g);
@@ -54,10 +63,10 @@ public class DrawArea extends JPanel {
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g);
         }
-//        //         Draws temporary line if user drags line
-//        if (drag != null) {
-//            drag.draw(g);
-//        }
+        //         Draws temporary line if user drags line
+        if (drag != null && dragging) {
+            drag.draw(g);
+        }
 
 //        drag = null;
 

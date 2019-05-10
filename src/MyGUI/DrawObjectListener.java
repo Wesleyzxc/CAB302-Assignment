@@ -42,7 +42,7 @@ public class DrawObjectListener extends MouseAdapter{
 
     public void toggleFill(boolean fill){ this.fill = fill; }
 
-
+    private boolean dragging = false;
     @Override
     public void mouseClicked(MouseEvent e) {
         if (shape == Shape.LINE) {
@@ -77,6 +77,7 @@ public class DrawObjectListener extends MouseAdapter{
         x1 = e.getX();
         y1 = e.getY();
     }
+
     @Override
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
@@ -95,14 +96,18 @@ public class DrawObjectListener extends MouseAdapter{
                 panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill));
             }
         }
+        panel.setDragging(false);
+
     }
 
+    Line drag;
     @Override
     public void mouseDragged(MouseEvent e) {
+
         x2 = e.getX(); //Not actually x2, just the end of the click
         y2 = e.getY(); //Not actually y2, just the end of the click
-        Line drag;
-        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) {
+        panel.setDragging(true);
+        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK ) {
             switch (shape) {
                 case LINE:
                     drag = new Line(x1, y1, x2, y2, penColour);
