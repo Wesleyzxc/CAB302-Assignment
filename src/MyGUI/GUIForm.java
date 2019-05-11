@@ -1,4 +1,7 @@
 package MyGUI;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
+import java.io.IOException;
 
 import javax.swing.*;
 import java.awt.*;
@@ -62,6 +65,8 @@ public class GUIForm{
                 }
             }
         }
+
+
         open.addActionListener(new openAction());
         exit.addActionListener(new exitAction());
 
@@ -87,6 +92,29 @@ public class GUIForm{
         panel.addMouseListener(handler);
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
+
+
+        class saveAction implements ActionListener{
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
+                Graphics2D cg = bImg.createGraphics();
+                panel.paintAll(cg);
+                try {
+                    if (ImageIO.write(bImg, "png", new File("./output_image.png")))
+                    {
+                        System.out.println("-- saved");
+                    }
+                } catch (IOException a) {
+                    // TODO Auto-generated catch block
+                    a.printStackTrace();
+                }
+
+            }
+        }
+
+        save.addActionListener(new saveAction());
 
 
         //Add shapes to toolbar

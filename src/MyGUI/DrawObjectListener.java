@@ -64,8 +64,9 @@ public class DrawObjectListener extends MouseAdapter{
                 System.out.println("Right Click");
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
-                panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
-                panel.clearMarker();
+                if (arrX.length > 0) {
+                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
+                }panel.clearMarker();
                 polyCoordsX.clear();
                 polyCoordsY.clear();
             }
@@ -100,7 +101,7 @@ public class DrawObjectListener extends MouseAdapter{
 
     }
 
-    Line drag;
+    AllShapes drag;
     @Override
     public void mouseDragged(MouseEvent e) {
 

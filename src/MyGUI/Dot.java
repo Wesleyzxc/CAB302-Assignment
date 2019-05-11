@@ -2,7 +2,7 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Dot implements AllShapes {
+public class Dot extends AllShapes {
     private int x;
     private int y;
     private int diameter;
@@ -15,6 +15,7 @@ public class Dot implements AllShapes {
 
 
     public Dot(int x, int y, int diameter, Color color) {
+        super(color);
         this.x = x;
         this.y = y;
         this.diameter = diameter;
@@ -41,5 +42,10 @@ public class Dot implements AllShapes {
     @Override
     public Color getColour() {
         return colour;
+    }
+
+    @Override
+    public String getVEC(){
+        return ((String.format("PLOT {0} {1}",x,y)));
     }
 }

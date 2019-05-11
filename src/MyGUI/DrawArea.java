@@ -12,7 +12,8 @@ import java.util.List;
 public class DrawArea extends JPanel {
     private List<Dot> polygonMarker = new LinkedList<>();
     private List<AllShapes> history = new LinkedList<>();
-    private Line drag;
+    private List<String> VEC = new LinkedList<>();
+    private AllShapes drag;
 
     public boolean isDragging() {
         return dragging;
@@ -26,11 +27,12 @@ public class DrawArea extends JPanel {
 
     void addShape(AllShapes shape) {
         history.add(shape);
-        System.out.println("addshape");
+        VEC.add(shape.getVEC());
+        System.out.println(VEC);
         this.repaint();
     }
 
-    void dragLine(Line line){
+    void dragLine(AllShapes line){
         drag = line;
         this.repaint();
     }

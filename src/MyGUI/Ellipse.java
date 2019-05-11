@@ -2,14 +2,14 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Ellipse extends Line implements AllShapes{ //maybe subclass of line?
+public class Ellipse extends AllShapes{ //maybe subclass of line?
     private int x1,y1,x2,y2;
     private Color color;
     private Color fillColor;
     private boolean toggleFill = false;
 
     public Ellipse(int x1, int y1, int x2, int y2, Color color, Color fillColor, boolean toggleFill) {
-        super(x1,y1,x2,y2, color);
+        super(color);
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
@@ -31,4 +31,7 @@ public class Ellipse extends Line implements AllShapes{ //maybe subclass of line
         }
     }
 
+    public String getVEC(){
+        return "Ellipse";
+    }
 }
