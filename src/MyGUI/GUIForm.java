@@ -21,7 +21,7 @@ public class GUIForm{
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Display window
-        frame.setPreferredSize(new Dimension(400, 400));
+        frame.setPreferredSize(new Dimension(500, 500));
         frame.setLocation(new Point(300, 300));
         frame.pack();
         frame.setVisible(true);
@@ -125,6 +125,7 @@ public class GUIForm{
         toolbar.add(penColourButton, BorderLayout.EAST);
         toolbar.add(fillColourButton, BorderLayout.EAST);
         toolbar.add(clearFillButton);
+        toolbar.add(undoButton);
         penColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -141,7 +142,6 @@ public class GUIForm{
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
                 handler.setFillColour(colour.getColor());
-                //System.out.println(colour.getColor());
             }
         });
         clearFillButton.addMouseListener(new MouseAdapter() {
