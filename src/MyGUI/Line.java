@@ -31,7 +31,8 @@ public class Line extends AllShapes{
 
     @Override
     public String getVEC(){
-        return (String.format("LINE " + x1 + " " + y1 + " " + x2 + " " + y2));
+        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+        return ((String.format("PEN %s LINE %.2f %.2f %.2f %.2f", hex, x1/screenWidth, y1/screenHeight, x2/screenWidth, y2/screenHeight)));
     }
 
 }

@@ -83,10 +83,9 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        if (e.getButton() == MouseEvent.BUTTON1) {
+        if (e.getButton() == MouseEvent.BUTTON1) { //Draws selected shape
             if (shape == Shape.LINE) {
                 panel.addShape(new Line(x1, y1, x2, y2, penColour));
-//                System.out.print("LINE " + x1 + " " + x2 + " " + y1 + " " + y2);
             }
 
             if (shape == Shape.RECTANGLE) {
@@ -108,7 +107,7 @@ public class DrawObjectListener extends MouseAdapter{
         x2 = e.getX(); //Not actually x2, just the end of the click
         y2 = e.getY(); //Not actually y2, just the end of the click
         panel.setDragging(true);
-        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK ) {
+        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK ) { //Creates dragged shape
             switch (shape) {
                 case LINE:
                     drag = new Line(x1, y1, x2, y2, penColour);

@@ -32,6 +32,6 @@ public class Ellipse extends AllShapes{ //maybe subclass of line?
     }
 
     public String getVEC(){
-        return "Ellipse";
+        return String.format("Ellipse %d %d %d %d",x1/screenWidth,y1/screenHeight,x2/screenWidth,y2/screenHeight);
     }
 }

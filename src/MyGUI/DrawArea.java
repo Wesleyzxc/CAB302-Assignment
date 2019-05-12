@@ -50,7 +50,8 @@ public class DrawArea extends JPanel {
     void undoHistory() {
         System.out.println(history.size());
         if (history.size() > 0) {
-            history.remove(history.get(history.size()-1));
+            history.remove(history.get(history.size()-1)); //Remove history
+            VEC.remove(VEC.get(VEC.size()-1)); //Remove VEC
             this.repaint();
         }
     }

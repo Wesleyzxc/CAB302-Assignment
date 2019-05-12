@@ -53,7 +53,7 @@ public class PolygonShape extends AllShapes{
         double largest = max(maxX,maxY);
         for (int i = 0; i < x.length; i++) {
             System.out.println(y[i]);
-            S = S.concat(" " + x[i] + " " + y[i]);
+            S = S.concat(" " + x[i]/screenWidth + " " + y[i]/screenHeight);
         }
         System.out.println(S);
         return (S);

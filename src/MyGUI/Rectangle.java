@@ -34,7 +34,8 @@ public class Rectangle extends AllShapes{ //maybe subclass of line?
 
     @Override
     public String getVEC(){
-        return ((String.format("RECTANGLE {0} {1} {2} {3}", x1, y1, x2, y2)));
+        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+        return ((String.format("%s RECTANGLE %.2f %.2f %.2f %.2f", hex, x1/screenWidth, y1/screenHeight, x2/screenWidth, y2/screenHeight)));
     }
 }
 
