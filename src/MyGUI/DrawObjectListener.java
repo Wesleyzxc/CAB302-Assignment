@@ -17,6 +17,7 @@ public class DrawObjectListener extends MouseAdapter{
     private Color fillColour = new Color(0,0,0);
     private ArrayList<Integer> polyCoordsX = new ArrayList<Integer>();
     private ArrayList<Integer> polyCoordsY = new ArrayList<Integer>();
+    private boolean isDot = true;
 
 
     public DrawObjectListener(DrawArea panel) {
@@ -45,7 +46,8 @@ public class DrawObjectListener extends MouseAdapter{
     private boolean dragging = false;
     @Override
     public void mouseClicked(MouseEvent e) {
-        if (shape == Shape.LINE) {
+        if (shape != Shape.POLYGON) {
+            isDot = true;
             if (e.getButton() == MouseEvent.BUTTON1) {
                 panel.addShape(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour));
             }
@@ -83,50 +85,54 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        if (e.getButton() == MouseEvent.BUTTON1) { //Draws selected shape
-            if (shape == Shape.LINE) {
-                panel.addShape(new Line(x1, y1, x2, y2, penColour));
-            }
+        System.out.println(isDot);
+        if (!isDot) {
+            if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 
-            if (shape == Shape.RECTANGLE) {
-                panel.addShape(new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill));
-            }
+                if (shape == Shape.LINE) {
+                    panel.addShape(new Line(x1, y1, x2, y2, penColour));
+                }
+                if (shape == Shape.RECTANGLE) {
+                    panel.addShape(new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill));
+                }
 
-            if (shape == Shape.ELLIPSE) {
-                panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill));
+                if (shape == Shape.ELLIPSE) {
+                    panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill));
+                }
             }
-        }
         panel.setDragging(false);
-
+        }
+        isDot = false;
     }
 
     AllShapes drag;
     @Override
     public void mouseDragged(MouseEvent e) {
-
-        x2 = e.getX(); //Not actually x2, just the end of the click
-        y2 = e.getY(); //Not actually y2, just the end of the click
-        panel.setDragging(true);
-        if(e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK ) { //Creates dragged shape
-            switch (shape) {
-                case LINE:
-                    drag = new Line(x1, y1, x2, y2, penColour);
-                    panel.dragLine(drag);
-                    break;
-                case RECTANGLE:
-                    drag = new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill);
-                    panel.dragLine(drag);
-                    break;
-                case ELLIPSE:
-                    drag = new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill);
-                    panel.dragLine(drag);
-                    break;
-                case POLYGON:
-                    break;
+        if (!isDot) {
+            x2 = e.getX(); //Not actually x2, just the end of the click
+            y2 = e.getY(); //Not actually y2, just the end of the click
+            panel.setDragging(true);
+            if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) { //Creates dragged shape
+                switch (shape) {
+                    case LINE:
+                        drag = new Line(x1, y1, x2, y2, penColour);
+                        panel.dragLine(drag);
+                        break;
+                    case RECTANGLE:
+                        drag = new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill);
+                        panel.dragLine(drag);
+                        break;
+                    case ELLIPSE:
+                        drag = new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill);
+                        panel.dragLine(drag);
+                        break;
+                    case POLYGON:
+                        break;
+                }
             }
+
         }
-
-
+        isDot = false;
     }
 
 

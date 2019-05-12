@@ -46,6 +46,6 @@ public class Dot extends AllShapes {
 
     @Override
     public String getVEC(){
-        return ((String.format("PLOT {0} {1}",x,y)));
+        return ((String.format("PLOT %.2f %.2f",x/screenWidth,y/screenHeight)));
     }
 }

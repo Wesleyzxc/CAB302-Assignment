@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Line.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Line.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Rectangle.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Rectangle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Dot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="43" column="51" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="51" />
+            <state relative-caret-position="118">
+              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -58,8 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            <state relative-caret-position="221">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -67,8 +48,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+            <state relative-caret-position="557">
+              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -82,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="109" column="89" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
+            <state relative-caret-position="84">
+              <caret line="89" column="75" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -100,10 +81,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
+            <state relative-caret-position="523">
               <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
             </state>
           </provider>
@@ -112,7 +93,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="302">
               <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
             </state>
           </provider>
@@ -138,10 +119,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>white</find>
-      <find>mouseada</find>
-      <find>whitez</find>
-      <find>jframe</find>
       <find>run</find>
       <find>FRAMe</find>
       <find>drawdot</find>
@@ -158,7 +135,6 @@
       <find>handler</find>
       <find>backgroun</find>
       <find>colour</find>
-      <find>draw</find>
       <find>system.</find>
       <find>drawarea</find>
       <find>frame</find>
@@ -168,6 +144,11 @@
       <find>lineBu</find>
       <find>saveAction</find>
       <find>panel</find>
+      <find>500</find>
+      <find>mouse cli</find>
+      <find>mousec</find>
+      <find>draw</find>
+      <find>addshape</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.form" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawDotListener.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Polygon.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ShapeChooser.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/MenuBarListeners.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ActionListeners.java" />
@@ -188,13 +168,14 @@
         <option value="$PROJECT_DIR$/src/MyGUI/SaveAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawArea.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/AllShapes.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Line.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" />
       </list>
     </option>
   </component>
@@ -241,7 +222,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557639734118" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557641411355" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -415,7 +396,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.119463086" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.119463086" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,7 +405,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.31161472" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31161472" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -530,44 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="43" column="51" selection-start-line="43" selection-start-column="46" selection-end-line="43" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="109" column="89" selection-start-line="109" selection-start-column="89" selection-end-line="109" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="48" column="47" lean-forward="true" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="404">
@@ -575,10 +518,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        <state relative-caret-position="118">
+          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="523">
+          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -589,10 +542,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+        <state relative-caret-position="302">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="557">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="89" column="75" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
         </state>
       </provider>
     </entry>
