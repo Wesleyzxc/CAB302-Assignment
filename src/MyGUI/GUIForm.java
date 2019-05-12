@@ -27,7 +27,7 @@ public class GUIForm{
         frame.add(panel);
 
         //Display window
-        frame.setPreferredSize(new Dimension(500, 500));
+        frame.setPreferredSize(new Dimension(20, 20));
         frame.setLocation(new Point(300, 300));
         frame.pack();
         frame.setVisible(true);
