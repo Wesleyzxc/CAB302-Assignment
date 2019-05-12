@@ -14,7 +14,7 @@ public class OpenAction implements ActionListener {
             File file = fc.getSelectedFile();
             String filename = file.getAbsolutePath();
         } else if(returnVal==JFileChooser.CANCEL_OPTION) {
-            
+
         }
     }
 }
