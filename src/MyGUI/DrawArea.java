@@ -25,6 +25,10 @@ public class DrawArea extends JPanel {
 
     private boolean dragging;
 
+    public List<String> getAllVEC() {
+        return VEC;
+    }
+
     void addShape(AllShapes shape, boolean changedPEN, boolean changedFILL) {
         history.add(shape);
         String final_VEC ="";
@@ -36,13 +40,13 @@ public class DrawArea extends JPanel {
 
         if (changedPEN){
             changedPEN = false;
-            final_VEC = final_VEC.concat("PEN " + hexPen);
+            final_VEC = final_VEC.concat("PEN " + hexPen + ",");
         }
         if (changedFILL){
             changedFILL = false;
-            final_VEC = final_VEC.concat("FILL " +hexFill);
+            final_VEC = final_VEC.concat("FILL " + hexFill + ",");
         }
-        final_VEC = final_VEC.concat(" " + shapeVEC);
+        final_VEC = final_VEC.concat(shapeVEC);
         VEC.add(final_VEC); //parameter - true if color changed
         System.out.println(VEC);
         final_VEC = "";
