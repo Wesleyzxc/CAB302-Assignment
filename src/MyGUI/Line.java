@@ -11,7 +11,7 @@ public class Line extends AllShapes{
     private Color color;
 
     public Line(int x1, int y1, int x2, int y2, Color color) {
-        super(color);
+        super(color, color);
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
@@ -31,8 +31,8 @@ public class Line extends AllShapes{
 
     @Override
     public String getVEC(){
-        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
-        return ((String.format("PEN %s LINE %.2f %.2f %.2f %.2f", hex, x1/screenWidth, y1/screenHeight, x2/screenWidth, y2/screenHeight)));
+        //String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+        return ((String.format("LINE %.2f %.2f %.2f %.2f", x1/screenWidth, y1/screenHeight, x2/screenWidth, y2/screenHeight)));
     }
 
 }

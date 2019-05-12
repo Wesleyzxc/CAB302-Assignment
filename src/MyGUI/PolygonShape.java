@@ -15,7 +15,7 @@ public class PolygonShape extends AllShapes{
     private boolean toggleFill;
 
     public PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill) {
-        super(color);
+        super(color,fillColor);
         this.x = x;
         this.y = y;
         this.color = color;
@@ -48,14 +48,12 @@ public class PolygonShape extends AllShapes{
     @Override
     public String getVEC(){
         String S = "POLYGON";
-        int maxX = maxValue(x);
-        int maxY = maxValue(y);
-        double largest = max(maxX,maxY);
+        //int maxX = maxValue(x);
+        //int maxY = maxValue(y);
+        //double largest = max(maxX,maxY);
         for (int i = 0; i < x.length; i++) {
-            System.out.println(y[i]);
-            S = S.concat(" " + x[i]/screenWidth + " " + y[i]/screenHeight);
+            S = S.concat(" " + x[i] + " " + y[i]);
         }
-        System.out.println(S);
         return (S);
     }
 }

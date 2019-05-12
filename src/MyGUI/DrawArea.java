@@ -25,12 +25,31 @@ public class DrawArea extends JPanel {
 
     private boolean dragging;
 
-    void addShape(AllShapes shape) {
+    void addShape(AllShapes shape, boolean changedPEN, boolean changedFILL) {
         history.add(shape);
-        VEC.add(shape.getVEC());
+        String final_VEC ="";
+        Color pen = shape.getColour();
+        String hexPen = String.format("#%02x%02x%02x", pen.getRed(), pen.getGreen(), pen.getBlue());
+        Color fill = shape.getFillColour();
+        String hexFill = String.format("#%02x%02x%02x", fill.getRed(), fill.getGreen(), fill.getBlue());
+        String shapeVEC = shape.getVEC();
+
+        if (changedPEN){
+            changedPEN = false;
+            final_VEC = final_VEC.concat("PEN " + hexPen);
+        }
+        if (changedFILL){
+            changedFILL = false;
+            final_VEC = final_VEC.concat("FILL " +hexFill);
+        }
+        final_VEC = final_VEC.concat(" " + shapeVEC);
+        VEC.add(final_VEC); //parameter - true if color changed
         System.out.println(VEC);
+        final_VEC = "";
         this.repaint();
-    }
+        }
+
+
 
     void dragLine(AllShapes line){
         drag = line;

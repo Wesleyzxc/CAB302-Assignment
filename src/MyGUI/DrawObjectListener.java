@@ -18,11 +18,14 @@ public class DrawObjectListener extends MouseAdapter{
     private ArrayList<Integer> polyCoordsX = new ArrayList<Integer>();
     private ArrayList<Integer> polyCoordsY = new ArrayList<Integer>();
     private boolean isDot = true;
+    private boolean changedPEN;
+    private boolean changedFILL;
 
 
     public DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
+
     }
 
     public void chooseShape(Shape shape){
@@ -35,13 +38,28 @@ public class DrawObjectListener extends MouseAdapter{
 
     public void setPenColour(Color colour) {
         this.penColour = colour;
+        changedPEN = true;
     }
 
     public void setFillColour(Color colour) {
         this.fillColour = colour;
+        changedFILL = true;
     }
 
     public void toggleFill(boolean fill){ this.fill = fill; }
+
+  /*  private String addVecColor(Color color){
+        changedPEN = false;
+        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+        return ((String.format("PEN %s",hex)));
+    }
+
+    private String addVecFillColor(Color color){
+        changedFill = false;
+        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
+        return ((String.format("FILL %s",hex)));
+    }*/
+
 
     private boolean dragging = false;
     @Override
@@ -49,7 +67,9 @@ public class DrawObjectListener extends MouseAdapter{
         if (shape != Shape.POLYGON) {
             isDot = true;
             if (e.getButton() == MouseEvent.BUTTON1) {
-                panel.addShape(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour));
+                panel.addShape(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour), changedPEN, changedFILL);
+                changedPEN = false;
+                changedFILL = false;
             }
             else if (e.getButton() == MouseEvent.BUTTON3) {
                 panel.removeAll();
@@ -67,7 +87,9 @@ public class DrawObjectListener extends MouseAdapter{
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 if (arrX.length > 0) {
-                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill));
+                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill), changedPEN, changedFILL);
+                    changedPEN = false;
+                    changedFILL = false;
                 }panel.clearMarker();
                 polyCoordsX.clear();
                 polyCoordsY.clear();
@@ -90,14 +112,20 @@ public class DrawObjectListener extends MouseAdapter{
             if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 
                 if (shape == Shape.LINE) {
-                    panel.addShape(new Line(x1, y1, x2, y2, penColour));
+                    panel.addShape(new Line(x1, y1, x2, y2, penColour), changedPEN, changedFILL);
+                    changedPEN = false;
+                    changedFILL = false;
                 }
                 if (shape == Shape.RECTANGLE) {
-                    panel.addShape(new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill));
+                    panel.addShape(new Rectangle(x1, y1, x2, y2, penColour, fillColour, fill), changedPEN, changedFILL);
+                    changedPEN = false;
+                    changedFILL = false;
                 }
 
                 if (shape == Shape.ELLIPSE) {
-                    panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill));
+                    panel.addShape(new Ellipse(x1, y1, x2, y2, penColour, fillColour, fill), changedPEN, changedFILL);
+                    changedPEN = false;
+                    changedFILL = false;
                 }
             }
         panel.setDragging(false);
