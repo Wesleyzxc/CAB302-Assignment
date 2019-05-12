@@ -36,15 +36,19 @@ public class GUIForm{
         JMenuItem save = new JMenuItem("Save File");
         JMenuItem exit = new JMenuItem("Exit");
         JMenuItem open = new JMenuItem("Open File");
+        JMenuItem undo = new JMenuItem("Undo");
         // shortcut key
         open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));;
         frame.setJMenuBar(MenuBar);
+
 
         MenuBar.add(file);
 
         file.add(open);
         file.add(save);
         file.add(exit);
+        file.add(undo);
+
         MenuBar.add(help);
         class exitAction implements ActionListener{
             @Override
@@ -92,6 +96,19 @@ public class GUIForm{
         panel.addMouseListener(handler);
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
+
+        class undoAction implements ActionListener {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.undoHistory();
+            }
+        }
+        undoButton.addActionListener(new undoAction());
+        undo.addActionListener(new undoAction());
+        // Ctrl + Z shortcut
+        undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));;
+
 
 
         class saveAction implements ActionListener{

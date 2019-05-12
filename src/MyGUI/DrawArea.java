@@ -47,13 +47,13 @@ public class DrawArea extends JPanel {
 //        this.repaint();
     }
 
-    void removeEach(List<?> individualArrays) {
+    void undoHistory() {
         System.out.println(history.size());
-//        if (individualArrays.contains(history.get(history.size()-1))) {
-//            individualArrays.remove(individualArrays.get(individualArrays.indexOf(history.size()-1)));
-//        }
+        if (history.size() > 0) {
+            history.remove(history.get(history.size()-1));
+            this.repaint();
+        }
     }
-
 
     @Override
     public void paintComponent(Graphics g) {
