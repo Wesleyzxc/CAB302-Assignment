@@ -28,7 +28,7 @@ public class Line extends AllShapes{
     public Color getColour() {
         return color;
     }
-
+    // get pen and fill colour, coords, DONT SET V HERE.
     @Override
     public String getVEC(){
         String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
