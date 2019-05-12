@@ -10,15 +10,21 @@ import java.io.File;
 
 public class GUIForm{
 
+    private void setShortcut(JMenuItem menuItem, char shortcut) {
+        menuItem.setAccelerator(KeyStroke.getKeyStroke(shortcut, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+    }
     /**
      * Create the GUI and show it. For thread safety, this method should be
      * invoked from the event-dispatching thread.
      */
     private static void createGUI() {
         // Create and set up window
-
         JFrame frame = new JFrame("VEC DRAWER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        //Draw area
+        DrawArea panel = new DrawArea();
+        frame.add(panel);
 
         //Display window
         frame.setPreferredSize(new Dimension(500, 500));
@@ -28,51 +34,42 @@ public class GUIForm{
 
         //menu bar and items
 
-
         JMenuBar MenuBar = new JMenuBar();
 
         JMenu help = new JMenu("Help");
         JMenu file = new JMenu("File");
+        // Save menu bar
         JMenuItem save = new JMenuItem("Save File");
+        file.add(save);
+        save.addActionListener(new SaveAction(panel));
+        save.setAccelerator(KeyStroke.getKeyStroke('S', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+        // Exit menu bar
         JMenuItem exit = new JMenuItem("Exit");
+        file.add(exit);
+        exit.addActionListener(new ExitAction());
+        // Open menu bar
         JMenuItem open = new JMenuItem("Open File");
+        file.add(open);
+        open.addActionListener(new OpenAction());
+        open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+        // Undo menu bar
         JMenuItem undo = new JMenuItem("Undo");
+        file.add(undo);
+        undo.addActionListener(new UndoAction(panel));
+        undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+
+
         // shortcut key
-        open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));;
         frame.setJMenuBar(MenuBar);
 
 
         MenuBar.add(file);
 
-        file.add(open);
-        file.add(save);
-        file.add(exit);
-        file.add(undo);
 
         MenuBar.add(help);
-        class exitAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        }
-
-        class openAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                final JFileChooser fc = new JFileChooser();
-                int returnVal = fc.showOpenDialog(fc);
-                if(returnVal==JFileChooser.APPROVE_OPTION) {
-                    File file = fc.getSelectedFile();
-                    String filename = file.getAbsolutePath();
-                } else if(returnVal==JFileChooser.CANCEL_OPTION) {
-                }
-            }
-        }
 
 
-        open.addActionListener(new openAction());
-        exit.addActionListener(new exitAction());
+
 
         // Trying out JToolbar
         JToolBar toolbar = new JToolBar();
@@ -87,9 +84,7 @@ public class GUIForm{
         JButton undoButton = new JButton("Undo");
 
 
-        //Draw area
-        DrawArea panel = new DrawArea();
-        frame.add(panel);
+
         //Create DrawObjectListener
         DrawObjectListener handler = new DrawObjectListener(panel);
         // MouseClick and others require MouseListener
@@ -97,41 +92,11 @@ public class GUIForm{
         // MouseDragged requires MouseMotionListener
         panel.addMouseMotionListener(handler);
 
-        class undoAction implements ActionListener {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                panel.undoHistory();
-            }
-        }
-        undoButton.addActionListener(new undoAction());
-        undo.addActionListener(new undoAction());
+        undoButton.addActionListener(new UndoAction(panel));
         // Ctrl + Z shortcut
-        undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));;
 
 
 
-        class saveAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-                BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-                Graphics2D cg = bImg.createGraphics();
-                panel.paintAll(cg);
-                try {
-                    if (ImageIO.write(bImg, "png", new File("./output_image.png")))
-                    {
-                        System.out.println("-- saved");
-                    }
-                } catch (IOException a) {
-                    // TODO Auto-generated catch block
-                    a.printStackTrace();
-                }
-
-            }
-        }
-
-        save.addActionListener(new saveAction());
 
 
         //Add shapes to toolbar
