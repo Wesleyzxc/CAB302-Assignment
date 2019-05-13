@@ -65,6 +65,21 @@ public class DrawArea extends JPanel {
         this.repaint();
     }
 
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(400, 400);
+    }
+
+    @Override
+    public Dimension getMaximumSize() {
+        return new Dimension(800, 800);
+    }
+
+    @Override
+    public Dimension getMinimumSize() {
+        return new Dimension(400, 400);
+    }
+
     void clearMarker() {
         polygonMarker.clear();
 //        this.repaint();

@@ -10,9 +10,6 @@ import java.io.File;
 
 public class GUIForm{
 
-    private void setShortcut(JMenuItem menuItem, char shortcut) {
-        menuItem.setAccelerator(KeyStroke.getKeyStroke(shortcut, Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-    }
     /**
      * Create the GUI and show it. For thread safety, this method should be
      * invoked from the event-dispatching thread.
@@ -27,13 +24,21 @@ public class GUIForm{
         frame.add(panel);
 
         //Display window
-        frame.setPreferredSize(new Dimension(500, 500));
+        frame.setPreferredSize(new Dimension(800, 800));
         frame.setLocation(new Point(300, 300));
         frame.pack();
         frame.setVisible(true);
 
-        //menu bar and items
+        // Add scroll pane to panel
+        JScrollPane scrollPane = new JScrollPane(panel);
+        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setSize(300,300);
+        scrollPane.setBounds(5, 5, 50, 50);
+        frame.add(scrollPane);
 
+        //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
 
         JMenu help = new JMenu("Help");

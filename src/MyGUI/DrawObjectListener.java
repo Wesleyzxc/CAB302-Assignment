@@ -107,7 +107,7 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        System.out.println(isDot);
+        System.out.println(e.getX());
         if (!isDot) {
             if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 
