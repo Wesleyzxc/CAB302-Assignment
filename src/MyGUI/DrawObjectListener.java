@@ -15,38 +15,38 @@ public class DrawObjectListener extends MouseAdapter{
     private Color penColour = new Color(0,0,0);
     private boolean fill = false;
     private Color fillColour = new Color(0,0,0);
-    private ArrayList<Integer> polyCoordsX = new ArrayList<Integer>();
-    private ArrayList<Integer> polyCoordsY = new ArrayList<Integer>();
+    private ArrayList<Integer> polyCoordsX = new ArrayList<>();
+    private ArrayList<Integer> polyCoordsY = new ArrayList<>();
     private boolean isDot = true;
     private boolean changedPEN;
     private boolean changedFILL;
 
 
-    public DrawObjectListener(DrawArea panel) {
+    DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
 
     }
 
-    public void chooseShape(Shape shape){
+    void chooseShape(Shape shape){
         this.shape = shape;
     }
 
-    public Shape getShape(){
+    Shape getShape(){
         return shape;
     }
 
-    public void setPenColour(Color colour) {
+    void setPenColour(Color colour) {
         this.penColour = colour;
         changedPEN = true;
     }
 
-    public void setFillColour(Color colour) {
+    void setFillColour(Color colour) {
         this.fillColour = colour;
         changedFILL = true;
     }
 
-    public void toggleFill(boolean fill){ this.fill = fill; }
+    void toggleFill(boolean fill){ this.fill = fill; }
 
   /*  private String addVecColor(Color color){
         changedPEN = false;
@@ -75,7 +75,7 @@ public class DrawObjectListener extends MouseAdapter{
                 panel.removeAll();
             }
         }
-        // maybe x1 = ...
+
         if (shape == Shape.POLYGON) {
             if (e.getButton() == MouseEvent.BUTTON1){
                 polyCoordsX.add(e.getX()/(int)panel.getZoomFactor());
@@ -134,7 +134,7 @@ public class DrawObjectListener extends MouseAdapter{
         isDot = false;
     }
 
-    AllShapes drag;
+    private AllShapes drag;
     @Override
     public void mouseDragged(MouseEvent e) {
         if (!isDot) {

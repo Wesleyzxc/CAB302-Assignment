@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Zoom button works with correct zoomed coordinates, but commented out scroll">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
@@ -10,12 +10,7 @@
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Line.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +88,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
+            <state relative-caret-position="204">
+              <caret line="136" column="22" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -244,7 +239,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557712827888" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557712912885" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -432,7 +427,21 @@
       <option name="project" value="LOCAL" />
       <updated>1557711391966</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Zoom button works with correct zoomed coordinates, but commented out scroll">
+      <created>1557712846099</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1557712846099</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Zoom button works with correct zoomed coordinates, but commented out scroll">
+      <created>1557712851403</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1557712851403</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -448,7 +457,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32804233" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.1989418" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.1989418" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39894179" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,7 +465,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.26666668" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.26666668" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -489,7 +498,8 @@
     <MESSAGE value="Able to draw in negative directions" />
     <MESSAGE value="Created scroll pane but no zoom function" />
     <MESSAGE value="Zoom works but the more it's zoomed the more distorted my mouse is" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zoom works but the more it's zoomed the more distorted my mouse is" />
+    <MESSAGE value="Zoom button works with correct zoomed coordinates, but commented out scroll" />
+    <option name="LAST_COMMIT_MESSAGE" value="Zoom button works with correct zoomed coordinates, but commented out scroll" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -626,8 +636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="81" column="67" selection-start-line="81" selection-start-column="67" selection-end-line="81" selection-end-column="67" />
+        <state relative-caret-position="204">
+          <caret line="136" column="22" selection-start-line="136" selection-start-column="22" selection-end-line="136" selection-end-column="22" />
         </state>
       </provider>
     </entry>
