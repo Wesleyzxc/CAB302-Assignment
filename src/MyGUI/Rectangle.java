@@ -47,6 +47,11 @@ public class Rectangle extends AllShapes { //maybe subclass of line?
         //String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
         return ((String.format("RECTANGLE %.2f %.2f %.2f %.2f", x1 / screenWidth, y1 / screenHeight, x2 / screenWidth, y2 / screenHeight)));
     }
+
+    @Override
+    public String shape() {
+        return "RECTANGLE";
+    }
 }
 
 

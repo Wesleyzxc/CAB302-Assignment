@@ -30,13 +30,14 @@ public class GUIForm{
         frame.setVisible(true);
 
         // Add scroll pane to panel
-        JScrollPane scrollPane = new JScrollPane(panel);
-        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setSize(300,300);
-        scrollPane.setBounds(5, 5, 50, 50);
-        frame.add(scrollPane);
+//        JScrollPane scrollPane = new JScrollPane(panel);
+//        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
+//        scrollPane.getViewport().addChangeListener(e -> panel.repaint());
+//        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+//        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+//        scrollPane.setSize(300,300);
+//        scrollPane.setBounds(5, 5, 50, 50);
+//        frame.add(scrollPane);
 
         //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
@@ -85,13 +86,22 @@ public class GUIForm{
         JButton zoomIn = new JButton("+");
         JButton zoomOut = new JButton("-");
         btmToolbar.add(zoomIn);
+        btmToolbar.add(zoomOut);
         zoomIn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panel.setZoomFactor(1.1*panel.getZoomFactor());
+                panel.setZoomFactor(2*panel.getZoomFactor());
                 panel.repaint();
             }
         });
+        zoomOut.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.setZoomFactor(panel.getZoomFactor()/2);
+                panel.repaint();
+            }
+        });
+
         frame.add(btmToolbar, BorderLayout.SOUTH);
 
 

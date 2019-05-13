@@ -4,8 +4,10 @@ import com.sun.source.util.DocTreeScanner;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Rectangle;
 import java.awt.event.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;

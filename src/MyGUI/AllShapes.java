@@ -23,6 +23,7 @@ public abstract class AllShapes {
     void draw(Graphics g){}
     String getVEC(){return "";}
     String getCoords(){return "";}
+    String shape() { return "" ;}
 
 
 }
