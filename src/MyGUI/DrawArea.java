@@ -5,6 +5,7 @@ import com.sun.source.util.DocTreeScanner;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.AffineTransform;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,6 +15,10 @@ public class DrawArea extends JPanel {
     private List<AllShapes> history = new LinkedList<>();
     private List<String> VEC = new LinkedList<>();
     private AllShapes drag;
+    private boolean zoomer = false;
+
+
+    private double zoomFactor = 1;
 
     public boolean isDragging() {
         return dragging;
@@ -24,6 +29,18 @@ public class DrawArea extends JPanel {
     }
 
     private boolean dragging;
+
+    public void setZoomFactor(double factor){
+        this.zoomFactor=factor;
+        this.zoomer = true;
+    }
+
+    public double getZoomFactor() {
+        return zoomFactor;
+    }
+
+
+
 
     public List<String> getAllVEC() {
         return VEC;
@@ -96,7 +113,14 @@ public class DrawArea extends JPanel {
 
     @Override
     public void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g;
+        if(zoomer==true){
+            AffineTransform at = new AffineTransform();
+            at.scale(zoomFactor ,zoomFactor);
+            g2.setTransform(at);
+        }
         super.paintComponent(g);
+
 
         for (AllShapes eachShape: history){
             eachShape.draw(g);
@@ -108,6 +132,7 @@ public class DrawArea extends JPanel {
         if (drag != null && dragging) {
             drag.draw(g);
         }
+
 
 //        drag = null;
 

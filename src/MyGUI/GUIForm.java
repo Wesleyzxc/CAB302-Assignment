@@ -63,20 +63,12 @@ public class GUIForm{
         undo.addActionListener(new UndoAction(panel));
         undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
 
-
         // shortcut key
         frame.setJMenuBar(MenuBar);
-
-
         MenuBar.add(file);
-
-
         MenuBar.add(help);
 
-
-
-
-        // Trying out JToolbar
+        //JToolbar
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
         JButton lineButton = new JButton("Line");
@@ -87,6 +79,21 @@ public class GUIForm{
         JButton fillColourButton = new JButton("Fill colour");
         JButton clearFillButton = new JButton("Fill off");
         JButton undoButton = new JButton("Undo");
+
+        // Bottom toolbar for zoom
+        JToolBar btmToolbar = new JToolBar();
+        JButton zoomIn = new JButton("+");
+        JButton zoomOut = new JButton("-");
+        btmToolbar.add(zoomIn);
+        zoomIn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panel.setZoomFactor(1.1*panel.getZoomFactor());
+                panel.repaint();
+            }
+        });
+        frame.add(btmToolbar, BorderLayout.SOUTH);
+
 
 
 
