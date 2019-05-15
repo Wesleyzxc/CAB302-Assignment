@@ -13,17 +13,38 @@ public class PolygonShape extends AllShapes{
     private Color color;
     private Color fillColor;
     private boolean toggleFill;
-
-    public PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill) {
-        super(color,fillColor);
+    private float[] hratio;
+    private float[] wratio;
+    public PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFillz, int pwidth, int pheight) {
+        super(color,fillColor,pwidth,pheight);
         this.x = x;
         this.y = y;
         this.color = color;
         this.fillColor = fillColor;
         this.toggleFill = toggleFill;
+        wratio = new float[x.length];
+        hratio = new float[y.length];
+        int xcount = 0;
+        int ycount = 0;
+        for (int x2:x){
+            wratio[xcount] = x2/(float)pwidth;
+            xcount++;
+        }
+        for (int y2:y){
+            hratio[ycount] = y2/(float)pheight;
+            ycount++;
+        }
     }
 
-    public void draw(Graphics g) {
+    public float[] getRatioW(){
+        return wratio;
+    }
+
+    public float[] getRatioH(){
+        return hratio;
+    }
+
+    public void draw(Graphics g, int currentWidth, int currentHeight) {
         if (!toggleFill) {
             g.setColor(color);
             g.drawPolygon(x, y, x.length);

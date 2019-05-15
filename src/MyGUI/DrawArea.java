@@ -125,14 +125,14 @@ public class DrawArea extends JPanel {
 
 
         for (AllShapes eachShape: history){
-            eachShape.draw(g);
+            eachShape.draw(g,this.getWidth(),this.getHeight());
         }
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g);
         }
         //         Draws temporary line if user drags line
         if (drag != null && dragging) {
-            drag.draw(g);
+            drag.draw(g, this.getWidth(),this.getHeight());
         }
 
 

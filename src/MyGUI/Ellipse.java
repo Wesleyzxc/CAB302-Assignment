@@ -7,9 +7,11 @@ public class Ellipse extends AllShapes{ //maybe subclass of line?
     private Color color;
     private Color fillColor;
     private boolean toggleFill = false;
+    private float hratio;
+    private float wratio;
 
-    public Ellipse(int x1, int y1, int x2, int y2, Color color, Color fillColor, boolean toggleFill) {
-        super(color, fillColor);
+    public Ellipse(int x1, int y1, int x2, int y2, Color color, Color fillColor, boolean toggleFill, int pwidth, int pheight) {
+        super(color, fillColor,pwidth,pheight);
         if (x1 < x2) {
             this.x1 = x1;
             this.x2 = x2;
@@ -27,9 +29,18 @@ public class Ellipse extends AllShapes{ //maybe subclass of line?
         this.color = color;
         this.fillColor = fillColor;
         this.toggleFill = toggleFill;
+        hratio = y2/(float)pheight;
+        wratio = x2/(float)pwidth;
     }
 
-    public void draw(Graphics g){
+    public float getRatioW(){
+        return wratio;
+    }
+
+    public float getRatioH(){
+        return hratio;
+    }
+    public void draw(Graphics g, int currentWidth, int currentHeight){
         if (!toggleFill) {
             g.setColor(color);
             g.drawOval(x1, y1, x2 - x1, y2 - y1);

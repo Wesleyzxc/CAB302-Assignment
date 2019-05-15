@@ -6,20 +6,33 @@ import java.text.MessageFormat;
 public class Line extends AllShapes{
     private int x1, y1, x2, y2;
     private Color color;
+    private float hratio;
+    private float wratio;
 
-    public Line(int x1, int y1, int x2, int y2, Color color) {
-        super(color, color);
+
+    public Line(int x1, int y1, int x2, int y2, Color color, int pwidth, int pheight) {
+        super(color, color, pwidth,pheight);
         this.x1 = x1;
         this.y1 = y1;
+        this.wratio = x2/(float)pwidth;
+        this.hratio = y2/(float)pheight;
         this.x2 = x2;
         this.y2 = y2;
         this.color = color;
     }
 
-    public void draw(Graphics g){
+    public float getRatioW(){
+        return wratio;
+    }
+
+    public float getRatioH(){
+        return hratio;
+    }
+
+    public void draw(Graphics g, int currentWidth, int currentHeight){
 
         g.setColor(color);
-        g.drawLine(x1, y1, x2, y2);
+        g.drawLine(x1, y1, (int)wratio*currentWidth, (int)hratio*currentHeight);
     }
 
     @Override

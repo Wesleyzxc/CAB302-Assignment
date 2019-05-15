@@ -14,8 +14,8 @@ public class Dot extends AllShapes {
 
 
 
-    public Dot(int x, int y, int diameter, Color color) {
-        super(color, color);
+    public Dot(int x, int y, int diameter, Color color, int pwidth, int pheight) {
+        super(color, color,pwidth,pheight);
         this.x = x;
         this.y = y;
         this.diameter = diameter;
