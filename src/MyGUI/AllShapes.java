@@ -20,7 +20,7 @@ public abstract class AllShapes {
     Color getFillColour(){
         return fillColour;
     };
-    void draw(Graphics g){}
+    void draw(Graphics g, int newWidth, int newHeight){}
     String getVEC(){return "";}
     String getCoords(){return "";}
     String shape() { return "" ;}
