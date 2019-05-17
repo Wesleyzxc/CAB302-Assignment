@@ -39,6 +39,6 @@ public class Ellipse extends AllShapes{
 
     @Override
     public String getVEC(){
-        return String.format("ELLIPSE %.2f %.2f %.2f %.2f", super.getX()[0]/screenWidth, super.getY()[0]/screenHeight, super.getX()[1]/screenWidth, super.getY()[1]/screenHeight);
+        return String.format("ELLIPSE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2);
     }
 }

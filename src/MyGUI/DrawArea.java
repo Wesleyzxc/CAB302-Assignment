@@ -14,17 +14,24 @@ import java.util.List;
 
 public class DrawArea extends JPanel {
     private List<Dot> polygonMarker = new LinkedList<>();
+
+    public List<AllShapes> getHistory() {
+        return history;
+    }
+
+    public void setHistory(List<AllShapes> history) {
+        this.history = history;
+    }
+
     private List<AllShapes> history = new LinkedList<>();
     private List<String> VEC = new LinkedList<>();
     private AllShapes drag;
-    private boolean zoomer = false;
-
-
-    private double zoomFactor = 1;
 
     public boolean isDragging() {
         return dragging;
     }
+
+
 
     void setDragging(boolean dragging) {
         this.dragging = dragging;
@@ -32,14 +39,6 @@ public class DrawArea extends JPanel {
 
     private boolean dragging;
 
-    void setZoomFactor(double factor){
-        this.zoomFactor=factor;
-        this.zoomer = true;
-    }
-
-    double getZoomFactor() {
-        return zoomFactor;
-    }
 
     List<String> getAllVEC() {
         return VEC;
@@ -95,16 +94,10 @@ public class DrawArea extends JPanel {
         }
     }
 
+
     @Override
     public void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        if(zoomer){
-            AffineTransform at = new AffineTransform();
-            at.scale(zoomFactor ,zoomFactor);
-            g2.setTransform(at);
-        }
         super.paintComponent(g);
-
 
         for (AllShapes eachShape: history){
             eachShape.draw(g, this.getWidth(), this.getHeight());

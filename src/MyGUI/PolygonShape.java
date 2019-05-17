@@ -50,7 +50,7 @@ public class PolygonShape extends AllShapes{
         //int maxY = maxValue(y);
         //double largest = max(maxX,maxY);
         for (int i = 0; i < super.getX().length; i++) {
-            S = S.concat(" " + super.getX()[i] + " " + super.getX()[i]);
+            S = S.concat(" " + xRatio[i] + " " + yRatio[i]);
         }
         return (S);
     }

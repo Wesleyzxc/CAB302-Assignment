@@ -23,12 +23,9 @@ public class DrawObjectListener extends MouseAdapter{
     private boolean changedPEN;
     private boolean changedFILL;
 
-
     DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
-
-
     }
 
     void chooseShape(Shape shape){
@@ -65,14 +62,17 @@ public class DrawObjectListener extends MouseAdapter{
 
 
     private boolean dragging = false;
+
     @Override
     public void mouseClicked(MouseEvent e) {
 
         if (shape != Shape.POLYGON) {
             isDot = true;
+
             if (e.getButton() == MouseEvent.BUTTON1) {
                 int[] x = {e.getX()};
                 int[] y = {e.getY()};
+                System.out.println(e.getX()); // where my mouse think it is on scale 1 canvas
                 panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                 changedPEN = false;
                 changedFILL = false;
@@ -84,11 +84,12 @@ public class DrawObjectListener extends MouseAdapter{
 
         if (shape == Shape.POLYGON) {
             if (e.getButton() == MouseEvent.BUTTON1){
-                int[] x = {e.getX()};
-                int[] y = {e.getY()};
-                polyCoordsX.add(x[0]/(int)panel.getZoomFactor());
-                polyCoordsY.add(y[0]/(int)panel.getZoomFactor());
-                panel.addMarker(new Dot(x, y, 3, penColour, panel.getWidth(), panel.getHeight()));
+                int[] polyX = {e.getX()};
+                int[] polyY = {e.getY()};
+                polyCoordsX.add(polyX[0]);
+                polyCoordsY.add(polyY[0]);
+
+                panel.addMarker(new Dot(polyX, polyY, 3, penColour, panel.getWidth(), panel.getHeight()));
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
                 System.out.println("Right Click");
@@ -120,6 +121,7 @@ public class DrawObjectListener extends MouseAdapter{
         y2 = e.getY();
         this.x[1] = e.getX();
         this.y[1] = e.getY();
+
         if (!isDot) {
             if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 

@@ -18,15 +18,14 @@ public class Line extends AllShapes{
 
     public void draw(Graphics g, int currentWidth, int currentHeight){
         g.setColor(super.getColour());
-//        g.drawLine(x1, y1, x2, y2);
-
+//        g.drawLine(super.getX()[0], super.getY()[0], super.getX()[1], super.getY()[1]);
         g.drawLine((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth), (int)(hratio2*currentHeight));
     }
 
     @Override
     public String getVEC(){
         //String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
-        return ((String.format("LINE %.2f %.2f %.2f %.2f", super.getX()[0]/screenWidth, super.getY()[0]/screenHeight, super.getX()[1]/screenWidth, super.getY()[1]/screenHeight)));
+        return ((String.format("LINE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2)));
     }
 
 }
