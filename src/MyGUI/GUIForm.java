@@ -4,6 +4,7 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
@@ -21,7 +22,16 @@ public class GUIForm{
 
         //Draw area
         DrawArea panel = new DrawArea();
-        frame.add(panel);
+
+        final JPanel container = new JPanel(new FlowLayout());
+        container.add(panel, BorderLayout.CENTER);
+        container.addComponentListener(new ComponentAdapter() {
+            @Override
+            public void componentResized(ComponentEvent e) {
+                resizePreview(panel, container);
+            }
+        });
+        frame.add(container);
 
         //Display window
         frame.setPreferredSize(new Dimension(800, 800));
@@ -191,7 +201,14 @@ public class GUIForm{
     }
 
 
-
+    private static void resizePreview(JPanel innerPanel, JPanel container) {
+        int w = container.getWidth();
+        int h = container.getHeight();
+        int size =  Math.min(w, h);
+        System.out.println(size);
+        innerPanel.setPreferredSize(new Dimension(size, size));
+        container.revalidate();
+    }
 
     public static void main(String[] args) {
         // Schedule a job for the event-dispatching thread:
