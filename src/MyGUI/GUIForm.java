@@ -208,6 +208,8 @@ public class GUIForm{
         System.out.println(size);
         innerPanel.setPreferredSize(new Dimension(size, size));
         container.revalidate();
+        innerPanel.removeAll();
+        innerPanel.repaint();
     }
 
     public static void main(String[] args) {

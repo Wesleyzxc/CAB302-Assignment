@@ -3,49 +3,27 @@ package MyGUI;
 import java.awt.*;
 
 public class Dot extends AllShapes {
-    private int x;
-    private int y;
+
     private int diameter;
-    private Color colour;
-
-    public void setColour(Color color) {
-        this.colour = color;
-    }
+    private float hratio1, wratio1;
 
 
+    Dot(int[] x, int[] y, int diameter, Color color, int pwidth, int pheight) {
+        super(x, y, color, color);
 
-    public Dot(int x, int y, int diameter, Color color) {
-        super(color, color);
-        this.x = x;
-        this.y = y;
         this.diameter = diameter;
-        this.colour = color;
+        this.wratio1 = super.getX()[0]/(float)pwidth;
+        this.hratio1 = super.getY()[0]/(float)pheight;
     }
 
-    public void draw(Graphics g){
-        g.setColor(colour);
-        g.fillOval(x, y, diameter, diameter);
-    }
+    public void draw(Graphics g, int currentWidth, int currentHeight){
+        g.setColor(super.getColour());
+        g.fillOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), diameter, diameter);
 
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    public int getDiameter() {
-        return diameter;
-    }
-
-    @Override
-    public Color getColour() {
-        return colour;
     }
 
     @Override
     public String getVEC(){
-        return ((String.format("PLOT %.2f %.2f",x/screenWidth,y/screenHeight)));
+        return ((String.format("PLOT %.2f %.2f",super.getX()[0]/screenWidth,super.getY()[0]/screenHeight)));
     }
 }

@@ -9,40 +9,38 @@ import java.util.Collections;
 import static java.lang.Math.max;
 
 public class PolygonShape extends AllShapes{
-    private int[] x,y;
-    private Color color;
-    private Color fillColor;
+
+    private float[] xRatio, yRatio;
+    private int[] xNew, yNew;
     private boolean toggleFill;
 
-    public PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill) {
-        super(color,fillColor);
-        this.x = x;
-        this.y = y;
-        this.color = color;
-        this.fillColor = fillColor;
+    PolygonShape(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill, int pwidth, int pheight) {
+        super(x, y, color,fillColor);
         this.toggleFill = toggleFill;
-    }
-
-    public void draw(Graphics g) {
-        if (!toggleFill) {
-            g.setColor(color);
-            g.drawPolygon(x, y, x.length);
-        } else {
-            g.setColor(fillColor);
-            g.fillPolygon(x, y, x.length);
-            g.setColor(color);
-            g.drawPolygon(x, y, x.length);
+        xRatio = new float[x.length];
+        yRatio = new float[y.length];
+        for (int i = 0; i < x.length; i++){
+            xRatio[i] = x[i] / (float)pwidth;
+            yRatio[i] = y[i] / (float)pheight;
         }
     }
 
-    @Override
-    public Color getColour() {
-        return color;
-    }
-
-    public int maxValue(int array[]){
-        int max = Arrays.stream(array).max().getAsInt();
-        return max;
+    public void draw(Graphics g, int currentWidth, int currentHeight) {
+        xNew = new int[super.getX().length];
+        yNew = new int[super.getX().length];
+        for (int i = 0; i < super.getX().length; i++){
+            xNew[i] = (int)(xRatio[i] * currentWidth);
+            yNew[i] = (int)(yRatio[i] * currentHeight);
+        }
+        if (!toggleFill) {
+            g.setColor(super.getColour());
+            g.drawPolygon(xNew, yNew, super.getX().length);
+        } else {
+            g.setColor(super.getFillColour());
+            g.fillPolygon(xNew, yNew, super.getX().length);
+            g.setColor(super.getColour());
+            g.drawPolygon(xNew, yNew, super.getX().length);
+        }
     }
 
     @Override
@@ -51,10 +49,9 @@ public class PolygonShape extends AllShapes{
         //int maxX = maxValue(x);
         //int maxY = maxValue(y);
         //double largest = max(maxX,maxY);
-        for (int i = 0; i < x.length; i++) {
-            S = S.concat(" " + x[i] + " " + y[i]);
+        for (int i = 0; i < super.getX().length; i++) {
+            S = S.concat(" " + super.getX()[i] + " " + super.getX()[i]);
         }
         return (S);
     }
 }
-

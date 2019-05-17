@@ -26,25 +26,22 @@ public class DrawArea extends JPanel {
         return dragging;
     }
 
-    public void setDragging(boolean dragging) {
+    void setDragging(boolean dragging) {
         this.dragging = dragging;
     }
 
     private boolean dragging;
 
-    public void setZoomFactor(double factor){
+    void setZoomFactor(double factor){
         this.zoomFactor=factor;
         this.zoomer = true;
     }
 
-    public double getZoomFactor() {
+    double getZoomFactor() {
         return zoomFactor;
     }
 
-
-
-
-    public List<String> getAllVEC() {
+    List<String> getAllVEC() {
         return VEC;
     }
 
@@ -101,7 +98,7 @@ public class DrawArea extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        if(zoomer==true){
+        if(zoomer){
             AffineTransform at = new AffineTransform();
             at.scale(zoomFactor ,zoomFactor);
             g2.setTransform(at);
@@ -113,7 +110,7 @@ public class DrawArea extends JPanel {
             eachShape.draw(g, this.getWidth(), this.getHeight());
         }
         for (Dot eachDot: polygonMarker){
-            eachDot.draw(g);
+            eachDot.draw(g, this.getWidth(), this.getHeight());
         }
         //         Draws temporary line if user drags line
         if (drag != null && dragging) {
