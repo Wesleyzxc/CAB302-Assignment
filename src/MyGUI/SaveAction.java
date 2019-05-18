@@ -36,7 +36,7 @@ public class SaveAction implements ActionListener {
         VEC = panel.getAllVEC();
 
         try {
-            FileWriter writer = new FileWriter("output.VEC");
+            FileWriter writer = new FileWriter(new File(filename + "/output.VEC"));
             for(String str: VEC) {
                 String[] s = str.split(",");
                 for (String str2: s){
@@ -48,13 +48,12 @@ public class SaveAction implements ActionListener {
             writer.close();
             System.out.println("file successfully saved");
         } catch(IOException a) {
-            System.out.println("failed to save file");
+            System.out.println("failed to save VEC");
         }
 
         panel.setSize(new Dimension(4096,4096));
         System.out.println(panel.getWidth());
         BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-        java.util.List<AllShapes> history = new LinkedList<>();
 
 
         Graphics2D cg = bImg.createGraphics();
@@ -69,6 +68,7 @@ public class SaveAction implements ActionListener {
             }
         } catch (IOException a) {
             // TODO Auto-generated catch block
+            System.out.println("failed to save BMP");
             a.printStackTrace();
         }
 
