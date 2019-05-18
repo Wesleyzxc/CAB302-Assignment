@@ -55,25 +55,25 @@ public class GUIForm{
 
         JMenu help = new JMenu("Help");
         JMenu file = new JMenu("File");
+        // Open menu bar
+        JMenuItem open = new JMenuItem("Open File");
+        file.add(open);
+        open.addActionListener(new OpenAction(panel));
+        open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Save menu bar
         JMenuItem save = new JMenuItem("Save File");
         file.add(save);
         save.addActionListener(new SaveAction(panel));
         save.setAccelerator(KeyStroke.getKeyStroke('S', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        // Exit menu bar
-        JMenuItem exit = new JMenuItem("Exit");
-        file.add(exit);
-        exit.addActionListener(new ExitAction());
-        // Open menu bar
-        JMenuItem open = new JMenuItem("Open File");
-        file.add(open);
-        open.addActionListener(new OpenAction());
-        open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Undo menu bar
         JMenuItem undo = new JMenuItem("Undo");
         file.add(undo);
         undo.addActionListener(new UndoAction(panel));
         undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
+        // Exit menu bar
+        JMenuItem exit = new JMenuItem("Exit");
+        file.add(exit);
+        exit.addActionListener(new ExitAction());
 
         // shortcut key
         frame.setJMenuBar(MenuBar);

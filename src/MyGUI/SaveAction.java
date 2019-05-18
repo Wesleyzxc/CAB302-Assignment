@@ -22,14 +22,14 @@ public class SaveAction implements ActionListener {
     @Override
     public void actionPerformed (ActionEvent e)  {
         String filename = "";
-        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
-        jfc.setDialogTitle("Choose a directory to save your file: ");
-        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+        JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        fileChooser.setDialogTitle("Choose a directory to save your file: ");
+        fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
 
-        int returnValue = jfc.showSaveDialog(null);
+        int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-            if (jfc.getSelectedFile().isDirectory()) {
-                filename = jfc.getSelectedFile().toString();
+            if (fileChooser.getSelectedFile().isDirectory()) {
+                filename = fileChooser.getSelectedFile().toString();
             }
         }
 
@@ -54,14 +54,11 @@ public class SaveAction implements ActionListener {
         panel.setSize(new Dimension(4096,4096));
         System.out.println(panel.getWidth());
         BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-
-
         Graphics2D cg = bImg.createGraphics();
         panel.paintAll(cg);
 
         //Save as bmp
         try {
-            System.out.println(filename);
             if (ImageIO.write(bImg, "bmp", new File(filename + "/output.bmp")))
             {
                 System.out.println("-- saved");
