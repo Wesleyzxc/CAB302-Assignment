@@ -14,37 +14,33 @@ import java.util.List;
 
 public class DrawArea extends JPanel {
     private List<Dot> polygonMarker = new LinkedList<>();
+
+    public List<AllShapes> getHistory() {
+        return history;
+    }
+
+    public void setHistory(List<AllShapes> history) {
+        this.history = history;
+    }
+
     private List<AllShapes> history = new LinkedList<>();
     private List<String> VEC = new LinkedList<>();
     private AllShapes drag;
-    private boolean zoomer = false;
-
-
-    private double zoomFactor = 1;
 
     public boolean isDragging() {
         return dragging;
     }
 
-    public void setDragging(boolean dragging) {
+
+
+    void setDragging(boolean dragging) {
         this.dragging = dragging;
     }
 
     private boolean dragging;
 
-    public void setZoomFactor(double factor){
-        this.zoomFactor=factor;
-        this.zoomer = true;
-    }
 
-    public double getZoomFactor() {
-        return zoomFactor;
-    }
-
-
-
-
-    public List<String> getAllVEC() {
+    List<String> getAllVEC() {
         return VEC;
     }
 
@@ -98,22 +94,16 @@ public class DrawArea extends JPanel {
         }
     }
 
+
     @Override
     public void paintComponent(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        if(zoomer==true){
-            AffineTransform at = new AffineTransform();
-            at.scale(zoomFactor ,zoomFactor);
-            g2.setTransform(at);
-        }
         super.paintComponent(g);
-
 
         for (AllShapes eachShape: history){
             eachShape.draw(g, this.getWidth(), this.getHeight());
         }
         for (Dot eachDot: polygonMarker){
-            eachDot.draw(g);
+            eachDot.draw(g, this.getWidth(), this.getHeight());
         }
         //         Draws temporary line if user drags line
         if (drag != null && dragging) {

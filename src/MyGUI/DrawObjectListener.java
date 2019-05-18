@@ -11,6 +11,8 @@ public class DrawObjectListener extends MouseAdapter{
     public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;
     private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
+    private int[] x = new int[2];
+    private int[] y = new int[2];
     private Shape shape = Shape.LINE; //Default shape is line
     private Color penColour = new Color(0,0,0);
     private boolean fill = false;
@@ -21,11 +23,9 @@ public class DrawObjectListener extends MouseAdapter{
     private boolean changedPEN;
     private boolean changedFILL;
 
-
     DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
-
     }
 
     void chooseShape(Shape shape){
@@ -62,12 +62,18 @@ public class DrawObjectListener extends MouseAdapter{
 
 
     private boolean dragging = false;
+
     @Override
     public void mouseClicked(MouseEvent e) {
+
         if (shape != Shape.POLYGON) {
             isDot = true;
+
             if (e.getButton() == MouseEvent.BUTTON1) {
-                panel.addShape(new Dot(e.getX() - 5, e.getY() - 5, 10, penColour), changedPEN, changedFILL);
+                int[] x = {e.getX()};
+                int[] y = {e.getY()};
+                System.out.println(e.getX()); // where my mouse think it is on scale 1 canvas
+                panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                 changedPEN = false;
                 changedFILL = false;
             }
@@ -78,16 +84,19 @@ public class DrawObjectListener extends MouseAdapter{
 
         if (shape == Shape.POLYGON) {
             if (e.getButton() == MouseEvent.BUTTON1){
-                polyCoordsX.add(e.getX()/(int)panel.getZoomFactor());
-                polyCoordsY.add(e.getY()/(int)panel.getZoomFactor());
-                panel.addMarker(new Dot(e.getX()/(int)panel.getZoomFactor(), e.getY()/(int)panel.getZoomFactor(), 3, penColour));
+                int[] polyX = {e.getX()};
+                int[] polyY = {e.getY()};
+                polyCoordsX.add(polyX[0]);
+                polyCoordsY.add(polyY[0]);
+
+                panel.addMarker(new Dot(polyX, polyY, 3, penColour, panel.getWidth(), panel.getHeight()));
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
                 System.out.println("Right Click");
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 if (arrX.length > 0) {
-                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill), changedPEN, changedFILL);
+                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                     changedPEN = false;
                     changedFILL = false;
                 }
@@ -101,6 +110,8 @@ public class DrawObjectListener extends MouseAdapter{
     @Override
     public void mousePressed(MouseEvent e) {
         x1 = e.getX();
+        this.x[0] = e.getX();
+        this.y[0] = e.getY();
         y1 = e.getY();
     }
 
@@ -108,23 +119,25 @@ public class DrawObjectListener extends MouseAdapter{
     public void mouseReleased(MouseEvent e) {
         x2 = e.getX();
         y2 = e.getY();
-        System.out.println(e.getX());
+        this.x[1] = e.getX();
+        this.y[1] = e.getY();
+
         if (!isDot) {
             if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 
                 if (shape == Shape.LINE) {
-                    panel.addShape(new Line(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Line(x, y, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                     changedPEN = false;
                     changedFILL = false;
                 }
                 if (shape == Shape.RECTANGLE) {
-                    panel.addShape(new Rectangle(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Rectangle(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                     changedPEN = false;
                     changedFILL = false;
                 }
 
                 if (shape == Shape.ELLIPSE) {
-                    panel.addShape(new Ellipse(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Ellipse(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
                     changedPEN = false;
                     changedFILL = false;
                 }
@@ -140,19 +153,22 @@ public class DrawObjectListener extends MouseAdapter{
         if (!isDot) {
             x2 = e.getX(); //Not actually x2, just the end of the click
             y2 = e.getY(); //Not actually y2, just the end of the click
+            this.x[1] = e.getX();
+            this.y[1] = e.getY();
+
             panel.setDragging(true);
             if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) { //Creates dragged shape
                 switch (shape) {
                     case LINE:
-                        drag = new Line(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, panel.getWidth(), panel.getHeight());
+                        drag = new Line(x, y, penColour, panel.getWidth(), panel.getHeight());
                         panel.dragLine(drag);
                         break;
                     case RECTANGLE:
-                        drag = new Rectangle(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, fillColour, fill, panel.getWidth(), panel.getHeight());
+                        drag = new Rectangle(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight());
                         panel.dragLine(drag);
                         break;
                     case ELLIPSE:
-                        drag = new Ellipse(x1/(int)panel.getZoomFactor(), y1/(int)panel.getZoomFactor(), x2/(int)panel.getZoomFactor(), y2/(int)panel.getZoomFactor(), penColour, fillColour, fill, panel.getWidth(), panel.getHeight());
+                        drag = new Ellipse(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight());
                         panel.dragLine(drag);
                         break;
                     case POLYGON:

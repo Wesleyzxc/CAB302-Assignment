@@ -1,6 +1,8 @@
 package MyGUI;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.filechooser.FileSystemView;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -19,6 +21,18 @@ public class SaveAction implements ActionListener {
     }
     @Override
     public void actionPerformed (ActionEvent e)  {
+        String filename = "";
+        JFileChooser jfc = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+        jfc.setDialogTitle("Choose a directory to save your file: ");
+        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+
+        int returnValue = jfc.showSaveDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            if (jfc.getSelectedFile().isDirectory()) {
+                filename = jfc.getSelectedFile().toString();
+            }
+        }
+
         VEC = panel.getAllVEC();
 
         try {
@@ -37,20 +51,26 @@ public class SaveAction implements ActionListener {
             System.out.println("failed to save file");
         }
 
-        //BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-        //Graphics2D cg = bImg.createGraphics();
-        //panel.paintAll(cg);
+        panel.setSize(new Dimension(4096,4096));
+        System.out.println(panel.getWidth());
+        BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
+        java.util.List<AllShapes> history = new LinkedList<>();
 
-        //save as png
-        /*try {
-            if (ImageIO.write(bImg, "png", new File("./output_image.png")))
+
+        Graphics2D cg = bImg.createGraphics();
+        panel.paintAll(cg);
+
+        //Save as bmp
+        try {
+            System.out.println(filename);
+            if (ImageIO.write(bImg, "bmp", new File(filename + "/output.bmp")))
             {
                 System.out.println("-- saved");
             }
         } catch (IOException a) {
             // TODO Auto-generated catch block
             a.printStackTrace();
-        }*/
+        }
 
 
     }

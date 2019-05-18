@@ -2,52 +2,43 @@ package MyGUI;
 
 import java.awt.*;
 
-public class Ellipse extends AllShapes{ //maybe subclass of line?
-    private int x1,y1,x2,y2;
-    private Color color;
-    private Color fillColor;
-    private boolean toggleFill = false;
+public class Ellipse extends AllShapes{
+
+    private boolean toggleFill;
     private float hratio1, wratio1, hratio2, wratio2;
 
-    public Ellipse(int x1, int y1, int x2, int y2, Color color, Color fillColor, boolean toggleFill, int pwidth, int pheight) {
-        super(color, fillColor);
-        if (x1 < x2) {
-            this.x1 = x1;
-            this.x2 = x2;
-        } else {
-            this.x1 = x2;
-            this.x2 = x1;
+    Ellipse(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill, int pwidth, int pheight) {
+        super(x, y, color, fillColor);
+        if (x[0] > x[1]) {
+            int[] replaced = {x[1], x[0]};
+            super.setX(replaced);
         }
-        if (y1 < y2) {
-            this.y1 = y1;
-            this.y2 = y2;
-        } else {
-            this.y1 = y2;
-            this.y2 = y1;
-        }
-        this.wratio1 = x1/(float)pwidth;
-        this.wratio2 = x2/(float)pwidth;
-        this.hratio1 = y1/(float)pheight;
-        this.hratio2 = y2/(float)pheight;
-        this.color = color;
-        this.fillColor = fillColor;
+        if (y[0] > y[1]) {
+            int[] replaced = {y[1], y[0]};
+            super.setY(replaced);
+    }
+        this.wratio1 = super.getX()[0]/(float)pwidth;
+        this.wratio2 = super.getX()[1]/(float)pwidth;
+        this.hratio1 = super.getY()[0]/(float)pheight;
+        this.hratio2 = super.getY()[1]/(float)pheight;
         this.toggleFill = toggleFill;
     }
 
     public void draw(Graphics g, int currentWidth, int currentHeight){
         if (!toggleFill) {
-            g.setColor(color);
+            g.setColor(super.getColour());
             g.drawOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
 
         } else {
-            g.setColor(fillColor);
+            g.setColor(super.getFillColour());
             g.fillOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
-            g.setColor(color);
+            g.setColor(super.getColour());
             g.drawOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
         }
     }
 
+    @Override
     public String getVEC(){
-        return String.format("ELLIPSE %.2f %.2f %.2f %.2f",x1/screenWidth,y1/screenHeight,x2/screenWidth,y2/screenHeight);
+        return String.format("ELLIPSE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2);
     }
 }

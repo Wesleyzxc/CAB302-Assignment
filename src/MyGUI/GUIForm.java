@@ -23,6 +23,7 @@ public class GUIForm{
         //Draw area
         DrawArea panel = new DrawArea();
 
+
         final JPanel container = new JPanel(new FlowLayout());
         container.add(panel, BorderLayout.CENTER);
         container.addComponentListener(new ComponentAdapter() {
@@ -40,14 +41,14 @@ public class GUIForm{
         frame.setVisible(true);
 
         // Add scroll pane to panel
-//        JScrollPane scrollPane = new JScrollPane(panel);
+        JScrollPane scrollPane = new JScrollPane(panel);
 //        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
-//        scrollPane.getViewport().addChangeListener(e -> panel.repaint());
+//        scrollPane.getViewport().addChangeListener(e -> container.repaint());
 //        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 //        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
 //        scrollPane.setSize(300,300);
 //        scrollPane.setBounds(5, 5, 50, 50);
-//        frame.add(scrollPane);
+        container.add(scrollPane);
 
         //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
@@ -100,15 +101,13 @@ public class GUIForm{
         zoomIn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panel.setZoomFactor(2*panel.getZoomFactor());
-                panel.repaint();
+
             }
         });
         zoomOut.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panel.setZoomFactor(panel.getZoomFactor()/2);
-                panel.repaint();
+
             }
         });
 
@@ -208,6 +207,8 @@ public class GUIForm{
         System.out.println(size);
         innerPanel.setPreferredSize(new Dimension(size, size));
         container.revalidate();
+        innerPanel.removeAll();
+        innerPanel.repaint();
     }
 
     public static void main(String[] args) {
