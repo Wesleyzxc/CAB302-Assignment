@@ -37,34 +37,13 @@ public class OpenAction implements ActionListener {
                     if (eachLine.contains("PEN")){
                         String[] array = eachLine.split(" ");
                         StringBuilder sb = new StringBuilder(array[1]);
-                        /*
+
                         StringBuilder r = new StringBuilder();
                         StringBuilder b = new StringBuilder();
                         StringBuilder g = new StringBuilder();
-                        sb.deleteCharAt(0);
-                        r.append(sb.charAt(0));
-                        r.append(sb.charAt(1));
-                        g.append(sb.charAt(2));
-                        g.append(sb.charAt(3));
-                        b.append(sb.charAt(4));
-                        b.append(sb.charAt(5));
-                        int ri = Integer.parseInt(r.toString());
-                        int bi = Integer.parseInt(b.toString());
-                        int gi = Integer.parseInt(g.toString());
-                        System.out.print(ri);
-                        System.out.print(bi);
-                        System.out.println(gi);*/
-                        //penColor = new Color(ri,bi,gi);
-                        penColor = Color.decode(sb.toString());
-                    }
-                    if (eachLine.contains("FILL")){
-                        String[] array = eachLine.split(" ");
-                        StringBuilder sb = new StringBuilder(array[1]);
+                        //sb.deleteCharAt(0);
+                        System.out.println(sb);
                         /*
-                        StringBuilder r = new StringBuilder();
-                        StringBuilder b = new StringBuilder();
-                        StringBuilder g = new StringBuilder();
-                        sb.deleteCharAt(0);
                         r.append(sb.charAt(0));
                         r.append(sb.charAt(1));
                         g.append(sb.charAt(2));
@@ -76,8 +55,35 @@ public class OpenAction implements ActionListener {
                         int gi = Integer.parseInt(g.toString());
                         System.out.print("c");
                         System.out.print(ri);
-                        System.out.print(bi);
-                        System.out.println(gi);*/
+                        System.out.print(gi);
+                        System.out.println(bi);*/
+                        //penColor = new Color(ri,gi,bi);
+                        penColor = Color.decode(sb.toString());
+                    }
+                    if (eachLine.contains("FILL")){
+                        String[] array = eachLine.split(" ");
+                        StringBuilder sb = new StringBuilder(array[1]);
+
+                        StringBuilder r = new StringBuilder();
+                        StringBuilder b = new StringBuilder();
+                        StringBuilder g = new StringBuilder();
+                        /*
+                        sb.deleteCharAt(0);
+                        System.out.println(sb);
+                        r.append(sb.charAt(0));
+                        r.append(sb.charAt(1));
+                        g.append(sb.charAt(2));
+                        g.append(sb.charAt(3));
+                        b.append(sb.charAt(4));
+                        b.append(sb.charAt(5));
+                        int ri = Integer.parseInt(r.toString());
+                        int bi = Integer.parseInt(b.toString());
+                        int gi = Integer.parseInt(g.toString());
+                        System.out.print("c");
+                        System.out.print(ri);
+                        System.out.print(gi);
+                        System.out.println(bi);*/
+                        //fillColor = new Color(ri,gi,bi);
                         fillColor = Color.decode(sb.toString());
                     }
 

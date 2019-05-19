@@ -44,13 +44,21 @@ public class DrawArea extends JPanel {
         return VEC;
     }
 
+    public String toHexString(Color colour) throws NullPointerException {
+        String hexColour = Integer.toHexString(colour.getRGB() & 0xffffff);
+        if (hexColour.length() < 6) {
+            hexColour = "000000".substring(0, 6 - hexColour.length()) + hexColour;
+        }
+        return "#" + hexColour;
+    }
+
     void addShape(AllShapes shape, boolean changedPEN, boolean changedFILL) {
         history.add(shape);
         String final_VEC ="";
         Color pen = shape.getColour();
-        String hexPen = String.format("#%02x%02x%02x", pen.getRed(), pen.getGreen(), pen.getBlue());
+        String hexPen = toHexString(pen);
         Color fill = shape.getFillColour();
-        String hexFill = String.format("#%02x%02x%02x", fill.getRed(), fill.getGreen(), fill.getBlue());
+        String hexFill = toHexString(fill);
         String shapeVEC = shape.getVEC();
 
         if (changedPEN){
