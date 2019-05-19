@@ -36,6 +36,14 @@ public class DrawObjectListener extends MouseAdapter{
         return shape;
     }
 
+    Color getPenColour(){
+        return penColour;
+    }
+
+    Color getFillColour(){
+        return fillColour;
+    }
+
     void setPenColour(Color colour) {
         this.penColour = colour;
         changedPEN = true;
