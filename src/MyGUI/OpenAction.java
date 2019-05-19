@@ -32,32 +32,22 @@ public class OpenAction implements ActionListener {
 //                    System.out.println(eachLine);
                     if (eachLine.contains("POLYGON")){
                         String[] array = eachLine.split(" ");
-//                        System.out.println(array[1]);
+                        int x[] = new int[array.length/2]; // 8/2 = 4
+                        int y[] = new int[array.length/2]; // 8/2 = 4
+                        for (int i = 1; i < array.length; i++){
+                            if (i%2 == 1){
+                                x[i/2] = (int)(Double.parseDouble(array[i])*this.panel.getWidth());
+                            }
+                            if (i%2 == 0){
+                                y[i/2-1] = (int)(Double.parseDouble(array[i])*this.panel.getHeight());
+                            }
+
+                        }
+                        panel.addShape(new PolygonShape(x, y, penColor, fillColor, true, panel.getWidth(), panel.getHeight()), false, false);
                     }
                     if (eachLine.contains("PEN")){
                         String[] array = eachLine.split(" ");
                         StringBuilder sb = new StringBuilder(array[1]);
-
-                        StringBuilder r = new StringBuilder();
-                        StringBuilder b = new StringBuilder();
-                        StringBuilder g = new StringBuilder();
-                        //sb.deleteCharAt(0);
-                        System.out.println(sb);
-                        /*
-                        r.append(sb.charAt(0));
-                        r.append(sb.charAt(1));
-                        g.append(sb.charAt(2));
-                        g.append(sb.charAt(3));
-                        b.append(sb.charAt(4));
-                        b.append(sb.charAt(5));
-                        int ri = Integer.parseInt(r.toString());
-                        int bi = Integer.parseInt(b.toString());
-                        int gi = Integer.parseInt(g.toString());
-                        System.out.print("c");
-                        System.out.print(ri);
-                        System.out.print(gi);
-                        System.out.println(bi);*/
-                        //penColor = new Color(ri,gi,bi);
                         penColor = Color.decode(sb.toString());
                     }
                     if (eachLine.contains("FILL")){
@@ -67,26 +57,8 @@ public class OpenAction implements ActionListener {
                         StringBuilder r = new StringBuilder();
                         StringBuilder b = new StringBuilder();
                         StringBuilder g = new StringBuilder();
-                        /*
-                        sb.deleteCharAt(0);
-                        System.out.println(sb);
-                        r.append(sb.charAt(0));
-                        r.append(sb.charAt(1));
-                        g.append(sb.charAt(2));
-                        g.append(sb.charAt(3));
-                        b.append(sb.charAt(4));
-                        b.append(sb.charAt(5));
-                        int ri = Integer.parseInt(r.toString());
-                        int bi = Integer.parseInt(b.toString());
-                        int gi = Integer.parseInt(g.toString());
-                        System.out.print("c");
-                        System.out.print(ri);
-                        System.out.print(gi);
-                        System.out.println(bi);*/
-                        //fillColor = new Color(ri,gi,bi);
                         fillColor = Color.decode(sb.toString());
                     }
-
                     if (eachLine.contains("LINE")){
                         String[] array = eachLine.split(" ");
                         System.out.println("split array");
