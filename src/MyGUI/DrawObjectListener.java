@@ -15,13 +15,14 @@ public class DrawObjectListener extends MouseAdapter{
     private int[] y = new int[2];
     private Shape shape = Shape.LINE; //Default shape is line
     private Color penColour = new Color(0,0,0);
-    private boolean fill = false;
+    private boolean fill = false; //fill is on or off
     private Color fillColour = new Color(0,0,0);
     private ArrayList<Integer> polyCoordsX = new ArrayList<>();
     private ArrayList<Integer> polyCoordsY = new ArrayList<>();
     private boolean isDot = true;
     private boolean changedPEN;
     private boolean changedFILL;
+    private boolean changedTOGGLE;
 
     DrawObjectListener(DrawArea panel) {
         super();
@@ -54,7 +55,12 @@ public class DrawObjectListener extends MouseAdapter{
         changedFILL = true;
     }
 
-    void toggleFill(boolean fill){ this.fill = fill; }
+    void toggleFill(boolean fill){
+        this.fill = fill;
+        if (fill == false){
+            changedTOGGLE = true;
+        }
+    }
 
   /*  private String addVecColor(Color color){
         changedPEN = false;
@@ -81,9 +87,10 @@ public class DrawObjectListener extends MouseAdapter{
                 int[] x = {e.getX()};
                 int[] y = {e.getY()};
                 System.out.println(e.getX()); // where my mouse think it is on scale 1 canvas
-                panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                 changedPEN = false;
                 changedFILL = false;
+                changedTOGGLE = false;
             }
             else if (e.getButton() == MouseEvent.BUTTON3) {
                 panel.removeAll();
@@ -104,9 +111,10 @@ public class DrawObjectListener extends MouseAdapter{
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 if (arrX.length > 0) {
-                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     changedPEN = false;
                     changedFILL = false;
+                    changedTOGGLE = false;
                 }
                 panel.clearMarker();
                 polyCoordsX.clear();
@@ -134,20 +142,23 @@ public class DrawObjectListener extends MouseAdapter{
             if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
 
                 if (shape == Shape.LINE) {
-                    panel.addShape(new Line(x, y, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Line(x, y, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     changedPEN = false;
                     changedFILL = false;
+                    changedTOGGLE = false;
                 }
                 if (shape == Shape.RECTANGLE) {
-                    panel.addShape(new Rectangle(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Rectangle(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     changedPEN = false;
                     changedFILL = false;
+                    changedTOGGLE = false;
                 }
 
                 if (shape == Shape.ELLIPSE) {
-                    panel.addShape(new Ellipse(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL);
+                    panel.addShape(new Ellipse(x, y, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     changedPEN = false;
                     changedFILL = false;
+                    changedTOGGLE = false;
                 }
             }
         panel.setDragging(false);

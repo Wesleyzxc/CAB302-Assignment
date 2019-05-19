@@ -52,7 +52,7 @@ public class DrawArea extends JPanel {
         return "#" + hexColour;
     }
 
-    void addShape(AllShapes shape, boolean changedPEN, boolean changedFILL) {
+    void addShape(AllShapes shape, boolean changedPEN, boolean changedFILL, boolean toggleFILL) {
         history.add(shape);
         String final_VEC ="";
         Color pen = shape.getColour();
@@ -69,6 +69,7 @@ public class DrawArea extends JPanel {
             changedFILL = false;
             final_VEC = final_VEC.concat("FILL " + hexFill + ",");
         }
+
         final_VEC = final_VEC.concat(shapeVEC);
         VEC.add(final_VEC); //parameter - true if color changed
         System.out.println(VEC);
