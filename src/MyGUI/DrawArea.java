@@ -69,6 +69,10 @@ public class DrawArea extends JPanel {
             changedFILL = false;
             final_VEC = final_VEC.concat("FILL " + hexFill + ",");
         }
+        if (toggleFILL){
+            toggleFILL = false;
+            final_VEC = final_VEC.concat("FILL OFF" + ",");
+        }
 
         final_VEC = final_VEC.concat(shapeVEC);
         VEC.add(final_VEC); //parameter - true if color changed

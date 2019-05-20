@@ -56,10 +56,10 @@ public class DrawObjectListener extends MouseAdapter{
     }
 
     void toggleFill(boolean fill){
-        this.fill = fill;
-        if (fill == false){
+        if (this.fill == true){
             changedTOGGLE = true;
         }
+        this.fill = fill;
     }
 
   /*  private String addVecColor(Color color){
