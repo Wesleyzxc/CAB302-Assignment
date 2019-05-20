@@ -8,6 +8,8 @@ import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
 
 public class GUIForm{
 
@@ -80,6 +82,27 @@ public class GUIForm{
         MenuBar.add(file);
         MenuBar.add(help);
 
+        //History support
+        JMenu historyButton = new JMenu("History");
+        historyButton.addMenuListener(new MenuListener() {
+            @Override
+            public void menuSelected(MenuEvent arg0) {
+                for (Object s :panel.getHistory()){
+                    //System.out.println(panel.getHistory().size() + " shapes");
+                    historyButton.add(new JButton(s.toString()));
+                }
+            }
+
+            @Override
+            public void menuDeselected(MenuEvent arg0) {
+            }
+
+            @Override
+            public void menuCanceled(MenuEvent arg0) {
+            }
+        });
+        MenuBar.add(historyButton);
+
         //JToolbar
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
@@ -91,7 +114,6 @@ public class GUIForm{
         JButton fillColourButton = new JButton("Fill colour");
         JButton clearFillButton = new JButton("Fill off");
         JButton undoButton = new JButton("Undo");
-        JButton historyButton = new JButton("History");
 
         // Bottom toolbar for zoom
         JToolBar btmToolbar = new JToolBar();
@@ -125,7 +147,7 @@ public class GUIForm{
         panel.addMouseMotionListener(handler);
 
         undoButton.addActionListener(new UndoAction(panel));
-        historyButton.addActionListener(new HistoryAction(panel));
+
         // Ctrl + Z shortcut
 
 
@@ -142,7 +164,7 @@ public class GUIForm{
         toolbar.add(fillColourButton, BorderLayout.EAST);
         toolbar.add(clearFillButton);
         toolbar.add(undoButton);
-        toolbar.add(historyButton);
+
         penColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
