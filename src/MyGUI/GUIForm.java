@@ -91,6 +91,7 @@ public class GUIForm{
         JButton fillColourButton = new JButton("Fill colour");
         JButton clearFillButton = new JButton("Fill off");
         JButton undoButton = new JButton("Undo");
+        JButton historyButton = new JButton("History");
 
         // Bottom toolbar for zoom
         JToolBar btmToolbar = new JToolBar();
@@ -124,7 +125,9 @@ public class GUIForm{
         panel.addMouseMotionListener(handler);
 
         undoButton.addActionListener(new UndoAction(panel));
+        historyButton.addActionListener(new HistoryAction(panel));
         // Ctrl + Z shortcut
+
 
 
 
@@ -139,6 +142,7 @@ public class GUIForm{
         toolbar.add(fillColourButton, BorderLayout.EAST);
         toolbar.add(clearFillButton);
         toolbar.add(undoButton);
+        toolbar.add(historyButton);
         penColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

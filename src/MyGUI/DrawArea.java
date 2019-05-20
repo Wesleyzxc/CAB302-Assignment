@@ -23,14 +23,26 @@ public class DrawArea extends JPanel {
         this.history = history;
     }
 
-    private List<AllShapes> history = new LinkedList<>();
+    private List<AllShapes> history = new LinkedList<>(); //main history
+
+    public List<AllShapes> getPreviousHistory() {
+        return previousHistory;
+    }
+
+    public void clearHistory() {
+        history.clear();
+    }
+    public void setPreviousHistory(List<AllShapes> previousHistory) {
+        this.previousHistory = previousHistory;
+    }
+
+    private List<AllShapes> previousHistory = new LinkedList<>();
     private List<String> VEC = new LinkedList<>();
     private AllShapes drag;
 
     public boolean isDragging() {
         return dragging;
     }
-
 
 
     void setDragging(boolean dragging) {
