@@ -46,7 +46,7 @@ public class OpenAction implements ActionListener {
                                 y[i/2-1] = (int)(Double.parseDouble(array[i])*this.panel.getHeight());
                             }
                         }
-                        panel.addShape(new PolygonShape(x, y, penColor, fillColor, true, panel.getWidth(), panel.getHeight()), false, false, changedTOGGLE);
+                        panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     }
                     if (eachLine.contains("PEN")){
                         String[] array = eachLine.split(" ");
@@ -54,7 +54,7 @@ public class OpenAction implements ActionListener {
                         penColor = Color.decode(sb.toString());
                         changedPEN = true;
                     }
-                    if (eachLine.contains("FILL")){
+                    if (eachLine.contains("FILL") && !eachLine.contains("OFF")){
                         String[] array = eachLine.split(" ");
                         StringBuilder sb = new StringBuilder(array[1]);
 
@@ -62,26 +62,43 @@ public class OpenAction implements ActionListener {
                         StringBuilder b = new StringBuilder();
                         StringBuilder g = new StringBuilder();
                         fillColor = Color.decode(sb.toString());
-                        changedFILL = true;
+                        changedFILL = false;
+                        changedPEN = false;
+                        changedTOGGLE = false;
+                        toggleFill = true;
+                    }
+                    if (eachLine.contains("FILL OFF")){
+                        String[] array = eachLine.split(" ");
+                        changedTOGGLE = true;
+                        toggleFill = false;
                     }
                     if (eachLine.contains("LINE")){
                         String[] array = eachLine.split(" ");
                         System.out.println("split array");
                         int[] x = {(int)(Double.parseDouble(array[1])*this.panel.getWidth()), (int)(Double.parseDouble(array[3])*this.panel.getWidth())};
                         int[] y = {(int)(Double.parseDouble(array[2])*this.panel.getWidth()), (int)(Double.parseDouble(array[4])*this.panel.getWidth())};
-                        panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), false, false, changedTOGGLE);
+                        panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                        changedFILL = false;
+                        changedPEN = false;
+                        changedTOGGLE = false;
                     } else if (eachLine.contains("RECTANGLE")){
                         String[] array = eachLine.split(" ");
                         System.out.println("split array");
                         int[] x = {(int)(Double.parseDouble(array[1])*this.panel.getWidth()), (int)(Double.parseDouble(array[3])*this.panel.getWidth())};
                         int[] y = {(int)(Double.parseDouble(array[2])*this.panel.getWidth()), (int)(Double.parseDouble(array[4])*this.panel.getWidth())};
-                        panel.addShape(new Rectangle(x, y, penColor, fillColor, true, panel.getWidth(), panel.getHeight()), false, false, changedTOGGLE);
+                        panel.addShape(new Rectangle(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                        changedFILL = false;
+                        changedPEN = false;
+                        changedTOGGLE = false;
                     } else if (eachLine.contains("ELLIPSE")){
                         String[] array = eachLine.split(" ");
                         System.out.println("split array");
                         int[] x = {(int)(Double.parseDouble(array[1])*this.panel.getWidth()), (int)(Double.parseDouble(array[3])*this.panel.getWidth())};
                         int[] y = {(int)(Double.parseDouble(array[2])*this.panel.getWidth()), (int)(Double.parseDouble(array[4])*this.panel.getWidth())};
-                        panel.addShape(new Ellipse(x, y, penColor, fillColor, true, panel.getWidth(), panel.getHeight()), false, false, changedTOGGLE);
+                        panel.addShape(new Ellipse(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                        changedFILL = false;
+                        changedPEN = false;
+                        changedTOGGLE = false;
                     }
 
 
