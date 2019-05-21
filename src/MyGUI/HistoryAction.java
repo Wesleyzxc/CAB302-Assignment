@@ -32,6 +32,7 @@ public class HistoryAction implements ActionListener {
         panel.setHistory(history);
         System.out.println(history);
         panel.repaint();
+        //VEC not in sync
     }
 
 
