@@ -13,7 +13,6 @@ public abstract class AllShapes {
 
     Color getFillColour(){ return fillColour; }
 
-
     int[] getX() {
         return x;
     }
@@ -30,17 +29,25 @@ public abstract class AllShapes {
         this.y = y;
     }
 
-
     // java - get screen size using the Toolkit class
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     float screenHeight = screenSize.height;
     float screenWidth = screenSize.width;
+
+    /**
+     * Abstract parent class which accepts an array of coordinates x and y, colour of pen in Color and fillColour in Color
+     *
+     * @param x array of x coordinates which will be plotted
+     * @param y array of y coordinates which will be plotted
+     * @param colour pen colour which is a Color class
+     * @param fillColour fill colour which is a Color class
+     *
+     **/
     AllShapes(int[] x, int[] y, Color colour, Color fillColour){
         this.x = x;
         this.y = y;
         this.colour = colour;
         this.fillColour = fillColour;
-
     }
 
     public boolean isVisible() {
