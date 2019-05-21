@@ -40,6 +40,10 @@ public class GUIForm{
         JMenuBar MenuBar = new JMenuBar();
 
         JMenu help = new JMenu("Help");
+        JMenuItem about = new JMenuItem("About");
+        about.addActionListener(new AboutAction(about));
+        help.add(about);
+
         JMenu file = new JMenu("File");
         // Open menu bar
         JMenuItem open = new JMenuItem("Open File");
@@ -74,7 +78,6 @@ public class GUIForm{
                 historyButton.removeAll();
                 int counter = 1;
                 for (AllShapes shape :panel.getHistory()){
-                    //System.out.println(panel.getHistory().size() + " shapes");
                     JMenuItem revertItem = new JMenuItem(shape.toString());
                     revertItem.setName(String.valueOf(counter));
                     historyButton.add(revertItem);

@@ -10,12 +10,12 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class HistoryAction2 implements ActionListener {
-    String itemCount;
-    List previousHistory;
-    DrawArea panel;
+    private String itemCount;
+    private List previousHistory;
+    private DrawArea panel;
 
 
-    public HistoryAction2(DrawArea panel, String itemCount) {
+    HistoryAction2(DrawArea panel, String itemCount) {
         this.previousHistory = panel.getHistory();
         this.panel = panel;
         this.itemCount = itemCount;
@@ -23,7 +23,6 @@ public class HistoryAction2 implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println(itemCount);
         for (int i = 0; i < Integer.parseInt(itemCount); i++) {
             panel.getHistory().get(i).setVisible(true);
         }
