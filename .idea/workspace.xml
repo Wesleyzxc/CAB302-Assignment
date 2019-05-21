@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Save location added to VEC as well">
-      <change afterPath="$PROJECT_DIR$/src/MyGUI/HistoryAction2.java" afterDir="false" />
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$8.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/HistoryAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/HistoryAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/resources/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,8 +27,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="91" column="98" selection-start-line="91" selection-start-column="98" selection-end-line="91" selection-end-column="98" />
+            <state relative-caret-position="346">
+              <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,7 +56,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>changedpen</find>
       <find>setpen</find>
       <find>setp</find>
       <find>changed</find>
@@ -91,6 +85,7 @@
       <find>drawob</find>
       <find>handler</find>
       <find>undo</find>
+      <find>system</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -165,7 +160,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558480943109" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558481192934" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -381,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558221128021</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="History support working back and forth">
+      <created>1558481007911</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1558481007911</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -441,7 +443,8 @@
     <MESSAGE value="Zoom button works with correct zoomed coordinates, but commented out scroll" />
     <MESSAGE value="Refactored to match parent class" />
     <MESSAGE value="Save location added to VEC as well" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save location added to VEC as well" />
+    <MESSAGE value="History support working back and forth" />
+    <option name="LAST_COMMIT_MESSAGE" value="History support working back and forth" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -595,8 +598,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="91" column="98" selection-start-line="91" selection-start-column="98" selection-end-line="91" selection-end-column="98" />
+        <state relative-caret-position="346">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

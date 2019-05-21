@@ -20,7 +20,6 @@ public class GUIForm{
         //Draw area
         DrawArea panel = new DrawArea();
 
-
         final JPanel container = new JPanel(new FlowLayout());
         container.add(panel, BorderLayout.CENTER);
         container.addComponentListener(new ComponentAdapter() {
@@ -36,16 +35,6 @@ public class GUIForm{
         frame.setLocation(new Point(300, 300));
         frame.pack();
         frame.setVisible(true);
-
-        // Add scroll pane to panel
-        JScrollPane scrollPane = new JScrollPane(panel);
-//        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
-//        scrollPane.getViewport().addChangeListener(e -> container.repaint());
-//        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-//        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-//        scrollPane.setSize(300,300);
-//        scrollPane.setBounds(5, 5, 50, 50);
-        container.add(scrollPane);
 
         //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
@@ -92,16 +81,15 @@ public class GUIForm{
                     revertItem.addActionListener(new HistoryAction2(panel, revertItem.getName()));
                     counter++;
                 }
-
+            }
+            @Override
+            public void menuDeselected(MenuEvent e) {
             }
 
             @Override
-            public void menuDeselected(MenuEvent arg0) {
+            public void menuCanceled(MenuEvent e) {
             }
 
-            @Override
-            public void menuCanceled(MenuEvent arg0) {
-            }
         });
         MenuBar.add(historyButton);
 
@@ -126,13 +114,6 @@ public class GUIForm{
 
         undoButton.addActionListener(new UndoAction(panel));
 
-        // Ctrl + Z shortcut
-
-
-
-
-
-
         //Add shapes to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
@@ -149,7 +130,6 @@ public class GUIForm{
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
                 handler.setPenColour(colour.getColor());
-                //System.out.println(colour.getColor());
             }
         });
         fillColourButton.addMouseListener(new MouseAdapter() {
@@ -178,19 +158,15 @@ public class GUIForm{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == lineButton){
                     handler.chooseShape(DrawObjectListener.Shape.LINE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == rectButton){
                     handler.chooseShape(DrawObjectListener.Shape.RECTANGLE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == ellipseButton){
                     handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == polyButton){
                     handler.chooseShape(DrawObjectListener.Shape.POLYGON);
-                    System.out.println(handler.getShape());
                 }
 
             }
@@ -208,7 +184,6 @@ public class GUIForm{
         int w = container.getWidth();
         int h = container.getHeight();
         int size =  Math.min(w, h);
-        System.out.println(size);
         innerPanel.setPreferredSize(new Dimension(size, size));
         container.revalidate();
         innerPanel.removeAll();
