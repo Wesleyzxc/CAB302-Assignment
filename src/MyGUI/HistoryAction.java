@@ -9,35 +9,31 @@ import java.awt.event.ActionEvent;
 import java.util.LinkedList;
 import java.util.List;
 
-public class HistoryAction implements MenuListener {
-    List history = new LinkedList();
+public class HistoryAction implements ActionListener {
+    List<AllShapes> history = new LinkedList();
     List previousHistory;
     DrawArea panel;
-    public HistoryAction(MenuEvent e, DrawArea panel){
+    Object shape;
+
+    public HistoryAction(DrawArea panel, AllShapes shape){
         this.previousHistory = panel.getHistory();
         this.panel = panel;
-        for (Object s :panel.getHistory()){
-            System.out.println("a");
-            //historyButton.add(new JButton((String)s));
+        this.shape = shape;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        /*for (AllShapes s :panel.getHistory()){
+            history.add(s);
+            if (s == shape){
+                break;
+            }
         }
-    }
-    @Override
-    public void menuSelected(MenuEvent e) {
-        System.out.println("menuSelected");
-
+        panel.setHistory(history);*/
+            System.out.println(shape);
     }
 
-    @Override
-    public void menuDeselected(MenuEvent e) {
-        System.out.println("menuDeselected");
 
-    }
-
-    @Override
-    public void menuCanceled(MenuEvent e) {
-        System.out.println("menuCanceled");
-
-    }
         /*
         int counter = 0;
         //panel.clearHistory();

@@ -87,9 +87,12 @@ public class GUIForm{
         historyButton.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent arg0) {
-                for (Object s :panel.getHistory()){
+                historyButton.removeAll();
+                for (AllShapes shape :panel.getHistory()){
                     //System.out.println(panel.getHistory().size() + " shapes");
-                    historyButton.add(new JButton(s.toString()));
+                    JButton revertButton = new JButton(shape.toString());
+                    historyButton.add(revertButton);
+                    revertButton.addActionListener( new HistoryAction(panel,shape));
                 }
             }
 
