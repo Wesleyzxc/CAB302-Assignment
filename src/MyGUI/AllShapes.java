@@ -7,6 +7,7 @@ public abstract class AllShapes {
     private Color fillColour;
     private int[] x;
     private int[] y;
+    private boolean visible = true;
 
     Color getColour(){ return colour; }
 
@@ -42,6 +43,13 @@ public abstract class AllShapes {
 
     }
 
+    public boolean isVisible() {
+        return visible;
+    }
+
+    public void setVisible(boolean visible) {
+        this.visible = visible;
+    }
 
     void draw(Graphics g, int newWidth, int newHeight){}
     String getVEC(){return "";}

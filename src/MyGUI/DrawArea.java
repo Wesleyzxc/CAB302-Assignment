@@ -124,7 +124,7 @@ public class DrawArea extends JPanel {
         super.paintComponent(g);
 
         for (AllShapes eachShape: history){
-            eachShape.draw(g, this.getWidth(), this.getHeight());
+            if (eachShape.isVisible()) eachShape.draw(g, this.getWidth(), this.getHeight());
         }
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g, this.getWidth(), this.getHeight());

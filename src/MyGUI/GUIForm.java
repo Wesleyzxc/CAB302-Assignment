@@ -1,13 +1,8 @@
 package MyGUI;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import java.io.IOException;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
@@ -88,12 +83,16 @@ public class GUIForm{
             @Override
             public void menuSelected(MenuEvent arg0) {
                 historyButton.removeAll();
+                int counter = 1;
                 for (AllShapes shape :panel.getHistory()){
                     //System.out.println(panel.getHistory().size() + " shapes");
-                    JButton revertButton = new JButton(shape.toString());
-                    historyButton.add(revertButton);
-                    revertButton.addActionListener( new HistoryAction(panel,shape));
+                    JMenuItem revertItem = new JMenuItem(shape.toString());
+                    revertItem.setName(String.valueOf(counter));
+                    historyButton.add(revertItem);
+                    revertItem.addActionListener(new HistoryAction2(panel, revertItem.getName()));
+                    counter++;
                 }
+
             }
 
             @Override
@@ -117,30 +116,6 @@ public class GUIForm{
         JButton fillColourButton = new JButton("Fill colour");
         JButton clearFillButton = new JButton("Fill off");
         JButton undoButton = new JButton("Undo");
-
-        // Bottom toolbar for zoom
-        JToolBar btmToolbar = new JToolBar();
-        JButton zoomIn = new JButton("+");
-        JButton zoomOut = new JButton("-");
-        btmToolbar.add(zoomIn);
-        btmToolbar.add(zoomOut);
-        zoomIn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        zoomOut.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-        frame.add(btmToolbar, BorderLayout.SOUTH);
-
-
-
 
         //Create DrawObjectListener
         DrawObjectListener handler = new DrawObjectListener(panel);

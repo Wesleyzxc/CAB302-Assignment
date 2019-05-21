@@ -16,7 +16,7 @@ public class Ellipse extends AllShapes{
         if (y[0] > y[1]) {
             int[] replaced = {y[1], y[0]};
             super.setY(replaced);
-    }
+        }
         this.wratio1 = super.getX()[0]/(float)pwidth;
         this.wratio2 = super.getX()[1]/(float)pwidth;
         this.hratio1 = super.getY()[0]/(float)pheight;
