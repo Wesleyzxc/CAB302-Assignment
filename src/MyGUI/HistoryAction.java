@@ -23,14 +23,15 @@ public class HistoryAction implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        /*for (AllShapes s :panel.getHistory()){
+        for (AllShapes s :panel.getHistory()){
             history.add(s);
             if (s == shape){
                 break;
             }
         }
-        panel.setHistory(history);*/
-            System.out.println(shape);
+        panel.setHistory(history);
+        System.out.println(history);
+        panel.repaint();
     }
 
 
