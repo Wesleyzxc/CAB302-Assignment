@@ -20,7 +20,11 @@ public class OpenAction implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         int dialogButton = JOptionPane.YES_NO_OPTION;
-        int dialogResult = JOptionPane.showConfirmDialog(null, "Opening a new drawing will overwrite the current drawing, continue?", "Warning", dialogButton);
+        int dialogResult;
+        if (panel.getHistory().size() != 0) {
+            dialogResult = JOptionPane.showConfirmDialog(null, "Opening a new drawing will overwrite the current drawing, continue?", "Warning", dialogButton);
+        }
+        else { dialogResult = JOptionPane.YES_OPTION;}
         if (dialogResult == JOptionPane.YES_OPTION) {
             final JFileChooser fileChooser = new JFileChooser();
             int returnVal = fileChooser.showOpenDialog(fileChooser);
