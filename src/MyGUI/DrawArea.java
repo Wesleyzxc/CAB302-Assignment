@@ -42,7 +42,7 @@ public class DrawArea extends JPanel {
         history.clear();
     }
 
-    private List<String> getAllVEC() {
+    public List<String> getAllVEC() {
         return VEC;
     }
 
