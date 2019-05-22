@@ -76,9 +76,11 @@ public class GUIForm{
             @Override
             public void menuSelected(MenuEvent arg0) {
                 historyButton.removeAll();
+                java.util.List<String> VEC  = panel.getAllVEC();
                 int counter = 1;
-                for (AllShapes shape :panel.getHistory()){
-                    JMenuItem revertItem = new JMenuItem(shape.toString());
+                for(String str: VEC) {
+                    String[] s = str.split(",");
+                    JMenuItem revertItem = new JMenuItem(s[0]);
                     revertItem.setName(String.valueOf(counter));
                     historyButton.add(revertItem);
                     revertItem.addActionListener(new HistoryAction2(panel, revertItem.getName()));
