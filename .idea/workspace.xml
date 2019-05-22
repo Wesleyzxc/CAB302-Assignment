@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/SaveAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/SaveAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/SaveAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/SaveAction.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,16 +48,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
+            <state relative-caret-position="763">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="158">
@@ -209,7 +209,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558501244140" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558501334856" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
@@ -456,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1558482885496</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Open file wont clash with existing drawing but doesnt prompt user to save existing drawing">
+      <created>1558501269610</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1558501269610</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -492,7 +499,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new class DrawArea extends JPanel for drawing" />
     <MESSAGE value="Merge branch 'master' of https://github.com/Wesleyzxc/CAB302-Assignment&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/A2/MyGUI/GUIForm$1exitAction.class" />
     <MESSAGE value="Added toolbar to frame instead of panel. Have to change setcontentpane to add" />
     <MESSAGE value="Added colour picker that does nothing" />
@@ -517,7 +523,8 @@
     <MESSAGE value="Removed useless code" />
     <MESSAGE value="Added &quot;about&quot; random message" />
     <MESSAGE value="Semi documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Semi documentation" />
+    <MESSAGE value="Open file wont clash with existing drawing but doesnt prompt user to save existing drawing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Open file wont clash with existing drawing but doesnt prompt user to save existing drawing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -672,17 +679,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="55" column="74" selection-start-line="55" selection-start-column="74" selection-end-line="55" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
