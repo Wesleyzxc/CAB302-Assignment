@@ -38,10 +38,12 @@ public class SaveAction implements ActionListener {
         try {
             FileWriter writer = new FileWriter(new File(filename + "/output.VEC"));
             for(String str: VEC) {
-                String[] s = str.split(",");
-                for (String str2: s){
-                writer.write(str2);
-                writer.write(System.getProperty( "line.separator" ));
+                if (panel.getHistory().get(VEC.indexOf(str)).isVisible()){
+                    String[] s = str.split(",");
+                    for (String str2: s) {
+                        writer.write(str2);
+                        writer.write(System.getProperty("line.separator"));
+                }
                 }
 
             }
