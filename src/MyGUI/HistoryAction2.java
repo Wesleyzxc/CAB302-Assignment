@@ -1,12 +1,7 @@
 package MyGUI;
 
-import javax.swing.*;
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.util.LinkedList;
 import java.util.List;
 
 public class HistoryAction2 implements ActionListener {

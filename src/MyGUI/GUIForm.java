@@ -45,6 +45,11 @@ public class GUIForm{
         help.add(about);
 
         JMenu file = new JMenu("File");
+        // New menu bar
+        JMenuItem clear = new JMenuItem("New File");
+        file.add(clear);
+        clear.addActionListener(new ClearAction(panel));
+        clear.setAccelerator(KeyStroke.getKeyStroke('N', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Open menu bar
         JMenuItem open = new JMenuItem("Open File");
         file.add(open);
