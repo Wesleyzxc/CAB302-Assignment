@@ -32,6 +32,7 @@ public class OpenAction implements ActionListener {
 //            String filePath = file.getAbsolutePath();
             try {
                 BufferedReader reader = new BufferedReader(new FileReader(file));
+                panel.clearHistory();
                 String eachLine;
                 while ((eachLine = reader.readLine()) != null) {
                     if (eachLine.contains("POLYGON")){

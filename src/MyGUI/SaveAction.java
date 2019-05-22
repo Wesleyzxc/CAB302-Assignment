@@ -47,12 +47,14 @@ public class SaveAction implements ActionListener {
                 } catch(IOException a) {
                     System.out.println("failed to save VEC");
                 }
-
+                int[] formerSize = {panel.getWidth(), panel.getHeight()};
                 panel.setSize(new Dimension(4096,4096));
                 System.out.println(panel.getWidth());
                 BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
                 Graphics2D cg = bImg.createGraphics();
-                panel.paintAll(cg);
+//                panel.paintAll(cg);
+                panel.setSize(new Dimension(formerSize[0],formerSize[1]));
+                panel.repaint();
 
                 //Save as bmp
                 try {
