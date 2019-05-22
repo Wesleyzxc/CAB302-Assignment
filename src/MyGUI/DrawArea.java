@@ -24,7 +24,6 @@ public class DrawArea extends JPanel {
     }
 
     private List<AllShapes> history = new LinkedList<>(); //main history
-    private List<AllShapes> previousHistory = new LinkedList<>();
     private List<String> VEC = new LinkedList<>();
     private AllShapes drag;
 
@@ -39,19 +38,11 @@ public class DrawArea extends JPanel {
 
     private boolean dragging;
 
-    public List<AllShapes> getPreviousHistory() {
-        return previousHistory;
-    }
-
     public void clearHistory() {
         history.clear();
     }
-    public void setPreviousHistory(List<AllShapes> previousHistory) {
-        this.previousHistory = previousHistory;
-    }
 
-
-    List<String> getAllVEC() {
+    public List<String> getAllVEC() {
         return VEC;
     }
 
@@ -124,7 +115,7 @@ public class DrawArea extends JPanel {
         super.paintComponent(g);
 
         for (AllShapes eachShape: history){
-            eachShape.draw(g, this.getWidth(), this.getHeight());
+            if (eachShape.isVisible()) eachShape.draw(g, this.getWidth(), this.getHeight());
         }
         for (Dot eachDot: polygonMarker){
             eachDot.draw(g, this.getWidth(), this.getHeight());

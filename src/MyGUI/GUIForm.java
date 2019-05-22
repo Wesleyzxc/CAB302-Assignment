@@ -1,13 +1,8 @@
 package MyGUI;
-import java.awt.image.BufferedImage;
-import javax.imageio.ImageIO;
-import java.io.IOException;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.File;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
@@ -25,7 +20,6 @@ public class GUIForm{
         //Draw area
         DrawArea panel = new DrawArea();
 
-
         final JPanel container = new JPanel(new FlowLayout());
         container.add(panel, BorderLayout.CENTER);
         container.addComponentListener(new ComponentAdapter() {
@@ -42,21 +36,20 @@ public class GUIForm{
         frame.pack();
         frame.setVisible(true);
 
-        // Add scroll pane to panel
-        JScrollPane scrollPane = new JScrollPane(panel);
-//        scrollPane.getViewport().setPreferredSize(new Dimension(400, 400));
-//        scrollPane.getViewport().addChangeListener(e -> container.repaint());
-//        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-//        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-//        scrollPane.setSize(300,300);
-//        scrollPane.setBounds(5, 5, 50, 50);
-        container.add(scrollPane);
-
         //menu bar and items
         JMenuBar MenuBar = new JMenuBar();
 
         JMenu help = new JMenu("Help");
+        JMenuItem about = new JMenuItem("About");
+        about.addActionListener(new AboutAction(about));
+        help.add(about);
+
         JMenu file = new JMenu("File");
+        // New menu bar
+        JMenuItem clear = new JMenuItem("New File");
+        file.add(clear);
+        clear.addActionListener(new ClearAction(panel));
+        clear.setAccelerator(KeyStroke.getKeyStroke('N', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Open menu bar
         JMenuItem open = new JMenuItem("Open File");
         file.add(open);
@@ -88,21 +81,25 @@ public class GUIForm{
             @Override
             public void menuSelected(MenuEvent arg0) {
                 historyButton.removeAll();
-                for (AllShapes shape :panel.getHistory()){
-                    //System.out.println(panel.getHistory().size() + " shapes");
-                    JButton revertButton = new JButton(shape.toString());
-                    historyButton.add(revertButton);
-                    revertButton.addActionListener( new HistoryAction(panel,shape));
+                java.util.List<String> VEC  = panel.getAllVEC();
+                int counter = 1;
+                for(String str: VEC) {
+                    String[] s = str.split(",");
+                    JMenuItem revertItem = new JMenuItem(s[0]);
+                    revertItem.setName(String.valueOf(counter));
+                    historyButton.add(revertItem);
+                    revertItem.addActionListener(new HistoryAction2(panel, revertItem.getName()));
+                    counter++;
                 }
             }
-
             @Override
-            public void menuDeselected(MenuEvent arg0) {
+            public void menuDeselected(MenuEvent e) {
             }
 
             @Override
-            public void menuCanceled(MenuEvent arg0) {
+            public void menuCanceled(MenuEvent e) {
             }
+
         });
         MenuBar.add(historyButton);
 
@@ -118,30 +115,6 @@ public class GUIForm{
         JButton clearFillButton = new JButton("Fill off");
         JButton undoButton = new JButton("Undo");
 
-        // Bottom toolbar for zoom
-        JToolBar btmToolbar = new JToolBar();
-        JButton zoomIn = new JButton("+");
-        JButton zoomOut = new JButton("-");
-        btmToolbar.add(zoomIn);
-        btmToolbar.add(zoomOut);
-        zoomIn.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        zoomOut.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-
-        frame.add(btmToolbar, BorderLayout.SOUTH);
-
-
-
-
         //Create DrawObjectListener
         DrawObjectListener handler = new DrawObjectListener(panel);
         // MouseClick and others require MouseListener
@@ -150,13 +123,6 @@ public class GUIForm{
         panel.addMouseMotionListener(handler);
 
         undoButton.addActionListener(new UndoAction(panel));
-
-        // Ctrl + Z shortcut
-
-
-
-
-
 
         //Add shapes to toolbar
         toolbar.add(lineButton);
@@ -174,7 +140,6 @@ public class GUIForm{
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
                 handler.setPenColour(colour.getColor());
-                //System.out.println(colour.getColor());
             }
         });
         fillColourButton.addMouseListener(new MouseAdapter() {
@@ -203,19 +168,15 @@ public class GUIForm{
             public void actionPerformed(ActionEvent e) {
                 if (e.getSource() == lineButton){
                     handler.chooseShape(DrawObjectListener.Shape.LINE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == rectButton){
                     handler.chooseShape(DrawObjectListener.Shape.RECTANGLE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == ellipseButton){
                     handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
-                    System.out.println(handler.getShape());
                 }
                 if (e.getSource() == polyButton){
                     handler.chooseShape(DrawObjectListener.Shape.POLYGON);
-                    System.out.println(handler.getShape());
                 }
 
             }
@@ -233,7 +194,6 @@ public class GUIForm{
         int w = container.getWidth();
         int h = container.getHeight();
         int size =  Math.min(w, h);
-        System.out.println(size);
         innerPanel.setPreferredSize(new Dimension(size, size));
         container.revalidate();
         innerPanel.removeAll();
