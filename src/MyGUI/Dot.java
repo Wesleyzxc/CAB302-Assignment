@@ -47,4 +47,9 @@ public class Dot extends AllShapes {
     public String getVEC(){
         return ((String.format("PLOT %.2f %.2f",wratio1,hratio1)));
     }
+
+    @Override
+    String getShape() {
+        return "Dot";
+    }
 }
