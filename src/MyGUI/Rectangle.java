@@ -49,6 +49,11 @@ public class Rectangle extends AllShapes {
         return ((String.format("RECTANGLE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2)));
     }
 
+    @Override
+    String getShape() {
+        return "Rectangle";
+    }
+
 }
 
 

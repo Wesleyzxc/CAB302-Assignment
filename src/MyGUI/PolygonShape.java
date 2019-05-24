@@ -54,4 +54,9 @@ public class PolygonShape extends AllShapes{
         }
         return (S);
     }
+
+    @Override
+    String getShape() {
+        return "Polygon";
+    }
 }

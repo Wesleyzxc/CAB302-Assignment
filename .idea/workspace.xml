@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" afterDir="false" />
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Prettify history support and added some docs">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/A2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/A2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1chooseShapeAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/HistoryAction2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/HistoryAction2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Dot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Line.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Line.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Rectangle.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +26,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
+            <state relative-caret-position="577">
+              <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+              <folding>
+                <element signature="e#1341#1342#0" expanded="true" />
+                <element signature="e#1371#1372#0" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#1575#1576#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,20 +41,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="880">
-              <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
+            <state relative-caret-position="264">
+              <caret line="86" column="71" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#724#904#0" expanded="true" />
+                <element signature="e#903#904#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            <state relative-caret-position="140">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,50 +67,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="200">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="22" selection-start-line="22" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -110,17 +79,73 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
-              <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+            <state relative-caret-position="234">
+              <caret line="157" column="29" selection-start-line="157" selection-start-column="26" selection-end-line="157" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="613">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+              <folding>
+                <element signature="e#1739#1740#0" expanded="true" />
+                <element signature="e#1767#1768#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="639">
+              <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+              <folding>
+                <element signature="e#1862#1863#0" expanded="true" />
+                <element signature="e#1890#1891#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="620">
+              <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding>
+                <element signature="e#1083#1084#0" expanded="true" />
+                <element signature="e#1111#1112#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+              <folding>
+                <element signature="e#1866#1867#0" expanded="true" />
+                <element signature="e#1894#1895#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+              <folding>
+                <element signature="e#2038#2039#0" expanded="true" />
+                <element signature="e#2066#2067#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,9 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addshape</find>
-      <find>FILL</find>
-      <find>toggle</find>
       <find>changedTOGGLE = true</find>
       <find>new col</find>
       <find>fill</find>
@@ -158,15 +180,18 @@
       <find>historyaction</find>
       <find>revertbutt</find>
       <find>drawob</find>
-      <find>handler</find>
       <find>undo</find>
       <find>system</find>
       <find>help</find>
       <find>system.ou</find>
       <find>dot</find>
-      <find>draw</find>
       <find>pai</find>
       <find>geta</find>
+      <find>draw</find>
+      <find>getcoord</find>
+      <find>setpen</find>
+      <find>addshape</find>
+      <find>handler</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -185,24 +210,24 @@
         <option value="$PROJECT_DIR$/src/MyGUI/MenuBarListeners.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ActionListeners.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ExitAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Line.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/historyAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/HistoryAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/UndoAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/AboutAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/AllShapes.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawArea.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/SaveAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/HistoryAction2.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ClearAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ClearActionTest.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/AllShapes.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Line.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Rectangle.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" />
       </list>
     </option>
@@ -218,6 +243,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -236,12 +263,17 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CAB302 Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CAB302-Assignment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="MyGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="GUIForm" type="e9f4de52:FormNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -249,7 +281,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558514605731" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558659100778" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -285,7 +317,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FunctionTesting.panelClearHistory">
+  <component name="RunManager" selected="Application.GUIForm">
     <configuration name="GUIForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MyGUI.GUIForm" />
       <module name="A2" />
@@ -317,8 +349,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FunctionTesting.panelClearHistory" />
         <item itemvalue="Application.GUIForm" />
+        <item itemvalue="JUnit.FunctionTesting.panelClearHistory" />
       </list>
     </recent_temporary>
   </component>
@@ -543,11 +575,21 @@
       <option name="project" value="LOCAL" />
       <updated>1558503132557</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Trying JUnit function">
+      <created>1558514623513</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1558514623513</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TestHistory">
     <history-entry file="FunctionTesting_panelClearHistory - 2019.05.22 at 18h 43m 03s.xml">
+      <configuration name="FunctionTesting.panelClearHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelClearHistory - 2019.05.22 at 18h 43m 28s.xml">
       <configuration name="FunctionTesting.panelClearHistory" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -564,7 +606,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32804233" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17354497" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17354497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -572,7 +614,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.26455027" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.26455027" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -584,8 +626,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added colour picker that does nothing" />
-    <MESSAGE value="Draw ellipse and minimise code" />
     <MESSAGE value="Missed out 1 break in a switch case which drew ellipse while drawing rect." />
     <MESSAGE value="Printed colour picker Color but yet to apply to shapes. PolygoneShape half done not yet added event driven" />
     <MESSAGE value="When polygon is selected, left click adds coords and right click clears (and will need to draw next time)" />
@@ -609,7 +649,9 @@
     <MESSAGE value="Open file wont clash with existing drawing but doesnt prompt user to save existing drawing" />
     <MESSAGE value="Only warning when there is drawing" />
     <MESSAGE value="New file warning" />
-    <option name="LAST_COMMIT_MESSAGE" value="New file warning" />
+    <MESSAGE value="Trying JUnit function" />
+    <MESSAGE value="Prettify history support and added some docs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prettify history support and added some docs" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -674,67 +716,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="52" column="104" selection-start-line="44" selection-end-line="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="78" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#562#563#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="60" column="56" selection-start-line="60" selection-start-column="56" selection-end-line="60" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="880">
-          <caret line="50" column="47" selection-start-line="50" selection-start-column="47" selection-end-line="50" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -743,10 +726,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction2.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -760,27 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="43" column="47" selection-start-line="43" selection-start-column="47" selection-end-line="43" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
-          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -791,10 +753,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2">
+          <caret line="52" column="8" lean-forward="true" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="53" selection-end-column="5" />
+          <folding>
+            <element signature="e#1739#1740#0" expanded="true" />
+            <element signature="e#1767#1768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="639">
+          <caret line="46" column="23" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
+          <folding>
+            <element signature="e#1862#1863#0" expanded="true" />
+            <element signature="e#1890#1891#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#1083#1084#0" expanded="true" />
+            <element signature="e#1111#1112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+          <folding>
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="53" column="25" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="25" />
+          <folding>
+            <element signature="e#2038#2039#0" expanded="true" />
+            <element signature="e#2066#2067#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="157" column="29" selection-start-line="157" selection-start-column="26" selection-end-line="157" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="86" column="32" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+          <folding>
+            <element signature="e#1341#1342#0" expanded="true" />
+            <element signature="e#1371#1372#0" expanded="true" />
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1575#1576#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="86" column="71" selection-start-line="86" selection-start-column="71" selection-end-line="86" selection-end-column="71" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#724#904#0" expanded="true" />
+            <element signature="e#903#904#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        <state relative-caret-position="200">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -28,4 +28,9 @@ public class Line extends AllShapes{
         return ((String.format("LINE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2)));
     }
 
+    @Override
+    String getShape() {
+        return "Line";
+    }
+
 }

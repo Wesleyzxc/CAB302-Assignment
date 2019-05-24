@@ -50,18 +50,40 @@ public abstract class AllShapes {
         this.fillColour = fillColour;
     }
 
+    /**
+     *  Returns visibility for history support
+     * @return true if it is displayed on canvas
+     */
     public boolean isVisible() {
         return visible;
     }
 
+    /**
+     * Sets visiblity of shape on canvas
+     * @param visible boolean to determine if it will be displayed on canvas
+     */
     public void setVisible(boolean visible) {
         this.visible = visible;
     }
 
+    /**
+     *  Draws shape based on child class based on the resized canvas
+     * @param g Graphics g
+     * @param newWidth width of current canvas used to resize shape based on canvas size
+     * @param newHeight height of current canvas used to resize shape based on canvas size
+     */
     void draw(Graphics g, int newWidth, int newHeight){}
-    String getVEC(){return "";}
-    String getCoords(){return "";}
-    String shape() { return "" ;}
 
+    /**
+     * Gets VEC in a single string
+     * @return VEC in string
+     */
+    String getVEC(){return "";}
+
+    /**
+     * Gets name of shape for history support
+     * @return Shape in string
+     */
+    String getShape(){return "";}
 
 }

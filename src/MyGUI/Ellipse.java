@@ -41,4 +41,9 @@ public class Ellipse extends AllShapes{
     public String getVEC(){
         return String.format("ELLIPSE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2);
     }
+
+    @Override
+    String getShape() {
+        return "Ellipse";
+    }
 }

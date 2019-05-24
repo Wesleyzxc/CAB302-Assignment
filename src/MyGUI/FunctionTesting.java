@@ -19,4 +19,8 @@ class FunctionTesting {
         assertEquals(panel.getHistory(), panel2.getHistory());
     }
 
+
+
+
+
 }
