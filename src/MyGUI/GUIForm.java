@@ -3,6 +3,9 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
@@ -193,7 +196,7 @@ public class GUIForm{
         int w = container.getWidth();
         int h = container.getHeight();
         int size =  Math.min(w, h);
-        innerPanel.setPreferredSize(new Dimension(size, size));
+        innerPanel.setPreferredSize(new Dimension(size-10, size-10));
         container.revalidate();
         innerPanel.removeAll();
         innerPanel.repaint();
