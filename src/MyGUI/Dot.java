@@ -23,6 +23,13 @@ public class Dot extends AllShapes {
         this.diameter = diameter;
         this.wratio1 = super.getX()[0]/(float)pWidth;
         this.hratio1 = super.getY()[0]/(float)pHeight;
+
+        if (this.wratio1 >= 1){
+            this.wratio1 = 0.999f;
+        }
+        if (this.hratio1 >= 1){
+            this.hratio1 = 0.999f;
+        }
     }
 
     /**

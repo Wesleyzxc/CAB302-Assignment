@@ -31,6 +31,18 @@ public class Ellipse extends AllShapes{
         this.wratio2 = super.getX()[1]/(float)pWidth;
         this.hratio1 = super.getY()[0]/(float)pHeight;
         this.hratio2 = super.getY()[1]/(float)pHeight;
+        if (this.wratio1 >= 1){
+            this.wratio1 = 0.999f;
+        }
+        if (this.wratio2 >= 1){
+            this.wratio2 = 0.999f;
+        }
+        if (this.hratio1 >= 1){
+            this.hratio1 = 0.999f;
+        }
+        if (this.hratio2 >= 1){
+            this.hratio2 = 0.999f;
+        }
         this.toggleFill = toggleFill;
     }
 
