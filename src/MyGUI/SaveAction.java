@@ -16,6 +16,10 @@ public class SaveAction implements ActionListener {
     private DrawArea panel;
     private java.util.List<String> VEC = new LinkedList<>();
 
+    /**
+     * ActionListener for saving file
+     * @param panel
+     */
     public SaveAction(DrawArea panel) {
         this.panel = panel;
     }

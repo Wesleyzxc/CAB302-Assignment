@@ -6,6 +6,10 @@ import java.awt.event.ActionListener;
 public class UndoAction implements ActionListener {
     private DrawArea panel;
 
+    /**
+     * ActionListener for undo action
+     * @param panel
+     */
     public UndoAction(DrawArea panel) {
         this.panel = panel;
     }

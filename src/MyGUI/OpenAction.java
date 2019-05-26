@@ -13,10 +13,18 @@ public class OpenAction implements ActionListener {
     Color penColor = new Color(00,00,00);
     Color fillColor = new Color(00,00,00);
 
+    /**
+     * ActionListener for opening file
+     * @param panel
+     */
     public OpenAction(DrawArea panel) {
         this.panel = panel;
     }
 
+    /**
+     * Warns user if canvas is not empty, then loads from selected file otherwise.
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         int dialogButton = JOptionPane.YES_NO_OPTION;
