@@ -7,9 +7,18 @@ public class Rectangle extends AllShapes {
     private boolean toggleFill;
     private float hratio1, wratio1, hratio2, wratio2;
 
-
-    Rectangle(int[] x, int[] y, Color color, Color fillColor, boolean toggleFill, int pwidth, int pheight) {
-        super(x, y, color, fillColor);
+    /**
+     * Initialises a Rectangle class that saves the ratio of rectangle on canvas and scales according
+     * @param x array which stores all x coordinates
+     * @param y array which stores all y coordinates
+     * @param colour Color class which sets pen colour
+     * @param fillColour Color class which sets fill colour
+     * @param toggleFill boolean to decide whether shape is filled in
+     * @param pWidth integer of panel's width when object is instantiated
+     * @param pHeight integer of panel's height when object is instantiated
+     */
+    Rectangle(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
+        super(x, y, colour, fillColour);
 
         this.toggleFill = toggleFill;
         if (x[0] > x[1]) {
@@ -21,13 +30,19 @@ public class Rectangle extends AllShapes {
             super.setY(replaced);
 
         }
-        this.wratio1 = super.getX()[0]/(float)pwidth;
-        this.wratio2 = super.getX()[1]/(float)pwidth;
-        this.hratio1 = super.getY()[0]/(float)pheight;
-        this.hratio2 = super.getY()[1]/(float)pheight;
+        this.wratio1 = super.getX()[0]/(float)pWidth;
+        this.wratio2 = super.getX()[1]/(float)pWidth;
+        this.hratio1 = super.getY()[0]/(float)pHeight;
+        this.hratio2 = super.getY()[1]/(float)pHeight;
 
     }
 
+    /**
+     * Draws the rectangle based on the new size of panel
+     * @param g Graphics g
+     * @param currentWidth integer of new panel's width
+     * @param currentHeight integer of new panel's height
+     */
     public void draw(Graphics g, int currentWidth, int currentHeight) {
         if (!toggleFill) {
             g.setColor(super.getColour());

@@ -48,6 +48,10 @@ public class Dot extends AllShapes {
         return ((String.format("PLOT %.2f %.2f",wratio1,hratio1)));
     }
 
+    /**
+     *  Method that returns shape in string
+     * @return String value of "Dot"
+     */
     @Override
     String getShape() {
         return "Dot";

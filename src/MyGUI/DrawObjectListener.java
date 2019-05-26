@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class DrawObjectListener extends MouseAdapter{
     public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;
+    private AllShapes drag;
     private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
     private int[] x = new int[2];
     private int[] y = new int[2];
@@ -24,58 +25,51 @@ public class DrawObjectListener extends MouseAdapter{
     private boolean changedFILL;
     private boolean changedTOGGLE;
 
+    /**
+     * Saves the panel to the listener that modifies the panel (drawing canvas)
+     * @param panel panel which is attached to the listener
+     */
     DrawObjectListener(DrawArea panel) {
         super();
         this.panel = panel;
     }
 
+    /**
+     * Sets shape
+     * @param shape Shape that will be drawn
+     */
     void chooseShape(Shape shape){
         this.shape = shape;
     }
 
-    Shape getShape(){
-        return shape;
-    }
-
-    Color getPenColour(){
-        return penColour;
-    }
-
-    Color getFillColour(){
-        return fillColour;
-    }
-
+    /**
+     * Sets pen colour
+     * @param colour Color class colour
+     */
     void setPenColour(Color colour) {
         this.penColour = colour;
         changedPEN = true;
     }
 
+    /**
+     * Sets fill colour
+     * @param colour Color class colour
+     */
     void setFillColour(Color colour) {
         this.fillColour = colour;
         changedFILL = true;
     }
 
+    /**
+     * Toggle between fill or no fill
+     * @param fill boolean variable for if fill is on
+     */
     void toggleFill(boolean fill){
         if (this.fill == true){
             changedTOGGLE = true;
         }
         this.fill = fill;
     }
-
-  /*  private String addVecColor(Color color){
-        changedPEN = false;
-        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
-        return ((String.format("PEN %s",hex)));
-    }
-
-    private String addVecFillColor(Color color){
-        changedFill = false;
-        String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
-        return ((String.format("FILL %s",hex)));
-    }*/
-
-
-    private boolean dragging = false;
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -86,7 +80,6 @@ public class DrawObjectListener extends MouseAdapter{
             if (e.getButton() == MouseEvent.BUTTON1) {
                 int[] x = {e.getX()};
                 int[] y = {e.getY()};
-                System.out.println(e.getX()); // where my mouse think it is on scale 1 canvas
                 panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                 changedPEN = false;
                 changedFILL = false;
@@ -166,7 +159,6 @@ public class DrawObjectListener extends MouseAdapter{
         isDot = false;
     }
 
-    private AllShapes drag;
     @Override
     public void mouseDragged(MouseEvent e) {
         if (!isDot) {

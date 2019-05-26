@@ -1,56 +1,37 @@
 package MyGUI;
 
-import javax.swing.*;
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.util.LinkedList;
 import java.util.List;
 
 public class HistoryAction implements ActionListener {
-    List<AllShapes> history = new LinkedList();
-    List previousHistory;
-    DrawArea panel;
-    Object shape;
+    private String itemCount;
+    private List previousHistory;
+    private DrawArea panel;
 
-    public HistoryAction(DrawArea panel, AllShapes shape){
+    /**
+     * Action carried out for history support
+     * @param panel panel that the history support keeps track
+     * @param itemCount name of MenuItem of which the shape will be drawn up till.
+     */
+    HistoryAction(DrawArea panel, String itemCount) {
         this.previousHistory = panel.getHistory();
         this.panel = panel;
-        this.shape = shape;
+        this.itemCount = itemCount;
     }
 
+    /**
+     * Sets all previous instances of AllShapes to be visible and anything after to be invisible.
+     * @param e
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
-        for (AllShapes s :panel.getHistory()){
-            history.add(s);
-            if (s == shape){
-                break;
-            }
+        for (int i = 0; i < Integer.parseInt(itemCount); i++) {
+            panel.getHistory().get(i).setVisible(true);
         }
-        panel.setHistory(history);
-        System.out.println(history);
+        for (int i = Integer.parseInt(itemCount); i < panel.getHistory().size(); i++) {
+            panel.getHistory().get(i).setVisible(false);
+        }
         panel.repaint();
-        //VEC not in sync
     }
-
-
-        /*
-        int counter = 0;
-        //panel.clearHistory();
-            for (Object s: this.previousHistory) {
-                counter++;
-                if (counter <= 2){
-                    history.add(s);
-                }
-
-            }
-            panel.setHistory(history);
-            System.out.println(panel.getHistory().size());
-            panel.repaint();
-
-     */
 }
-
-

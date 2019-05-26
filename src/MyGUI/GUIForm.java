@@ -87,7 +87,7 @@ public class GUIForm{
                     JMenuItem revertItem = new JMenuItem(counter + ": " + shape.getShape());
                     revertItem.setName(String.valueOf(counter));
                     historyButton.add(revertItem);
-                    revertItem.addActionListener(new HistoryAction2(panel, revertItem.getName()));
+                    revertItem.addActionListener(new HistoryAction(panel, revertItem.getName()));
                     counter++;
                 }
             }

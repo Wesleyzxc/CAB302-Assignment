@@ -7,6 +7,10 @@ import java.awt.event.ActionListener;
 public class ClearAction implements ActionListener {
     private DrawArea panel;
 
+    /**
+     * An action listener that will accept a DrawArea as parameter clear all existing history and creates new canvas
+     * @param panel DrawArea panel that has drawings
+     */
     ClearAction(DrawArea panel) {
         this.panel = panel;
     }
