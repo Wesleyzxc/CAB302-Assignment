@@ -72,18 +72,18 @@ public abstract class AllShapes {
      * @param newWidth width of current canvas used to resize shape based on canvas size
      * @param newHeight height of current canvas used to resize shape based on canvas size
      */
-    void draw(Graphics g, int newWidth, int newHeight){}
+    abstract void draw(Graphics g, int newWidth, int newHeight);
 
     /**
      * Gets VEC in a single string
      * @return VEC in string
      */
-    String getVEC(){return "";}
+    abstract String getVEC();
 
     /**
      * Gets name of shape for history support
      * @return Shape in string
      */
-    String getShape(){return "";}
+    abstract String getShape();
 
 }
