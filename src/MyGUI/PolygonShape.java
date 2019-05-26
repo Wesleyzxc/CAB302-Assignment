@@ -32,6 +32,12 @@ public class PolygonShape extends AllShapes{
         for (int i = 0; i < x.length; i++){
             xRatio[i] = x[i] / (float)pWidth;
             yRatio[i] = y[i] / (float)pHeight;
+            if (this.xRatio[i] >= 1){
+                this.xRatio[i] = 0.999f;
+            }
+            if (this.yRatio[i] >= 1){
+                this.yRatio[i] = 0.999f;
+            }
         }
     }
 
