@@ -163,9 +163,6 @@ public class DrawArea extends JPanel {
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        // Increase width of stroke
-//        Graphics2D g2 = (Graphics2D) g;
-//        g2.setStroke(new BasicStroke(3));
 
         for (AllShapes eachShape: history){
             if (eachShape.isVisible()) eachShape.draw(g, this.getWidth(), this.getHeight());

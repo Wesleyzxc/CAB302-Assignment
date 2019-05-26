@@ -164,27 +164,8 @@ public class GUIForm{
         frame.add(toolbar, BorderLayout.NORTH);
 
 
-        //Create separate class later
-        class chooseShapeAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == lineButton){
-                    handler.chooseShape(DrawObjectListener.Shape.LINE);
-                }
-                if (e.getSource() == rectButton){
-                    handler.chooseShape(DrawObjectListener.Shape.RECTANGLE);
-                }
-                if (e.getSource() == ellipseButton){
-                    handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
-                }
-                if (e.getSource() == polyButton){
-                    handler.chooseShape(DrawObjectListener.Shape.POLYGON);
-                }
 
-            }
-        }
-
-        chooseShapeAction chooseShape = new chooseShapeAction();
+        ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
         lineButton.addActionListener(chooseShape);
         rectButton.addActionListener(chooseShape);
         ellipseButton.addActionListener(chooseShape);
