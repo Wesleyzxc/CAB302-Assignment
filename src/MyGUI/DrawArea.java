@@ -68,6 +68,14 @@ public class DrawArea extends JPanel {
     }
 
     /**
+     * Sets VEC as string
+     * @param VEC
+     */
+    public void setVEC(List<String> VEC) {
+        this.VEC = VEC;
+    }
+
+    /**
      * Converts Color class colours to hex string which is used for VEC commands
      * @param colour Color class colour which will be converted to hex
      * @return string of hex value of the converted Color
