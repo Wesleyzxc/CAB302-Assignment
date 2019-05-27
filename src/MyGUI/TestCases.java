@@ -290,5 +290,54 @@ public class TestCases {
         Graphics2D g2 = bi.createGraphics();
         rectangle.draw(g2, 10, 10);
 
+        Rectangle rectangle2 = new Rectangle(coords, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        rectangle2.draw(g2, 10, 10);
+
+    }
+
+    @Test
+    void testPolygonConstructor() {
+        panel = new DrawArea();
+        int[] coords = {0, 0};
+        int[] coords2 = {10, 10};
+
+        PolygonShape polygon = new PolygonShape(coords2, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        PolygonShape polygon2 = new PolygonShape(coords2, coords2, Color.BLACK, Color.BLACK, true, panel.getWidth(), panel.getHeight());
+
+    }
+
+    @Test
+    void testPolygonGetVEC(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+        int[] coords2 = {10, 10};
+        PolygonShape polygon = new PolygonShape(coords2, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+
+        String VEC = String.format("POLYGON %.2f %.2f %.2f %.2f", 1.0, 1.0, 1.0, 1.0);
+        System.out.println(polygon.getVEC());
+        assertEquals(polygon.getVEC(), VEC);
+    }
+
+    @Test
+    void testPolygonGetShape(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+        PolygonShape polygon = new PolygonShape(coords, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        assertEquals(polygon.getShape(), "Polygon");
+    }
+
+    @Test
+    void testPolygonDraw(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+
+        PolygonShape polygon = new PolygonShape(coords, coords, Color.BLACK, Color.BLACK, true, panel.getWidth(), panel.getHeight());
+        BufferedImage bi = new BufferedImage(10,10, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = bi.createGraphics();
+        polygon.draw(g2, 10, 10);
+        PolygonShape polygon2 = new PolygonShape(coords, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        polygon2.draw(g2, 10, 10);
+
+
     }
 }
