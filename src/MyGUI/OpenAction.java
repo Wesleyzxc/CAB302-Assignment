@@ -45,6 +45,10 @@ public class OpenAction implements ActionListener {
                 File file = fileChooser.getSelectedFile();
 //            String filePath = file.getAbsolutePath();
                 try {
+                    if (!file.toString().contains(".vec")) {
+                        System.out.println("Wrong format");
+                        JOptionPane.showMessageDialog(null, "This file type is not supported. Please select a VEC file.");
+                    }
                     BufferedReader reader = new BufferedReader(new FileReader(file));
                     panel.clearHistory();
                     String eachLine;
