@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/TestAllShapes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/TestDrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/TestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/TestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/TestCases.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,15 +19,21 @@
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testLineDraw.ic" NAME="TestCases.testLineDraw Coverage Results" MODIFIED="1558939881499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testRectangleConstructor.ic" NAME="TestCases.testRectangleConstructor Coverage Results" MODIFIED="1558940926341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testRectangleDraw.ic" NAME="TestCases.testRectangleDraw Coverage Results" MODIFIED="1558941130376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="TestCases Coverage Results" MODIFIED="1558939490196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.TestCases</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$MyGUI_in_A2.ic" NAME="MyGUI in A2 Coverage Results" MODIFIED="1558939800630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$MyGUI_in_A2.ic" NAME="MyGUI in A2 Coverage Results" MODIFIED="1558941095602" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="375" />
+    <option name="myElementSize" value="377" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -80,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="963">
-              <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+            <state relative-caret-position="-88">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -89,11 +91,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/TestCases.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2015">
-              <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+            <state relative-caret-position="489">
+              <caret line="287" column="90" selection-start-line="287" selection-start-column="90" selection-end-line="287" selection-end-column="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -137,15 +148,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="150" column="159" selection-start-line="150" selection-start-column="35" selection-end-line="150" selection-end-column="159" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -158,7 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dot</find>
       <find>pai</find>
       <find>geta</find>
       <find>draw</find>
@@ -188,6 +189,7 @@
       <find>g2</find>
       <find>getsha</find>
       <find>getvec</find>
+      <find>setx</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -278,7 +280,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558939944642" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558941128304" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -318,7 +320,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestCases.testLineDraw">
+  <component name="RunManager" selected="JUnit.TestCases.testRectangleDraw">
     <configuration name="MyGUI in A2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
@@ -333,22 +335,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="A2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyGUI.TestCases" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.TestCases" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestCases.testLineConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testLineGetShape" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -358,13 +345,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.TestCases" />
-      <option name="METHOD_NAME" value="testLineConstructor" />
+      <option name="METHOD_NAME" value="testLineGetShape" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testLineDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testRectangleDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -374,13 +361,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.TestCases" />
-      <option name="METHOD_NAME" value="testLineDraw" />
+      <option name="METHOD_NAME" value="testRectangleDraw" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestCases.testLineGetVEC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestCases.testRectangleGetShape" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -390,7 +377,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.TestCases" />
-      <option name="METHOD_NAME" value="testLineGetVEC" />
+      <option name="METHOD_NAME" value="testRectangleGetShape" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestCases.testRectangleGetVEC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="A2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyGUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MyGUI" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.TestCases" />
+      <option name="METHOD_NAME" value="testRectangleGetVEC" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -398,11 +401,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestCases.testLineDraw" />
+        <item itemvalue="JUnit.TestCases.testRectangleDraw" />
         <item itemvalue="JUnit.MyGUI in A2" />
-        <item itemvalue="JUnit.TestCases.testLineGetVEC" />
-        <item itemvalue="JUnit.TestCases.testLineConstructor" />
-        <item itemvalue="JUnit.TestCases" />
+        <item itemvalue="JUnit.TestCases.testRectangleGetShape" />
+        <item itemvalue="JUnit.TestCases.testLineGetShape" />
+        <item itemvalue="JUnit.TestCases.testRectangleGetVEC" />
       </list>
     </recent_temporary>
   </component>
@@ -711,28 +714,17 @@
       <option name="project" value="LOCAL" />
       <updated>1558936720666</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="LINE 100% done testing">
+      <created>1558939955218</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1558939955218</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCases - 2019.05.27 at 16h 43m 02s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases - 2019.05.27 at 16h 43m 27s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases - 2019.05.27 at 16h 44m 22s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases - 2019.05.27 at 16h 45m 07s.xml">
-      <configuration name="TestCases" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MyGUI_in_A2 - 2019.05.27 at 16h 46m 58s.xml">
-      <configuration name="MyGUI in A2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestCases_testLineConstructor - 2019.05.27 at 16h 48m 17s.xml">
-      <configuration name="TestCases.testLineConstructor" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TestCases_testLineConstructor - 2019.05.27 at 16h 48m 37s.xml">
       <configuration name="TestCases.testLineConstructor" configurationId="JUnit" />
     </history-entry>
@@ -744,6 +736,24 @@
     </history-entry>
     <history-entry file="TestCases_testLineDraw - 2019.05.27 at 16h 51m 38s.xml">
       <configuration name="TestCases.testLineDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testRectangleConstructor - 2019.05.27 at 17h 07m 48s.xml">
+      <configuration name="TestCases.testRectangleConstructor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testRectangleConstructor - 2019.05.27 at 17h 09m 03s.xml">
+      <configuration name="TestCases.testRectangleConstructor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testRectangleGetVEC - 2019.05.27 at 17h 10m 00s.xml">
+      <configuration name="TestCases.testRectangleGetVEC" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testLineGetShape - 2019.05.27 at 17h 10m 14s.xml">
+      <configuration name="TestCases.testLineGetShape" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestCases_testRectangleGetShape - 2019.05.27 at 17h 11m 11s.xml">
+      <configuration name="TestCases.testRectangleGetShape" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MyGUI_in_A2 - 2019.05.27 at 17h 11m 52s.xml">
+      <configuration name="MyGUI in A2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -776,11 +786,10 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32916668" />
+      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.33072916" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Undo function working with button and ctrl z, added some classes for JMenuItem" />
     <MESSAGE value="Able to draw in negative directions" />
     <MESSAGE value="Created scroll pane but no zoom function" />
     <MESSAGE value="Zoom works but the more it's zoomed the more distorted my mouse is" />
@@ -805,7 +814,8 @@
     <MESSAGE value="AllShapes all tested" />
     <MESSAGE value="Done a few more shapes but not 100% lines" />
     <MESSAGE value="Fix labels and added more tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix labels and added more tests" />
+    <MESSAGE value="LINE 100% done testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="LINE 100% done testing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -843,13 +853,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -931,13 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="963">
-          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1000,10 +996,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-88">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2015">
-          <caret line="243" lean-forward="true" selection-start-line="243" selection-end-line="243" />
+        <state relative-caret-position="489">
+          <caret line="287" column="90" selection-start-line="287" selection-start-column="90" selection-end-line="287" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -249,5 +249,46 @@ public class TestCases {
 
     }
 
+    @Test
+    void testRectangleConstructor() {
+        panel = new DrawArea();
+        int[] coords = {0, 0};
+        int[] coords2 = {10, 10};
 
+        Rectangle rectangle = new Rectangle(coords2, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        Rectangle rectangle2 = new Rectangle(coords2, coords2, Color.BLACK, Color.BLACK, true, panel.getWidth(), panel.getHeight());
+
+    }
+
+    @Test
+    void testRectangleGetVEC(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+        int[] coords2 = {10, 10};
+        Rectangle rectangle = new Rectangle(coords2, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+
+        String VEC = String.format("RECTANGLE %.2f %.2f %.2f %.2f", 1.0, 1.0, 1.0, 1.0);
+        System.out.println(rectangle.getVEC());
+        assertEquals(rectangle.getVEC(), VEC);
+    }
+
+    @Test
+    void testRectangleGetShape(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+        Rectangle rectangle = new Rectangle(coords, coords, Color.BLACK, Color.BLACK, false, panel.getWidth(), panel.getHeight());
+        assertEquals(rectangle.getShape(), "Rectangle");
+    }
+
+    @Test
+    void testRectangleDraw(){
+        panel = new DrawArea();
+        int[] coords = {1, 1};
+
+        Rectangle rectangle = new Rectangle(coords, coords, Color.BLACK, Color.BLACK, true, panel.getWidth(), panel.getHeight());
+        BufferedImage bi = new BufferedImage(10,10, BufferedImage.TYPE_INT_ARGB);
+        Graphics2D g2 = bi.createGraphics();
+        rectangle.draw(g2, 10, 10);
+
+    }
 }
