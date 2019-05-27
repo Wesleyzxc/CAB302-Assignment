@@ -17,12 +17,12 @@ class DrawAreaTest {
     void setupPanel() { panel = null; }
 
     @Test
-    public void testConstruction() {
+    void testConstruction() {
         panel = new DrawArea();
     }
 
     @Test
-    public void panelClearHistory() {
+    void panelClearHistory() {
         panel = new DrawArea();
         panel.clearHistory();
 
@@ -31,7 +31,7 @@ class DrawAreaTest {
     }
 
     @Test
-    public void panelSetHistory(){
+    void panelSetHistory(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
         List<AllShapes> history = new LinkedList<>();
@@ -42,7 +42,7 @@ class DrawAreaTest {
     }
 
     @Test
-    public void panelUndoHistory(){
+    void panelUndoHistory(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
         List<AllShapes> history = new LinkedList<>();
@@ -65,38 +65,37 @@ class DrawAreaTest {
     }
 
     @Test
-    public void panelToHex(){
+    void panelToHex(){
         panel = new DrawArea();
         String colour = panel.toHexString(Color.BLACK);
         assertEquals(colour, "#000000");
     }
 
     @Test
-    public void panelIsDragging(){
+    void panelIsDragging(){
         panel = new DrawArea();
 
-        assertEquals(panel.isDragging(), false);
+        assertFalse(panel.isDragging());
     }
 
     @Test
-    public void panelSetDragging(){
+    void panelSetDragging(){
         panel = new DrawArea();
         panel.setDragging(true);
-        assertEquals(panel.isDragging(), true);
+        assertTrue(panel.isDragging());
     }
 
     @Test
-    public void panelDragLine(){
+    void panelDragLine(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
-
         Dot dot1 = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
 
         panel.dragLine(dot1);
     }
 
     @Test
-    public void panelAddMarker(){
+    void panelAddMarker(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
         List<Dot> polygonMarker = new LinkedList<>();
@@ -108,7 +107,7 @@ class DrawAreaTest {
     }
 
     @Test
-    public void panelClearMarker(){
+    void panelClearMarker(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
         List<Dot> polygonMarker = new LinkedList<>();
@@ -120,7 +119,7 @@ class DrawAreaTest {
     }
 
     @Test
-    public void panelPaintComponent(){
+    void panelPaintComponent(){
         BufferedImage bi = new BufferedImage(10,10, BufferedImage.TYPE_INT_ARGB);
         Graphics2D g2 = bi.createGraphics();
         int[] coords = {1,2,3};
@@ -138,7 +137,7 @@ class DrawAreaTest {
     }
 
     @Test
-    public void AllShapesTest(){
+    void AllShapesTest(){
         int[] coords = {0,0,0};
         AllShapes shapes = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
         shapes.setX(coords);
@@ -146,12 +145,12 @@ class DrawAreaTest {
         shapes.setVisible(false);
         assertEquals(shapes.getColour(), Color.BLACK);
         assertEquals(shapes.getFillColour(), Color.BLACK);
-        assertEquals(shapes.isVisible(), false);
+        assertFalse(shapes.isVisible());
 
     }
 
     @Test
-    public void getDotName(){
+    void getDotName(){
         int[] coords = {0,0,0};
         Dot dot1 = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
         assertEquals(dot1.getShape(), "Dot");
