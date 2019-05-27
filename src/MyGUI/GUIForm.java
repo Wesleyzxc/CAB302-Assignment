@@ -3,6 +3,9 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
@@ -161,27 +164,8 @@ public class GUIForm{
         frame.add(toolbar, BorderLayout.NORTH);
 
 
-        //Create separate class later
-        class chooseShapeAction implements ActionListener{
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if (e.getSource() == lineButton){
-                    handler.chooseShape(DrawObjectListener.Shape.LINE);
-                }
-                if (e.getSource() == rectButton){
-                    handler.chooseShape(DrawObjectListener.Shape.RECTANGLE);
-                }
-                if (e.getSource() == ellipseButton){
-                    handler.chooseShape(DrawObjectListener.Shape.ELLIPSE);
-                }
-                if (e.getSource() == polyButton){
-                    handler.chooseShape(DrawObjectListener.Shape.POLYGON);
-                }
 
-            }
-        }
-
-        chooseShapeAction chooseShape = new chooseShapeAction();
+        ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
         lineButton.addActionListener(chooseShape);
         rectButton.addActionListener(chooseShape);
         ellipseButton.addActionListener(chooseShape);
@@ -193,7 +177,7 @@ public class GUIForm{
         int w = container.getWidth();
         int h = container.getHeight();
         int size =  Math.min(w, h);
-        innerPanel.setPreferredSize(new Dimension(size, size));
+        innerPanel.setPreferredSize(new Dimension(size-10, size-10));
         container.revalidate();
         innerPanel.removeAll();
         innerPanel.repaint();
