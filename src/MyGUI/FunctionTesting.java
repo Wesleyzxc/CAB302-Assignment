@@ -36,7 +36,7 @@ class FunctionTesting {
         List<AllShapes> history = new LinkedList<>();
         Dot dot1 = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
         history.add(dot1);
-
+        panel.setHistory(history);
         assertEquals(panel.getHistory().get(0), dot1);
     }
 
@@ -52,15 +52,38 @@ class FunctionTesting {
         VEC.add(dot1.getVEC());
         VEC.add(dot1.getVEC());
 
-        panel.setHistory(history);
+        panel.addShape(dot1, false, false, false);
+        panel.addShape(dot1, false, false, false);
         panel.setVEC(VEC);
         panel.undoHistory();
 
         assertEquals(panel.getHistory().size(), 1);
         assertEquals(panel.getAllVEC().size(), 1);
-//        System.out.println(history.size());
 
     }
+
+    @Test
+    public void panelToHex(){
+        panel = new DrawArea();
+        String colour = panel.toHexString(Color.BLACK);
+        assertEquals(colour, "#000000");
+    }
+
+    @Test
+    public void panelIsDragging(){
+        panel = new DrawArea();
+
+        assertEquals(panel.isDragging(), false);
+    }
+
+    @Test
+    public void panelSetDragging(){
+        panel = new DrawArea();
+        panel.setDragging(true);
+        assertEquals(panel.isDragging(), true);
+    }
+
+
 
 
 

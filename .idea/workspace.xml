@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="Some testing on DrawArea">
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -16,22 +13,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="FunctionTesting Coverage Results" MODIFIED="1558923407794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="FunctionTesting Coverage Results" MODIFIED="1558929819061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="244" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
+            <state relative-caret-position="841">
               <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
               <folding>
                 <element signature="e#1587#1588#0" expanded="true" />
                 <element signature="e#1627#1628#0" expanded="true" />
-                <element signature="e#2055#2056#0" expanded="true" />
-                <element signature="e#2085#2086#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -40,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="580">
               <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
             </state>
           </provider>
@@ -49,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="740">
               <caret line="37" column="33" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="33" />
             </state>
           </provider>
@@ -58,12 +56,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="509">
+              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#309#310#0" expanded="true" />
-                <element signature="e#347#348#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,7 +101,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
+            <state relative-caret-position="260">
               <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -256,7 +252,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558923498215" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558929913760" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -292,7 +288,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FunctionTesting.panelClearHistory">
+  <component name="RunManager" selected="JUnit.FunctionTesting.panelIsDragging">
     <configuration name="FunctionTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
@@ -308,7 +304,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.panelClearHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionTesting.panelIsDragging" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -318,7 +314,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="panelClearHistory" />
+      <option name="METHOD_NAME" value="panelIsDragging" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -340,6 +336,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FunctionTesting.panelToHex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="A2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="MyGUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="MyGUI" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
+      <option name="METHOD_NAME" value="panelToHex" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FunctionTesting.panelUndoHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
@@ -356,28 +368,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.testConstruction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="A2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="MyGUI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="testConstruction" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FunctionTesting.panelClearHistory" />
-        <item itemvalue="JUnit.FunctionTesting.testConstruction" />
+        <item itemvalue="JUnit.FunctionTesting.panelIsDragging" />
         <item itemvalue="JUnit.FunctionTesting" />
         <item itemvalue="JUnit.FunctionTesting.panelUndoHistory" />
+        <item itemvalue="JUnit.FunctionTesting.panelToHex" />
         <item itemvalue="JUnit.FunctionTesting.panelSetHistory" />
       </list>
     </recent_temporary>
@@ -638,39 +634,46 @@
       <option name="project" value="LOCAL" />
       <updated>1558918546801</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Some testing on DrawArea">
+      <created>1558923504078</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1558923504078</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 11m 48s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 11m 56s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 12m 29s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 12m 36s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 16m 08s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 16m 21s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 12h 16m 41s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting - 2019.05.27 at 12h 17m 05s.xml">
-      <configuration name="FunctionTesting" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FunctionTesting_testConstruction - 2019.05.27 at 12h 17m 51s.xml">
       <configuration name="FunctionTesting.testConstruction" configurationId="JUnit" />
     </history-entry>
     <history-entry file="FunctionTesting_panelClearHistory - 2019.05.27 at 12h 18m 00s.xml">
       <configuration name="FunctionTesting.panelClearHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelSetHistory - 2019.05.27 at 14h 00m 10s.xml">
+      <configuration name="FunctionTesting.panelSetHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelSetHistory - 2019.05.27 at 14h 00m 41s.xml">
+      <configuration name="FunctionTesting.panelSetHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting - 2019.05.27 at 14h 01m 05s.xml">
+      <configuration name="FunctionTesting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelToHex - 2019.05.27 at 14h 02m 17s.xml">
+      <configuration name="FunctionTesting.panelToHex" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 14h 02m 57s.xml">
+      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 14h 03m 09s.xml">
+      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting - 2019.05.27 at 14h 03m 56s.xml">
+      <configuration name="FunctionTesting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelIsDragging - 2019.05.27 at 14h 04m 57s.xml">
+      <configuration name="FunctionTesting.panelIsDragging" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -695,7 +698,6 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.26455027" />
-      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.3296875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -704,6 +706,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -826,6 +829,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="740">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -853,6 +877,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -867,58 +901,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
+        <state relative-caret-position="841">
           <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
           <folding>
             <element signature="e#1587#1588#0" expanded="true" />
             <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#2085#2086#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="509">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
           </folding>
         </state>
       </provider>
