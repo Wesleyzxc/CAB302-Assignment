@@ -152,6 +152,14 @@ public class DrawArea extends JPanel {
     }
 
     /**
+     * Gets list of markers to know number of edges
+     * @return a List of Dots
+     */
+    public List<Dot> getPolygonMarker() {
+        return polygonMarker;
+    }
+
+    /**
      * Remove the last item from the history such that it is no longer drawn.
      */
     void undoHistory() {

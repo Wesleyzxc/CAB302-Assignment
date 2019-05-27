@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -13,23 +14,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="FunctionTesting Coverage Results" MODIFIED="1558929819061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting_panelPaintComponent.ic" NAME="FunctionTesting.panelPaintComponent Coverage Results" MODIFIED="1558931581790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="FunctionTesting Coverage Results" MODIFIED="1558931610995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="244" />
+    <option name="myElementSize" value="335" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="841">
-              <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+            <state relative-caret-position="199">
+              <caret line="133" column="14" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="14" />
               <folding>
                 <element signature="e#1587#1588#0" expanded="true" />
                 <element signature="e#1627#1628#0" expanded="true" />
+                <element signature="e#4659#4660#0" expanded="true" />
+                <element signature="e#4695#4696#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,8 +62,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+            <state relative-caret-position="442">
+              <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,7 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>for</find>
       <find>.add</find>
       <find>event</find>
       <find>history</find>
@@ -170,6 +175,7 @@
       <find>undohis</find>
       <find>add</find>
       <find>vec</find>
+      <find>drag =</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -252,7 +258,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558929913760" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558931609656" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -288,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FunctionTesting.panelIsDragging">
+  <component name="RunManager" selected="JUnit.FunctionTesting">
     <configuration name="FunctionTesting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
@@ -304,7 +310,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.panelIsDragging" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionTesting.panelAddMarker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -314,13 +320,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="panelIsDragging" />
+      <option name="METHOD_NAME" value="panelAddMarker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.panelSetHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionTesting.panelClearMarker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -330,13 +336,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="panelSetHistory" />
+      <option name="METHOD_NAME" value="panelClearMarker" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.panelToHex" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionTesting.panelDragLine" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -346,13 +352,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="panelToHex" />
+      <option name="METHOD_NAME" value="panelDragLine" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FunctionTesting.panelUndoHistory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FunctionTesting.panelPaintComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -362,7 +368,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.FunctionTesting" />
-      <option name="METHOD_NAME" value="panelUndoHistory" />
+      <option name="METHOD_NAME" value="panelPaintComponent" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -370,11 +376,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FunctionTesting.panelIsDragging" />
         <item itemvalue="JUnit.FunctionTesting" />
-        <item itemvalue="JUnit.FunctionTesting.panelUndoHistory" />
-        <item itemvalue="JUnit.FunctionTesting.panelToHex" />
-        <item itemvalue="JUnit.FunctionTesting.panelSetHistory" />
+        <item itemvalue="JUnit.FunctionTesting.panelPaintComponent" />
+        <item itemvalue="JUnit.FunctionTesting.panelClearMarker" />
+        <item itemvalue="JUnit.FunctionTesting.panelAddMarker" />
+        <item itemvalue="JUnit.FunctionTesting.panelDragLine" />
       </list>
     </recent_temporary>
   </component>
@@ -641,39 +647,46 @@
       <option name="project" value="LOCAL" />
       <updated>1558923504078</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Testing on DrawArea">
+      <created>1558929929935</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1558929929935</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FunctionTesting_testConstruction - 2019.05.27 at 12h 17m 51s.xml">
-      <configuration name="FunctionTesting.testConstruction" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelClearHistory - 2019.05.27 at 12h 18m 00s.xml">
-      <configuration name="FunctionTesting.panelClearHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelSetHistory - 2019.05.27 at 14h 00m 10s.xml">
-      <configuration name="FunctionTesting.panelSetHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelSetHistory - 2019.05.27 at 14h 00m 41s.xml">
-      <configuration name="FunctionTesting.panelSetHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting - 2019.05.27 at 14h 01m 05s.xml">
-      <configuration name="FunctionTesting" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelToHex - 2019.05.27 at 14h 02m 17s.xml">
-      <configuration name="FunctionTesting.panelToHex" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 14h 02m 57s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting_panelUndoHistory - 2019.05.27 at 14h 03m 09s.xml">
-      <configuration name="FunctionTesting.panelUndoHistory" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FunctionTesting - 2019.05.27 at 14h 03m 56s.xml">
-      <configuration name="FunctionTesting" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="FunctionTesting_panelIsDragging - 2019.05.27 at 14h 04m 57s.xml">
       <configuration name="FunctionTesting.panelIsDragging" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting - 2019.05.27 at 14h 23m 55s.xml">
+      <configuration name="FunctionTesting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelDragLine - 2019.05.27 at 14h 25m 03s.xml">
+      <configuration name="FunctionTesting.panelDragLine" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelAddMarker - 2019.05.27 at 14h 27m 28s.xml">
+      <configuration name="FunctionTesting.panelAddMarker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelClearMarker - 2019.05.27 at 14h 28m 09s.xml">
+      <configuration name="FunctionTesting.panelClearMarker" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting - 2019.05.27 at 14h 28m 57s.xml">
+      <configuration name="FunctionTesting" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 29m 24s.xml">
+      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 29m 49s.xml">
+      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 30m 40s.xml">
+      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 32m 13s.xml">
+      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -689,7 +702,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3978836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -706,11 +719,10 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.3296875" />
+      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.3296875" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Polygon fill &amp; pen colour done" />
     <MESSAGE value="Open file shortcut key" />
     <MESSAGE value="removeAll function not properly working on right click" />
     <MESSAGE value="Draws on left click only" />
@@ -735,7 +747,8 @@
     <MESSAGE value="Moved the class for choosing shapes and added docs" />
     <MESSAGE value="Dialogue box for opening wrong file format" />
     <MESSAGE value="Some testing on DrawArea" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some testing on DrawArea" />
+    <MESSAGE value="Testing on DrawArea" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing on DrawArea" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -903,19 +916,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="74" column="23" selection-start-line="74" selection-start-column="23" selection-end-line="74" selection-end-column="23" />
+        <state relative-caret-position="199">
+          <caret line="133" column="14" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="14" />
           <folding>
             <element signature="e#1587#1588#0" expanded="true" />
             <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#4659#4660#0" expanded="true" />
+            <element signature="e#4695#4696#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/FunctionTesting.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        <state relative-caret-position="442">
+          <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
