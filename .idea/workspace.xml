@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="AllShapes all tested">
+    <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Dot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -17,7 +17,16 @@
     <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting_panelPaintComponent.ic" NAME="FunctionTesting.panelPaintComponent Coverage Results" MODIFIED="1558931581790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="FunctionTesting Coverage Results" MODIFIED="1558931610995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_testEllipseDraw.ic" NAME="DrawAreaTest.testEllipseDraw Coverage Results" MODIFIED="1558935470266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_testEllipse.ic" NAME="DrawAreaTest.testEllipse Coverage Results" MODIFIED="1558934526513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_testEllipseGetVEC.ic" NAME="DrawAreaTest.testEllipseGetVEC Coverage Results" MODIFIED="1558934845577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="DrawAreaTest Coverage Results" MODIFIED="1558935173046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_AllShapesTest.ic" NAME="DrawAreaTest.AllShapesTest Coverage Results" MODIFIED="1558933451281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -25,7 +34,7 @@
     </SUITE>
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="359" />
+    <option name="myElementSize" value="375" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -48,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+            <state relative-caret-position="-429">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
               <folding>
                 <element signature="e#1991#1992#0" expanded="true" />
                 <element signature="e#2019#2020#0" expanded="true" />
@@ -70,8 +79,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+            <state relative-caret-position="263">
+              <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -82,17 +112,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1540">
-              <caret line="82" column="30" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/PolygonShape.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="44" column="39" selection-start-line="44" selection-start-column="39" selection-end-line="44" selection-end-column="39" />
+            <state relative-caret-position="230">
+              <caret line="150" column="159" selection-start-line="150" selection-start-column="35" selection-end-line="150" selection-end-column="159" />
             </state>
           </provider>
         </entry>
@@ -102,18 +123,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="199">
               <caret line="36" column="23" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,10 +160,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>drawob</find>
-      <find>undo</find>
-      <find>system</find>
-      <find>help</find>
       <find>system.ou</find>
       <find>dot</find>
       <find>pai</find>
@@ -181,6 +186,10 @@
       <find>isvisib</find>
       <find>setvisi</find>
       <find>public void</find>
+      <find>new elli</find>
+      <find>paintcomp</find>
+      <find>g2</find>
+      <find>getvec</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -207,8 +216,6 @@
         <option value="$PROJECT_DIR$/src/MyGUI/HistoryAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/SaveAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/UndoAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Line.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Rectangle.java" />
@@ -218,6 +225,8 @@
         <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawArea.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" />
       </list>
     </option>
@@ -264,7 +273,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558933590018" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558935515032" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -300,7 +309,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DrawAreaTest.AllShapesTest">
+  <component name="RunManager" selected="JUnit.DrawAreaTest.testEllipseDraw">
     <configuration name="DrawAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
@@ -332,7 +341,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.getDotName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DrawAreaTest.testEllipse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -342,13 +351,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
-      <option name="METHOD_NAME" value="getDotName" />
+      <option name="METHOD_NAME" value="testEllipse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.panelClearMarker" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DrawAreaTest.testEllipseDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -358,13 +367,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
-      <option name="METHOD_NAME" value="panelClearMarker" />
+      <option name="METHOD_NAME" value="testEllipseDraw" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.panelPaintComponent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DrawAreaTest.testEllipseGetVEC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -374,7 +383,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
       <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
-      <option name="METHOD_NAME" value="panelPaintComponent" />
+      <option name="METHOD_NAME" value="testEllipseGetVEC" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -382,11 +391,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DrawAreaTest.AllShapesTest" />
-        <item itemvalue="JUnit.DrawAreaTest.getDotName" />
+        <item itemvalue="JUnit.DrawAreaTest.testEllipseDraw" />
         <item itemvalue="JUnit.DrawAreaTest" />
-        <item itemvalue="JUnit.DrawAreaTest.panelPaintComponent" />
-        <item itemvalue="JUnit.DrawAreaTest.panelClearMarker" />
+        <item itemvalue="JUnit.DrawAreaTest.testEllipseGetVEC" />
+        <item itemvalue="JUnit.DrawAreaTest.testEllipse" />
+        <item itemvalue="JUnit.DrawAreaTest.AllShapesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -674,39 +683,46 @@
       <option name="project" value="LOCAL" />
       <updated>1558933520702</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="AllShapes all tested">
+      <created>1558933594567</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1558933594567</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 32m 13s.xml">
-      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 10s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FunctionTesting_panelPaintComponent - 2019.05.27 at 14h 33m 18s.xml">
-      <configuration name="FunctionTesting.panelPaintComponent" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 42s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FunctionTesting - 2019.05.27 at 14h 33m 47s.xml">
-      <configuration name="FunctionTesting" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 54s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest - 2019.05.27 at 14h 58m 49s.xml">
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 32m 20s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DrawAreaTest - 2019.05.27 at 15h 33m 10s.xml">
       <configuration name="DrawAreaTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest_getDotName - 2019.05.27 at 14h 59m 54s.xml">
-      <configuration name="DrawAreaTest.getDotName" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 33m 47s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest_getDotName - 2019.05.27 at 15h 01m 00s.xml">
-      <configuration name="DrawAreaTest.getDotName" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 34m 30s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest_AllShapesTest - 2019.05.27 at 15h 02m 23s.xml">
-      <configuration name="DrawAreaTest.AllShapesTest" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 34m 51s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest_AllShapesTest - 2019.05.27 at 15h 03m 25s.xml">
-      <configuration name="DrawAreaTest.AllShapesTest" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 36m 08s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DrawAreaTest_AllShapesTest - 2019.05.27 at 15h 03m 35s.xml">
-      <configuration name="DrawAreaTest.AllShapesTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DrawAreaTest_AllShapesTest - 2019.05.27 at 15h 04m 29s.xml">
-      <configuration name="DrawAreaTest.AllShapesTest" configurationId="JUnit" />
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 36m 47s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -722,7 +738,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2835979" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3978836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -730,7 +746,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32910052" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.26455027" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.26455027" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -739,7 +755,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.3296875" />
+      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32916668" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
@@ -834,13 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/Rectangle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
@@ -859,16 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="580">
           <caret line="37" column="49" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -903,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1540">
-          <caret line="82" column="30" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
@@ -934,17 +926,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-          <folding>
-            <element signature="e#1991#1992#0" expanded="true" />
-            <element signature="e#2019#2020#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="963">
@@ -952,10 +933,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="150" column="159" selection-start-line="150" selection-start-column="35" selection-end-line="150" selection-end-column="159" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-429">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding>
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="146" column="18" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+        <state relative-caret-position="263">
+          <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

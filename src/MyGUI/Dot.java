@@ -12,7 +12,7 @@ public class Dot extends AllShapes {
      *
      * @param x array of x coordinates which will be plotted
      * @param y array of y coordinates which will be plotted
-     * @param colour pen colour which is a Color class
+     * @param colour pen colour which is     a Color class
      * @param pWidth width of the current panel which is used to calculate position ratio
      * @param pHeight height of the current panel which is used to calculate position ratio
      *
