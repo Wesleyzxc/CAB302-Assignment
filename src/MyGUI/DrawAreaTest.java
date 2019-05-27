@@ -9,7 +9,7 @@ import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 import java.util.List;
 
-class FunctionTesting {
+class DrawAreaTest {
     DrawArea panel;
 
     // Clear before
@@ -136,6 +136,29 @@ class FunctionTesting {
 
         panel.paintComponent(g2);
     }
+
+    @Test
+    public void AllShapesTest(){
+        int[] coords = {0,0,0};
+        AllShapes shapes = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
+        shapes.setX(coords);
+        shapes.setY(coords);
+        shapes.setVisible(false);
+        assertEquals(shapes.getColour(), Color.BLACK);
+        assertEquals(shapes.getFillColour(), Color.BLACK);
+        assertEquals(shapes.isVisible(), false);
+
+    }
+
+    @Test
+    public void getDotName(){
+        int[] coords = {0,0,0};
+        Dot dot1 = new Dot(coords, coords, 2, Color.BLACK, 2, 2);
+        assertEquals(dot1.getShape(), "Dot");
+
+    }
+
+
 
 
 

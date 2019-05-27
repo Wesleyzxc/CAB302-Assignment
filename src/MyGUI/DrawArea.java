@@ -120,8 +120,6 @@ public class DrawArea extends JPanel {
 
         final_VEC = final_VEC.concat(shapeVEC);
         VEC.add(final_VEC); //parameter - true if color changed
-        System.out.println(VEC);
-
         this.repaint();
         }
 
