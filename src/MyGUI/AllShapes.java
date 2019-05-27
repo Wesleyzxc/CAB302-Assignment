@@ -9,7 +9,7 @@ public abstract class AllShapes {
     private int[] y;
     private boolean visible = true;
 
-    Color getColour(){ return colour; }
+    public Color getColour(){ return colour; }
 
     Color getFillColour(){ return fillColour; }
 
@@ -17,7 +17,7 @@ public abstract class AllShapes {
         return x;
     }
 
-    void setX(int[] x) {
+    public void setX(int[] x) {
         this.x = x;
     }
 
@@ -25,7 +25,7 @@ public abstract class AllShapes {
         return y;
     }
 
-    void setY(int[] y) {
+    public void setY(int[] y) {
         this.y = y;
     }
 

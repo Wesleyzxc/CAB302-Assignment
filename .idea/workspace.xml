@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/MyGUI/AShapeTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/AllShapes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Dot.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Dot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/Ellipse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/AllShapes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/Dot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Dot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/ADrawAreaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/Ellipse.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,6 +25,9 @@
     <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting_panelPaintComponent.ic" NAME="FunctionTesting.panelPaintComponent Coverage Results" MODIFIED="1558931581790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$ShapeTester.ic" NAME="ShapeTester Coverage Results" MODIFIED="1558936606908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>JUnit.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_testEllipseDraw.ic" NAME="DrawAreaTest.testEllipseDraw Coverage Results" MODIFIED="1558935470266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
@@ -26,8 +37,11 @@
     <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_testEllipseGetVEC.ic" NAME="DrawAreaTest.testEllipseGetVEC Coverage Results" MODIFIED="1558934845577" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="DrawAreaTest Coverage Results" MODIFIED="1558935173046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$AShapeTester_testEllipseConstructor.ic" NAME="AShapeTester.testEllipseConstructor Coverage Results" MODIFIED="1558936414565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="ADrawAreaTest Coverage Results" MODIFIED="1558936570126" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>JUnit.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$DrawAreaTest_AllShapesTest.ic" NAME="DrawAreaTest.AllShapesTest Coverage Results" MODIFIED="1558933451281" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
@@ -41,14 +55,27 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="198" selection-start-line="198" selection-end-line="198" />
+            <state relative-caret-position="-459">
+              <caret line="151" column="7" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
               <folding>
                 <element signature="e#1587#1588#0" expanded="true" />
                 <element signature="e#1627#1628#0" expanded="true" />
                 <element signature="e#4659#4660#0" expanded="true" />
                 <element signature="e#4695#4696#0" expanded="true" />
                 <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#5949#5950#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/AShapeTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -57,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-429">
-              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            <state relative-caret-position="666">
+              <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
               <folding>
                 <element signature="e#1991#1992#0" expanded="true" />
                 <element signature="e#2019#2020#0" expanded="true" />
@@ -76,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/ADrawAreaTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+            <state relative-caret-position="-581">
+              <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,8 +118,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+            <state relative-caret-position="500">
+              <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -131,15 +158,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/Line.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/SaveAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
@@ -160,7 +178,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>system.ou</find>
       <find>dot</find>
       <find>pai</find>
       <find>geta</find>
@@ -188,8 +205,9 @@
       <find>public void</find>
       <find>new elli</find>
       <find>paintcomp</find>
-      <find>g2</find>
       <find>getvec</find>
+      <find>getsha</find>
+      <find>g2</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -225,9 +243,13 @@
         <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawArea.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/ShapeTester.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/Dot.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/DrawAreaTest.java" />
+        <option value="$PROJECT_DIR$/src/JUnit/AShapeTester.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/AShapeTester.java" />
       </list>
     </option>
   </component>
@@ -273,7 +295,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558935515032" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558936691230" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -290,11 +312,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="MyGUI" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="MyGUI" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="MyGUI" />
+      <recent name="JUnit" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="MyGUI" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -309,8 +335,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DrawAreaTest.testEllipseDraw">
-    <configuration name="DrawAreaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ShapeTester">
+    <configuration name="ShapeTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
@@ -318,71 +344,70 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
+      <option name="PACKAGE_NAME" value="JUnit" />
+      <option name="MAIN_CLASS_NAME" value="JUnit.ShapeTester" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.AllShapesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestAllShapes.testEllipseConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGUI.*" />
+          <option name="PATTERN" value="MyGUI.TestDrawArea" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
-      <option name="METHOD_NAME" value="AllShapesTest" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.TestAllShapes" />
+      <option name="METHOD_NAME" value="testEllipseConstructor" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.testEllipse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDrawArea" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGUI.*" />
+          <option name="PATTERN" value="MyGUI.TestDrawArea" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
-      <option name="METHOD_NAME" value="testEllipse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.TestDrawArea" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.testEllipseDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDrawArea.testEllipseDraw" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGUI.*" />
+          <option name="PATTERN" value="MyGUI.TestDrawArea" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.TestDrawArea" />
       <option name="METHOD_NAME" value="testEllipseDraw" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DrawAreaTest.testEllipseGetVEC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestDrawArea.testEllipseGetVEC" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="A2" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="MyGUI.*" />
+          <option name="PATTERN" value="MyGUI.TestDrawArea" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="MyGUI" />
-      <option name="MAIN_CLASS_NAME" value="MyGUI.DrawAreaTest" />
+      <option name="MAIN_CLASS_NAME" value="MyGUI.TestDrawArea" />
       <option name="METHOD_NAME" value="testEllipseGetVEC" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -391,11 +416,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DrawAreaTest.testEllipseDraw" />
-        <item itemvalue="JUnit.DrawAreaTest" />
-        <item itemvalue="JUnit.DrawAreaTest.testEllipseGetVEC" />
-        <item itemvalue="JUnit.DrawAreaTest.testEllipse" />
-        <item itemvalue="JUnit.DrawAreaTest.AllShapesTest" />
+        <item itemvalue="JUnit.ShapeTester" />
+        <item itemvalue="JUnit.TestDrawArea" />
+        <item itemvalue="JUnit.TestAllShapes.testEllipseConstructor" />
+        <item itemvalue="JUnit.TestDrawArea.testEllipseDraw" />
+        <item itemvalue="JUnit.TestDrawArea.testEllipseGetVEC" />
       </list>
     </recent_temporary>
   </component>
@@ -690,25 +715,17 @@
       <option name="project" value="LOCAL" />
       <updated>1558933594567</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Done a few more shapes but not 100% lines">
+      <created>1558935562006</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1558935562006</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 10s.xml">
-      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 42s.xml">
-      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 31m 54s.xml">
-      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 32m 20s.xml">
-      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DrawAreaTest - 2019.05.27 at 15h 33m 10s.xml">
-      <configuration name="DrawAreaTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 33m 47s.xml">
       <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
@@ -724,12 +741,26 @@
     <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 36m 47s.xml">
       <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DrawAreaTest_testEllipseDraw - 2019.05.27 at 15h 38m 07s.xml">
+      <configuration name="DrawAreaTest.testEllipseDraw" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AShapeTester_testEllipseConstructor - 2019.05.27 at 15h 53m 09s.xml">
+      <configuration name="AShapeTester.testEllipseConstructor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AShapeTester_testEllipseConstructor - 2019.05.27 at 15h 53m 51s.xml">
+      <configuration name="AShapeTester.testEllipseConstructor" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ADrawAreaTest - 2019.05.27 at 15h 56m 26s.xml">
+      <configuration name="ADrawAreaTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ShapeTester - 2019.05.27 at 15h 57m 04s.xml">
+      <configuration name="ShapeTester" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.080729164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1546875" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -755,11 +786,10 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Maven" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info active="true" anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32916668" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" visible="true" weight="0.32916668" />
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Draws on left click only" />
     <MESSAGE value="Draws in order when drag is not drawn, otherwise just dot and line messing up orders" />
     <MESSAGE value="Undo function working with button and ctrl z, added some classes for JMenuItem" />
     <MESSAGE value="Able to draw in negative directions" />
@@ -784,7 +814,8 @@
     <MESSAGE value="Testing on DrawArea" />
     <MESSAGE value="DrawArea all lines tested" />
     <MESSAGE value="AllShapes all tested" />
-    <option name="LAST_COMMIT_MESSAGE" value="AllShapes all tested" />
+    <MESSAGE value="Done a few more shapes but not 100% lines" />
+    <option name="LAST_COMMIT_MESSAGE" value="Done a few more shapes but not 100% lines" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -912,27 +943,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="198" selection-start-line="198" selection-end-line="198" />
-          <folding>
-            <element signature="e#1587#1588#0" expanded="true" />
-            <element signature="e#1627#1628#0" expanded="true" />
-            <element signature="e#4659#4660#0" expanded="true" />
-            <element signature="e#4695#4696#0" expanded="true" />
-            <element signature="e#5907#5908#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="963">
-          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/ClearAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -950,10 +960,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-459">
+          <caret line="151" column="7" selection-start-line="151" selection-start-column="7" selection-end-line="151" selection-end-column="7" />
+          <folding>
+            <element signature="e#1587#1588#0" expanded="true" />
+            <element signature="e#1627#1628#0" expanded="true" />
+            <element signature="e#4659#4660#0" expanded="true" />
+            <element signature="e#4695#4696#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#5949#5950#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="25" column="20" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/Dot.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        <state relative-caret-position="666">
+          <caret line="62" column="11" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="11" />
           <folding>
             <element signature="e#1991#1992#0" expanded="true" />
             <element signature="e#2019#2020#0" expanded="true" />
@@ -961,17 +993,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/Ellipse.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="963">
+          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawAreaTest.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/ADrawAreaTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="190" column="31" lean-forward="true" selection-start-line="190" selection-start-column="31" selection-end-line="190" selection-end-column="31" />
+        <state relative-caret-position="-581">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AShapeTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="73" column="33" selection-start-line="73" selection-start-column="33" selection-end-line="73" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

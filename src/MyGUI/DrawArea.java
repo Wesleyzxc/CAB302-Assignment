@@ -194,7 +194,7 @@ public class DrawArea extends JPanel {
     /**
      * An instance of DrawArea which sets background to white
      */
-    DrawArea() {
+    public DrawArea() {
         setBackground(Color.WHITE);
     }
 

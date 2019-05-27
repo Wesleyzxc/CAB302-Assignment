@@ -17,7 +17,7 @@ public class Dot extends AllShapes {
      * @param pHeight height of the current panel which is used to calculate position ratio
      *
      **/
-    Dot(int[] x, int[] y, int diameter, Color colour, int pWidth, int pHeight) {
+    public Dot(int[] x, int[] y, int diameter, Color colour, int pWidth, int pHeight) {
         super(x, y, colour, colour);
 
         this.diameter = diameter;
@@ -60,7 +60,7 @@ public class Dot extends AllShapes {
      * @return String value of "Dot"
      */
     @Override
-    String getShape() {
+    public String getShape() {
         return "Dot";
     }
 }

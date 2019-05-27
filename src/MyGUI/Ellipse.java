@@ -17,7 +17,7 @@ public class Ellipse extends AllShapes{
      * @param pWidth integer of panel's width when object is instantiated
      * @param pHeight integer of panel's height when object is instantiated
      */
-    Ellipse(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
+    public Ellipse(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
         super(x, y, colour, fillColour);
         if (x[0] > x[1]) {
             int[] replaced = {x[1], x[0]};
