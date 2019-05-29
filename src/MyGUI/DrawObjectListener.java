@@ -101,7 +101,6 @@ public class DrawObjectListener extends MouseAdapter{
                 panel.addMarker(new Dot(polyX, polyY, 3, penColour, panel.getWidth(), panel.getHeight()));
             }
             else if (e.getButton() == MouseEvent.BUTTON3){
-                System.out.println("Right Click");
                 int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
                 int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
                 if (arrX.length > 0) {

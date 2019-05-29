@@ -3,6 +3,7 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.LinkedList;
 import javax.swing.border.Border;
 import javax.swing.border.CompoundBorder;
 import javax.swing.border.EmptyBorder;
@@ -111,6 +112,7 @@ public class GUIForm{
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
         JButton lineButton = new JButton("Line");
+        lineButton.setEnabled(false); // initial state is line
         JButton rectButton = new JButton("Rectangle");
         JButton ellipseButton = new JButton("Ellipse");
         JButton polyButton = new JButton("Polygons");
@@ -165,22 +167,27 @@ public class GUIForm{
 //        toolbar.add(new JColorChooser());
         frame.add(toolbar, BorderLayout.NORTH);
 
-
+        // array of all buttons
+        JButton[] shapeButtons = new JButton[]{lineButton, rectButton, ellipseButton, polyButton};
 
         ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
         lineButton.addActionListener(chooseShape);
+        lineButton.addActionListener(new ButtonEnable(lineButton, shapeButtons));
         lineButton.setMnemonic(KeyEvent.VK_1);
         lineButton.setToolTipText("Alt + 1 ");
 
         rectButton.addActionListener(chooseShape);
+        rectButton.addActionListener(new ButtonEnable(rectButton, shapeButtons));
         rectButton.setMnemonic(KeyEvent.VK_2);
         rectButton.setToolTipText("Alt + 2 ");
 
         ellipseButton.addActionListener(chooseShape);
+        ellipseButton.addActionListener(new ButtonEnable(ellipseButton, shapeButtons));
         ellipseButton.setMnemonic(KeyEvent.VK_3);
         ellipseButton.setToolTipText("Alt + 3 ");
 
         polyButton.addActionListener(chooseShape);
+        polyButton.addActionListener(new ButtonEnable(polyButton, shapeButtons));
         polyButton.setMnemonic(KeyEvent.VK_4);
         polyButton.setToolTipText("<html>Alt + 4 <br> Left click to set points, right click to draw</html>");
     }
