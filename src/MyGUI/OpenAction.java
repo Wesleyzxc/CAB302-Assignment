@@ -132,6 +132,20 @@ public class OpenAction implements ActionListener {
                                     JOptionPane.showMessageDialog(null, "Ellipse has corrupted coordinates Check the commands! ");
                                     break;
                                 }
+                            } else if (eachLine.contains("PLOT")) {
+                                String[] array = eachLine.split(" ");
+                                System.out.println("split array");
+                                try {
+                                    int[] x = {(int) (Double.parseDouble(array[1]) * this.panel.getWidth())};
+                                    int[] y = {(int) (Double.parseDouble(array[2]) * this.panel.getWidth())};
+                                    panel.addShape(new Dot(x, y,10, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                                    changedFILL = false;
+                                    changedPEN = false;
+                                    changedTOGGLE = false;
+                                } catch (ArrayIndexOutOfBoundsException a){
+                                    JOptionPane.showMessageDialog(null, "Plot has corrupted coordinates Check the commands! " + eachLine);
+                                    break;
+                                }
                             } else {
                                 throw new vecException(eachLine);
                             }
