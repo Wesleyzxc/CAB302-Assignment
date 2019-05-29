@@ -17,6 +17,7 @@ public class GUIForm{
      */
     private static void createGUI() {
         // Create and set up window
+        boolean showPolyInstructions = true;
         JFrame frame = new JFrame("VEC DRAWER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -170,6 +171,7 @@ public class GUIForm{
         rectButton.addActionListener(chooseShape);
         ellipseButton.addActionListener(chooseShape);
         polyButton.addActionListener(chooseShape);
+        polyButton.setToolTipText("Left click to set points, right click to draw");
     }
 
 
