@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/OpenAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/UndoAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/UndoAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/UndoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/UndoAction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,40 +21,40 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testLineConstructor.ic" NAME="TestCases.testLineConstructor Coverage Results" MODIFIED="1558939700470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$GUIForm.ic" NAME="GUIForm Coverage Results" MODIFIED="1559092004444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testLineDraw.ic" NAME="TestCases.testLineDraw Coverage Results" MODIFIED="1558939881499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$MyGUI_in_A2.ic" NAME="MyGUI in A2 Coverage Results" MODIFIED="1558942219685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testRectangleConstructor.ic" NAME="TestCases.testRectangleConstructor Coverage Results" MODIFIED="1558940926341" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testRectangleDraw.ic" NAME="TestCases.testRectangleDraw Coverage Results" MODIFIED="1558941130376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>MyGUI.*</FILTER>
-    </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$GUIForm.ic" NAME="GUIForm Coverage Results" MODIFIED="1559092004444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>MyGUI.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_initialiseAllListeners.ic" NAME="TestCases.initialiseAllListeners Coverage Results" MODIFIED="1559092863922" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="TestCases Coverage Results" MODIFIED="1558939490196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>MyGUI.TestCases</FILTER>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testLineConstructor.ic" NAME="TestCases.testLineConstructor Coverage Results" MODIFIED="1558939700470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testRectangleDraw.ic" NAME="TestCases.testRectangleDraw Coverage Results" MODIFIED="1558941130376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_initialiseGUI.ic" NAME="TestCases.initialiseGUI Coverage Results" MODIFIED="1559092999532" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testLineDraw.ic" NAME="TestCases.testLineDraw Coverage Results" MODIFIED="1558939881499" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases.ic" NAME="TestCases Coverage Results" MODIFIED="1559095942478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testPolygonDraw.ic" NAME="TestCases.testPolygonDraw Coverage Results" MODIFIED="1558942162744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>MyGUI.*</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testDrawOjbectListener.ic" NAME="TestCases.testDrawOjbectListener Coverage Results" MODIFIED="1559092475754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/CAB302_Assignment$MyGUI_in_A2.ic" NAME="MyGUI in A2 Coverage Results" MODIFIED="1558942219685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$FunctionTesting.ic" NAME="TestCases Coverage Results" MODIFIED="1558939490196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>MyGUI.TestCases</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/CAB302_Assignment$TestCases_testPolygonDraw.ic" NAME="TestCases.testPolygonDraw Coverage Results" MODIFIED="1558942162744" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>MyGUI.*</FILTER>
     </SUITE>
   </component>
@@ -58,88 +64,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/vecException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="22" selection-start-line="22" selection-end-line="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#93#94#0" expanded="true" />
+                <element signature="e#115#116#0" expanded="true" />
+                <element signature="e#147#148#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="94" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#884#1064#0" expanded="true" />
-                <element signature="e#1063#1064#0" expanded="true" />
-                <element signature="e#6140#6302#0" expanded="true" />
-                <element signature="e#6301#6302#0" expanded="true" />
-                <element signature="e#7793#7794#0" expanded="true" />
-                <element signature="e#7836#7837#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
+            <state relative-caret-position="323">
+              <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -156,7 +99,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>draw</find>
       <find>getcoord</find>
       <find>setpen</find>
       <find>handler</find>
@@ -186,6 +128,7 @@
       <find>rectangle.draw</find>
       <find>getvec</find>
       <find>history</find>
+      <find>please sle</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -229,15 +172,17 @@
         <option value="$PROJECT_DIR$/src/MyGUI/TestCases.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/UndoAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/vecFormat.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/vecException.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="654" />
-    <option name="y" value="37" />
-    <option name="width" value="973" />
+    <option name="x" value="653" />
+    <option name="y" value="36" />
+    <option name="width" value="974" />
     <option name="height" value="870" />
   </component>
   <component name="ProjectView">
@@ -245,6 +190,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,7 +220,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -283,7 +228,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559097899362" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559107894819" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -300,15 +245,15 @@
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="MyGUI" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="MyGUI" />
       <recent name="JUnit" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="MyGUI" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -800,10 +745,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.090625" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09194631" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -812,7 +757,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28328612" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3978836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -985,20 +930,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="142" column="52" lean-forward="true" selection-start-line="142" selection-start-column="52" selection-end-line="142" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1007,52 +956,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
+        <state relative-caret-position="424">
           <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        <state relative-caret-position="102">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
+        <state relative-caret-position="469">
           <caret line="94" selection-start-line="94" selection-end-line="94" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/formatException.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/vecFormat.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/vecException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
+        <state relative-caret-position="153">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#884#1064#0" expanded="true" />
-            <element signature="e#1063#1064#0" expanded="true" />
-            <element signature="e#6140#6302#0" expanded="true" />
-            <element signature="e#6301#6302#0" expanded="true" />
-            <element signature="e#7793#7794#0" expanded="true" />
-            <element signature="e#7836#7837#0" expanded="true" />
+            <element signature="e#93#94#0" expanded="true" />
+            <element signature="e#115#116#0" expanded="true" />
+            <element signature="e#147#148#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="139" column="34" selection-start-line="139" selection-start-column="34" selection-end-line="139" selection-end-column="34" />
         </state>
       </provider>
     </entry>
