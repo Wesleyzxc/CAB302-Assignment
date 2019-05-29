@@ -3,7 +3,9 @@ package MyGUI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 import java.util.List;
@@ -339,5 +341,40 @@ public class TestCases {
         polygon2.draw(g2, 10, 10);
 
 
+    }
+
+    @Test
+    void testDrawObjectListener(){
+        panel = new DrawArea();
+        DrawObjectListener DrawObject = new DrawObjectListener(panel);
+        DrawObject.toggleFill(true);
+        DrawObject.chooseShape(DrawObjectListener.Shape.ELLIPSE);
+        DrawObject.chooseShape(DrawObjectListener.Shape.LINE);
+        DrawObject.chooseShape(DrawObjectListener.Shape.RECTANGLE);
+        DrawObject.chooseShape(DrawObjectListener.Shape.POLYGON);
+        DrawObject.setFillColour(Color.BLACK);
+        DrawObject.setPenColour(Color.BLACK);
+
+    }
+
+    @Test
+    void initialiseAllListeners() {
+        panel = new DrawArea();
+        DrawObjectListener DrawObject = new DrawObjectListener(panel);
+        JButton button = new JButton();
+
+        AboutAction aboutAction = new AboutAction();
+        ClearAction clearAction = new ClearAction(panel);
+        HistoryAction historyAction = new HistoryAction(panel, "5");
+        OpenAction openAction = new OpenAction(panel);
+        SaveAction saveAction = new SaveAction(panel);
+        UndoAction undoAction = new UndoAction(panel);
+        ExitAction exitAction = new ExitAction();
+        ShapeChooser shapeChooser = new ShapeChooser(DrawObject, button, button, button, button);
+    }
+
+    @Test
+    void initialiseGUI(){
+        GUIForm guiForm = new GUIForm();
     }
 }

@@ -44,7 +44,7 @@ public class GUIForm{
 
         JMenu help = new JMenu("Help");
         JMenuItem about = new JMenuItem("About");
-        about.addActionListener(new AboutAction(about));
+        about.addActionListener(new AboutAction());
         help.add(about);
 
         JMenu file = new JMenu("File");
