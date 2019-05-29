@@ -84,6 +84,7 @@ public class GUIForm{
         historyButton.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent arg0) {
+
                 historyButton.removeAll();
                 java.util.List<String> VEC  = panel.getAllVEC();
                 int counter = 1;

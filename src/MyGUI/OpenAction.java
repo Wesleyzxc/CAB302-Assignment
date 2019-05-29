@@ -118,6 +118,9 @@ public class OpenAction implements ActionListener {
                             changedFILL = false;
                             changedPEN = false;
                             changedTOGGLE = false;
+                        } else {
+                            JOptionPane.showMessageDialog(null, "This is a corrupted VEC file. Check the commands!");
+                            break;
                         }
 
 

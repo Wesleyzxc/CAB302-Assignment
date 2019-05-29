@@ -3,17 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$Shape.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$Shape.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/OpenAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyGUI/UndoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/UndoAction.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="400">
               <caret line="22" selection-start-line="22" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -80,7 +72,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="80">
               <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,7 +84,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
+            <state relative-caret-position="1080">
               <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
             </state>
           </provider>
@@ -110,11 +102,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
+            <state relative-caret-position="279">
+              <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#884#1064#0" expanded="true" />
+                <element signature="e#1063#1064#0" expanded="true" />
+                <element signature="e#6140#6302#0" expanded="true" />
+                <element signature="e#6301#6302#0" expanded="true" />
+                <element signature="e#7793#7794#0" expanded="true" />
+                <element signature="e#7836#7837#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -122,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2280">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
+            <state relative-caret-position="420">
+              <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -140,7 +156,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>geta</find>
       <find>draw</find>
       <find>getcoord</find>
       <find>setpen</find>
@@ -170,6 +185,7 @@
       <find>setx</find>
       <find>rectangle.draw</find>
       <find>getvec</find>
+      <find>history</find>
     </findStrings>
     <replaceStrings>
       <replace>y[1]</replace>
@@ -193,13 +209,11 @@
         <option value="$PROJECT_DIR$/src/MyGUI/ExitAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/HistoryAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/SaveAction.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/UndoAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Line.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/PolygonShape.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Rectangle.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ClearAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/ShapeChooser.java" />
-        <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/FunctionTesting.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawArea.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/Ellipse.java" />
@@ -214,6 +228,8 @@
         <option value="$PROJECT_DIR$/src/MyGUI/AboutAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/TestCases.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/UndoAction.java" />
+        <option value="$PROJECT_DIR$/src/MyGUI/OpenAction.java" />
         <option value="$PROJECT_DIR$/src/MyGUI/GUIForm.java" />
       </list>
     </option>
@@ -229,7 +245,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,6 +274,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -267,7 +283,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559097871043" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559097899362" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -741,7 +757,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559097556593</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Added shortcut to select shapes">
+      <created>1559097907782</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1559097907782</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -780,7 +803,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.090625" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.090625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -789,7 +812,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2835979" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3978836" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -810,7 +833,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Save location added to VEC as well" />
     <MESSAGE value="History support working back and forth" />
     <MESSAGE value="Removed useless code" />
     <MESSAGE value="Added &quot;about&quot; random message" />
@@ -835,7 +857,8 @@
     <MESSAGE value="Test initialise listener" />
     <MESSAGE value="Run GUIForm static class in test" />
     <MESSAGE value="Added polygon tool tip to draw" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added polygon tool tip to draw" />
+    <MESSAGE value="Added shortcut to select shapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added shortcut to select shapes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -925,13 +948,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/ExitAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -952,37 +968,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/TestCases.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="309">
           <caret line="370" column="54" lean-forward="true" selection-start-line="370" selection-start-column="54" selection-end-line="370" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -996,17 +985,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/ShapeChooser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="9" column="37" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="37" />
+        <state relative-caret-position="400">
+          <caret line="22" selection-start-line="22" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/AboutAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="6" column="52" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/AllShapes.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
+        <state relative-caret-position="1080">
           <caret line="64" column="10" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/UndoAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/OpenAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="130" column="46" lean-forward="true" selection-start-line="130" selection-start-column="46" selection-end-line="130" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MyGUI/HistoryAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -1019,10 +1042,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="183" column="53" selection-start-line="183" selection-start-column="53" selection-end-line="183" selection-end-column="53" />
+        <state relative-caret-position="279">
+          <caret line="85" column="54" selection-start-line="85" selection-start-column="54" selection-end-line="85" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#884#1064#0" expanded="true" />
+            <element signature="e#1063#1064#0" expanded="true" />
+            <element signature="e#6140#6302#0" expanded="true" />
+            <element signature="e#6301#6302#0" expanded="true" />
+            <element signature="e#7793#7794#0" expanded="true" />
+            <element signature="e#7836#7837#0" expanded="true" />
           </folding>
         </state>
       </provider>
