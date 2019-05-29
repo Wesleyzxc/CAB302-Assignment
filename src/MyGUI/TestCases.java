@@ -376,5 +376,6 @@ public class TestCases {
     @Test
     void initialiseGUI(){
         GUIForm guiForm = new GUIForm();
+        GUIForm.main(new String[]{"run"});
     }
 }
