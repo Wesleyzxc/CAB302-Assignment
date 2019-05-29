@@ -168,10 +168,20 @@ public class GUIForm{
 
         ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
         lineButton.addActionListener(chooseShape);
+        lineButton.setMnemonic(KeyEvent.VK_1);
+        lineButton.setToolTipText("Alt + 1 ");
+
         rectButton.addActionListener(chooseShape);
+        rectButton.setMnemonic(KeyEvent.VK_2);
+        rectButton.setToolTipText("Alt + 2 ");
+
         ellipseButton.addActionListener(chooseShape);
+        ellipseButton.setMnemonic(KeyEvent.VK_3);
+        ellipseButton.setToolTipText("Alt + 3 ");
+
         polyButton.addActionListener(chooseShape);
-        polyButton.setToolTipText("Left click to set points, right click to draw");
+        polyButton.setMnemonic(KeyEvent.VK_4);
+        polyButton.setToolTipText("<html>Alt + 4 <br> Left click to set points, right click to draw</html>");
     }
 
 
