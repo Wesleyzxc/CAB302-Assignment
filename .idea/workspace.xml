@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8c1d04f-666a-489b-8548-0a655557eb67" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MyGUI/ButtonEnable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/META-INF/A2.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawArea.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/DrawObjectListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/A2/MyGUI/GUIForm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawArea.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/DrawObjectListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyGUI/GUIForm.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -90,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="114" column="62" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+            <state relative-caret-position="239">
+              <caret line="178" selection-start-line="178" selection-end-line="178" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -258,7 +244,7 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559115087148" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559117451177" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -395,13 +381,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556576444615</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Added menu bar and exit actionListener">
-      <created>1556838824702</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1556838824702</updated>
     </task>
     <task id="LOCAL-00002" summary="Click event prints coordinates in JPanel">
       <created>1556840791320</created>
@@ -739,7 +718,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559097907782</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="setEnabled is false when we click on shapes">
+      <created>1559115108372</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1559115108372</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -808,7 +794,6 @@
     </layout>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="History support working back and forth" />
     <MESSAGE value="Removed useless code" />
     <MESSAGE value="Added &quot;about&quot; random message" />
     <MESSAGE value="Semi documentation" />
@@ -833,7 +818,8 @@
     <MESSAGE value="Run GUIForm static class in test" />
     <MESSAGE value="Added polygon tool tip to draw" />
     <MESSAGE value="Added shortcut to select shapes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added shortcut to select shapes" />
+    <MESSAGE value="setEnabled is false when we click on shapes" />
+    <option name="LAST_COMMIT_MESSAGE" value="setEnabled is false when we click on shapes" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.desktop/javax/swing/JComponent.java">
@@ -1023,8 +1009,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGUI/GUIForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="114" column="62" selection-start-line="114" selection-start-column="62" selection-end-line="114" selection-end-column="62" />
+        <state relative-caret-position="239">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
