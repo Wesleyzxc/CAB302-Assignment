@@ -9,7 +9,7 @@ public class UndoAction implements ActionListener {
 
     /**
      * ActionListener for undo action
-     * @param panel
+     * @param panel panel that is executing undo
      */
     public UndoAction(DrawArea panel) {
         this.panel = panel;
@@ -20,7 +20,7 @@ public class UndoAction implements ActionListener {
         if(panel.getHistory().size() == 0) {
             JOptionPane.showMessageDialog(null, "There is nothing to undo!");
         }
-        panel.undoHistory();
+        else panel.undoHistory();
 
     }
 }

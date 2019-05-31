@@ -8,12 +8,12 @@ import java.io.*;
 
 public class OpenAction implements ActionListener {
     private DrawArea panel;
-    Color penColor = new Color(00,00,00);
-    Color fillColor = new Color(00,00,00);
+    private Color penColor = new Color(0, 0,0);
+    private Color fillColor = new Color(0,0,0);
 
     /**
      * ActionListener for opening file
-     * @param panel
+     * @param panel panel that is loading the file
      */
     public OpenAction(DrawArea panel) {
         this.panel = panel;
@@ -27,16 +27,14 @@ public class OpenAction implements ActionListener {
      */
     private int[][] parseCommand(String shape, String[] command){
         int[][] finalArray ={{},{}};
-        if (shape == "ELLIPSE" || shape == "LINE" || shape == "RECTANGLE") {
-           int[][] twoPair = {{(int) (Double.parseDouble(command[1]) * this.panel.getWidth()), (int) (Double.parseDouble(command[3]) * this.panel.getWidth())},
-                   {(int) (Double.parseDouble(command[2]) * this.panel.getWidth()), (int) (Double.parseDouble(command[4]) * this.panel.getWidth())}};
-           finalArray = twoPair;
+        if (shape.equals("ELLIPSE") || shape.equals("LINE") || shape.equals("RECTANGLE")) {
+            finalArray = new int[][]{{(int) (Double.parseDouble(command[1]) * this.panel.getWidth()), (int) (Double.parseDouble(command[3]) * this.panel.getWidth())},
+                    {(int) (Double.parseDouble(command[2]) * this.panel.getWidth()), (int) (Double.parseDouble(command[4]) * this.panel.getWidth())}};
         }
-        else if (shape == "PLOT"){
+        else if (shape.equals("PLOT")){
             int[] x = {(int) (Double.parseDouble(command[1]) * this.panel.getWidth())};
             int[] y = {(int) (Double.parseDouble(command[2]) * this.panel.getWidth())};
-            int[][] onePair = {x, y};
-            finalArray = onePair;
+            finalArray = new int[][]{x, y};
         }
 
         return finalArray;
@@ -45,7 +43,6 @@ public class OpenAction implements ActionListener {
 
     /**
      * Warns user if canvas is not empty, then loads from selected file otherwise.
-     * @param e
      */
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -78,8 +75,8 @@ public class OpenAction implements ActionListener {
                             try {
                                 if (eachLine.contains("POLYGON")) {
                                     String[] array = eachLine.split(" ");
-                                    int x[] = new int[array.length / 2];
-                                    int y[] = new int[array.length / 2];
+                                    int[] x = new int[array.length / 2];
+                                    int[] y = new int[array.length / 2];
                                     for (int i = 1; i < array.length; i++) {
                                         try {
                                             if (i % 2 == 1) {
@@ -177,13 +174,9 @@ public class OpenAction implements ActionListener {
                             }
                         }
                     }
-                } catch (FileNotFoundException noFile) {
+                } catch (IOException noFile) {
                     noFile.printStackTrace();
-                } catch (IOException ioError) {
-                    ioError.printStackTrace();
                 }
-
-            } else if (returnVal == JFileChooser.CANCEL_OPTION) {
 
             }
         }

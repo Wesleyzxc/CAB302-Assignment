@@ -18,9 +18,9 @@ public class SaveAction implements ActionListener {
 
     /**
      * ActionListener for saving file
-     * @param panel
+     * @param panel panel that is getting saved
      */
-    public SaveAction(DrawArea panel) {
+    SaveAction(DrawArea panel) {
         this.panel = panel;
     }
     @Override
@@ -31,47 +31,50 @@ public class SaveAction implements ActionListener {
 
         int returnValue = fileChooser.showSaveDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-            if (fileChooser.getSelectedFile().isDirectory()) {
-                String filename = fileChooser.getSelectedFile().toString();
-                System.out.println(panel.getAllVEC());
-                VEC = panel.getAllVEC();
+            String filename = fileChooser.getSelectedFile().toString();
+            VEC = panel.getAllVEC();
 
-                try {
-                    FileWriter writer = new FileWriter(new File(filename + "/output.VEC"));
-                    for(String str: VEC) {
-                        if (panel.getHistory().get(VEC.indexOf(str)).isVisible()){
-                            String[] s = str.split(",");
-                            for (String str2: s) {
-                                writer.write(str2);
-                                writer.write(System.getProperty("line.separator"));
-                            }
+            try {
+                // file location + file name
+                FileWriter writer = new FileWriter(new File(filename + "/output.VEC"));
+                for(String str: VEC) {
+                    // only draw if visible when saved
+                    if (panel.getHistory().get(VEC.indexOf(str)).isVisible()){
+                        String[] s = str.split(",");
+                        for (String str2: s) {
+                            writer.write(str2);
+                            writer.write(System.getProperty("line.separator"));
                         }
                     }
-                    writer.close();
-                    System.out.println("file successfully saved");
-                } catch(IOException a) {
-                    System.out.println("failed to save VEC");
                 }
-                int[] formerSize = {panel.getWidth(), panel.getHeight()};
-                panel.setSize(new Dimension(4096,4096));
-                System.out.println(panel.getWidth());
-                BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
-                Graphics2D cg = bImg.createGraphics();
-                panel.paintAll(cg);
-                panel.setSize(new Dimension(formerSize[0],formerSize[1]));
-                panel.repaint();
-
-                //Save as bmp
-                try {
-                    if (ImageIO.write(bImg, "bmp", new File(filename + "/output.bmp")))
-                    {
-                        System.out.println("-- saved");
-                    }
-                } catch (IOException a) {
-                    System.out.println("failed to save BMP");
-                    a.printStackTrace();
-                }
+                writer.close();
+                System.out.println("file successfully saved");
+            } catch(IOException a) {
+                System.out.println("failed to save VEC");
             }
+            // saves old size before resizing it to 4096 and creates buffer image to save
+            int[] formerSize = {panel.getWidth(), panel.getHeight()};
+            panel.setSize(new Dimension(4096,4096));
+            System.out.println(panel.getWidth());
+            BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
+            Graphics2D cg = bImg.createGraphics();
+            panel.paintAll(cg);
+            // resets size back to old size
+            panel.setSize(new Dimension(formerSize[0],formerSize[1]));
+            panel.repaint();
+
+            //Save as bmp
+            try {
+                if (ImageIO.write(bImg, "bmp", new File(filename + "/output.bmp")))
+                {
+                    System.out.println("-- saved");
+                }
+            } catch (IOException a) {
+                System.out.println("failed to save BMP");
+                JOptionPane.showMessageDialog(null, "Failed to save BMP.");
+                a.printStackTrace();
+            }
+
         }
 
 
