@@ -29,9 +29,12 @@ public class PolygonShape extends AllShapes{
         this.toggleFill = toggleFill;
         xRatio = new float[x.length];
         yRatio = new float[y.length];
+
         for (int i = 0; i < x.length; i++){
+            // calculates ratio of the drawing based on current dimensions
             xRatio[i] = x[i] / (float)pWidth;
             yRatio[i] = y[i] / (float)pHeight;
+            // considers edge cases
             if (this.xRatio[i] >= 1){
                 this.xRatio[i] = 0.999f;
             }
@@ -54,15 +57,14 @@ public class PolygonShape extends AllShapes{
             xNew[i] = (int)(xRatio[i] * currentWidth);
             yNew[i] = (int)(yRatio[i] * currentHeight);
         }
-        if (!toggleFill) {
-            g.setColor(super.getColour());
-            g.drawPolygon(xNew, yNew, super.getX().length);
-        } else {
+        // fill first if needed, then draw to prevent overlap edges
+        if (toggleFill) {
             g.setColor(super.getFillColour());
             g.fillPolygon(xNew, yNew, super.getX().length);
-            g.setColor(super.getColour());
-            g.drawPolygon(xNew, yNew, super.getX().length);
         }
+        g.setColor(super.getColour());
+        g.drawPolygon(xNew, yNew, super.getX().length);
+
     }
 
     @Override

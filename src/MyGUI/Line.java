@@ -17,11 +17,14 @@ public class Line extends AllShapes{
      */
     Line(int[] x, int[] y, Color color, int pWidth, int pHeight) {
         super(x, y, color, color);
+
+        // calculates ratio of the drawing based on current dimensions
         this.wratio1 = x[0]/(float)pWidth;
         this.wratio2 = x[1]/(float)pWidth;
         this.hratio1 = y[0]/(float)pHeight;
         this.hratio2 = y[1]/(float)pHeight;
 
+        // considers edge cases
         if (this.wratio1 >= 1){
             this.wratio1 = 0.999f;
         }
@@ -44,14 +47,17 @@ public class Line extends AllShapes{
      * @param currentHeight integer of new panel's height
      */
     public void draw(Graphics g, int currentWidth, int currentHeight){
+
+        int x1 = (int)(wratio1*currentWidth);
+        int y1 = (int)(hratio1*currentHeight);
+        int x2 = (int)(wratio2*currentWidth);
+        int y2 = (int)(hratio2*currentHeight);
         g.setColor(super.getColour());
-//        g.drawLine(super.getX()[0], super.getY()[0], super.getX()[1], super.getY()[1]);
-        g.drawLine((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth), (int)(hratio2*currentHeight));
+        g.drawLine(x1, y1, x2, y2);
     }
 
     @Override
     public String getVEC(){
-        //String hex = String.format("#%02x%02x%02x", color.getRed(), color.getGreen(), color.getBlue());
         return ((String.format("LINE %.2f %.2f %.2f %.2f", wratio1, hratio1, wratio2, hratio2)));
     }
 

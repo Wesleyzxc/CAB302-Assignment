@@ -12,7 +12,7 @@ public class Dot extends AllShapes {
      *
      * @param x array of x coordinates which will be plotted
      * @param y array of y coordinates which will be plotted
-     * @param colour pen colour which is     a Color class
+     * @param colour pen colour which is a Color class
      * @param pWidth width of the current panel which is used to calculate position ratio
      * @param pHeight height of the current panel which is used to calculate position ratio
      *
@@ -21,9 +21,11 @@ public class Dot extends AllShapes {
         super(x, y, colour, colour);
 
         this.diameter = diameter;
+
+        // calculates ratio of the drawing based on current dimensions
         this.wratio1 = super.getX()[0]/(float)pWidth;
         this.hratio1 = super.getY()[0]/(float)pHeight;
-
+        //considers edge cases
         if (this.wratio1 >= 1){
             this.wratio1 = 0.999f;
         }
@@ -41,8 +43,10 @@ public class Dot extends AllShapes {
      *
      **/
     public void draw(Graphics g, int currentWidth, int currentHeight){
+        int x = (int)(wratio1*currentWidth);
+        int y = (int)(hratio1*currentHeight);
         g.setColor(super.getColour());
-        g.fillOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), diameter, diameter);
+        g.fillOval(x, y, diameter, diameter);
 
     }
 

@@ -33,6 +33,7 @@ public class SaveAction implements ActionListener {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             if (fileChooser.getSelectedFile().isDirectory()) {
                 String filename = fileChooser.getSelectedFile().toString();
+                System.out.println(panel.getAllVEC());
                 VEC = panel.getAllVEC();
 
                 try {

@@ -29,11 +29,6 @@ public abstract class AllShapes {
         this.y = y;
     }
 
-    // java - get screen size using the Toolkit class
-    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-    float screenHeight = screenSize.height;
-    float screenWidth = screenSize.width;
-
     /**
      * Abstract parent class which accepts an array of coordinates x and y, colour of pen in Color and fillColour in Color
      *

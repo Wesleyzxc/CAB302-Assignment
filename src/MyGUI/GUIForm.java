@@ -24,7 +24,7 @@ public class GUIForm{
 
         //Draw area
         DrawArea panel = new DrawArea();
-
+        // Container for the canvas which is used for resizing
         final JPanel container = new JPanel(new FlowLayout());
         container.add(panel, BorderLayout.CENTER);
         container.addComponentListener(new ComponentAdapter() {
@@ -33,52 +33,51 @@ public class GUIForm{
                 resizePreview(panel, container);
             }
         });
-        frame.add(container);
 
+        frame.add(container);
         //Display window
         frame.setPreferredSize(new Dimension(600, 500));
         frame.setLocation(new Point(300, 300));
         frame.pack();
         frame.setVisible(true);
 
-        //menu bar and items
+        // Menu bar and items
         JMenuBar MenuBar = new JMenuBar();
 
+        // Help menu with random information
         JMenu help = new JMenu("Help");
         JMenuItem about = new JMenuItem("About");
         about.addActionListener(new AboutAction());
         help.add(about);
 
+        // File menu with main functionalities
         JMenu file = new JMenu("File");
-        // New menu bar
+
+        // New menu item
         JMenuItem clear = new JMenuItem("New File");
         file.add(clear);
         clear.addActionListener(new ClearAction(panel));
         clear.setAccelerator(KeyStroke.getKeyStroke('N', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        // Open menu bar
+        // Open menu item
         JMenuItem open = new JMenuItem("Open File");
         file.add(open);
         open.addActionListener(new OpenAction(panel));
         open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        // Save menu bar
+        // Save menu item
         JMenuItem save = new JMenuItem("Save File");
         file.add(save);
         save.addActionListener(new SaveAction(panel));
         save.setAccelerator(KeyStroke.getKeyStroke('S', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        // Undo menu bar
+        // Undo menu item
         JMenuItem undo = new JMenuItem("Undo");
         file.add(undo);
         undo.addActionListener(new UndoAction(panel));
         undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
-        // Exit menu bar
+        // Exit menu item
         JMenuItem exit = new JMenuItem("Exit");
         file.add(exit);
         exit.addActionListener(new ExitAction());
 
-        // shortcut key
-        frame.setJMenuBar(MenuBar);
-        MenuBar.add(file);
-        MenuBar.add(help);
 
         //History support
         JMenu historyButton = new JMenu("History");
@@ -106,9 +105,15 @@ public class GUIForm{
             }
 
         });
+
+        // Base for menubar
+        frame.setJMenuBar(MenuBar);
+        MenuBar.add(file);
+        MenuBar.add(help);
         MenuBar.add(historyButton);
 
-        //JToolbar
+
+        //JToolbar with all the buttons
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
         JButton lineButton = new JButton("Line");
@@ -130,7 +135,7 @@ public class GUIForm{
 
         undoButton.addActionListener(new UndoAction(panel));
 
-        //Add shapes to toolbar
+        //Add buttons to toolbar
         toolbar.add(lineButton);
         toolbar.add(rectButton);
         toolbar.add(ellipseButton);
@@ -140,6 +145,7 @@ public class GUIForm{
         toolbar.add(clearFillButton);
         toolbar.add(undoButton);
 
+        // Colour buttons receives output colour
         penColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -164,10 +170,10 @@ public class GUIForm{
             }
         });
 
-//        toolbar.add(new JColorChooser());
+        // Add toolbar to frame
         frame.add(toolbar, BorderLayout.NORTH);
 
-        // array of all buttons
+        // array of all buttons of shapes
         JButton[] shapeButtons = new JButton[]{lineButton, rectButton, ellipseButton, polyButton};
 
         ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
@@ -187,12 +193,17 @@ public class GUIForm{
         polyButton.setMnemonic(KeyEvent.VK_4);
         polyButton.setToolTipText("<html>Alt + 4 <br> Left click to set points, right click to draw</html>");
 
+        // Disable button if button is selected
         for(JButton eachButton: shapeButtons){
             eachButton.addActionListener(new ButtonEnable(eachButton, shapeButtons));
         }
     }
 
-
+    /**
+     * Allows resizing of panel based on the container, keeping aspect ratio of inner panel
+     * @param innerPanel JPanel that needs to maintian aspect ratio
+     * @param container container that innerPanel's size has to obey by
+     */
     private static void resizePreview(JPanel innerPanel, JPanel container) {
         int w = container.getWidth();
         int h = container.getHeight();
@@ -202,6 +213,7 @@ public class GUIForm{
         innerPanel.removeAll();
         innerPanel.repaint();
     }
+
 
     public static void main(String[] args) {
         // Schedule a job for the event-dispatching thread:

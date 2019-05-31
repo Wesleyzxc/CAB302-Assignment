@@ -19,8 +19,9 @@ public class Rectangle extends AllShapes {
      */
     Rectangle(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
         super(x, y, colour, fillColour);
-
         this.toggleFill = toggleFill;
+
+        // flips array if drawing towards up and left directions
         if (x[0] > x[1]) {
             int[] replaced = {x[1], x[0]};
             super.setX(replaced);
@@ -30,11 +31,13 @@ public class Rectangle extends AllShapes {
             super.setY(replaced);
 
         }
+        // calculates ratio of the drawing based on current dimensions
         this.wratio1 = super.getX()[0]/(float)pWidth;
         this.wratio2 = super.getX()[1]/(float)pWidth;
         this.hratio1 = super.getY()[0]/(float)pHeight;
         this.hratio2 = super.getY()[1]/(float)pHeight;
 
+        // considers edge cases
         if (this.wratio1 >= 1){
             this.wratio1 = 0.999f;
         }
@@ -57,18 +60,20 @@ public class Rectangle extends AllShapes {
      * @param currentHeight integer of new panel's height
      */
     public void draw(Graphics g, int currentWidth, int currentHeight) {
-        if (!toggleFill) {
-            g.setColor(super.getColour());
-//            g.drawRect(x1, y1, x2 - x1, y2 - y1);
-            g.drawRect((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
+        int x = (int)(wratio1*currentWidth);
+        int y = (int)(hratio1*currentHeight);
+        int width = (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth);
+        int height = (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight);
 
-        } else {
+        // fill first if needed, then draw to prevent overlap edges
+        if (toggleFill) {
             g.setColor(super.getFillColour());
-            g.fillRect((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
-            g.setColor(super.getColour());
-            g.drawRect((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
-
+            g.fillRect(x, y, width, height);
         }
+        g.setColor(super.getColour());
+        g.drawRect(x, y, width, height);
+
+
     }
 
     @Override

@@ -12,7 +12,6 @@ public class DrawObjectListener extends MouseAdapter{
     public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;
     private AllShapes drag;
-    private int x1,x2,y1,y2; //Start of click and end of click coordinates ALL SHAPES ARE DETERMINED BY THESE COORDS
     private int[] x = new int[2];
     private int[] y = new int[2];
     private Shape shape = Shape.LINE; //Default shape is line
@@ -75,23 +74,24 @@ public class DrawObjectListener extends MouseAdapter{
     @Override
     public void mouseClicked(MouseEvent e) {
 
+        // If polygon not selected, a click means draw dot.
         if (shape != Shape.POLYGON) {
             isDot = true;
-
+            // only draws dot on left click to allow extendability
             if (e.getButton() == MouseEvent.BUTTON1) {
-                int[] x = {e.getX()};
-                int[] y = {e.getY()};
+                // minus 5 to center of mouse
+                int[] x = {e.getX()-5};
+                int[] y = {e.getY()-5};
                 panel.addShape(new Dot(x, y, 10, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                 changedPEN = false;
                 changedFILL = false;
                 changedTOGGLE = false;
             }
-            else if (e.getButton() == MouseEvent.BUTTON3) {
-                panel.removeAll();
-            }
+
         }
 
         if (shape == Shape.POLYGON) {
+            // left click to set marker
             if (e.getButton() == MouseEvent.BUTTON1){
                 int[] polyX = {e.getX()};
                 int[] polyY = {e.getY()};
@@ -100,39 +100,43 @@ public class DrawObjectListener extends MouseAdapter{
 
                 panel.addMarker(new Dot(polyX, polyY, 3, penColour, panel.getWidth(), panel.getHeight()));
             }
+            // right click to draw
             else if (e.getButton() == MouseEvent.BUTTON3){
-                int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
-                int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
-                if (arrX.length > 0) {
+
+                // only execute any necessary commands if it is possible to plot (at least a line)
+                if (polyCoordsX.size() > 1) {
+                    // Converts to an int[]
+                    int[] arrX = polyCoordsX.stream().mapToInt(i -> i).toArray();
+                    int[] arrY = polyCoordsY.stream().mapToInt(i -> i).toArray();
+
                     panel.addShape(new PolygonShape(arrX, arrY, penColour, fillColour, fill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                     changedPEN = false;
                     changedFILL = false;
                     changedTOGGLE = false;
+
+                    // resets polygon state
+                    panel.clearMarker();
+                    polyCoordsX.clear();
+                    polyCoordsY.clear();
                 }
-                panel.clearMarker();
-                polyCoordsX.clear();
-                polyCoordsY.clear();
+
             }
         }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        x1 = e.getX();
         this.x[0] = e.getX();
         this.y[0] = e.getY();
-        y1 = e.getY();
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        x2 = e.getX();
-        y2 = e.getY();
         this.x[1] = e.getX();
         this.y[1] = e.getY();
 
         if (!isDot) {
-            if (e.getButton() == MouseEvent.BUTTON1 && x1 != x2 && y1 != y2) { //Draws selected shape
+            if (e.getButton() == MouseEvent.BUTTON1 && x[0] != x[1] && y[0] != y[1]) { //Draws selected shape and not a dot
 
                 if (shape == Shape.LINE) {
                     panel.addShape(new Line(x, y, penColour, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
@@ -162,13 +166,13 @@ public class DrawObjectListener extends MouseAdapter{
     @Override
     public void mouseDragged(MouseEvent e) {
         if (!isDot) {
-            x2 = e.getX(); //Not actually x2, just the end of the click
-            y2 = e.getY(); //Not actually y2, just the end of the click
+            // continuously getting coordinates
             this.x[1] = e.getX();
             this.y[1] = e.getY();
 
+            // is dragging so that it draws continuously
             panel.setDragging(true);
-            if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) { //Creates dragged shape
+            if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) { //Creates dragged shape only on left click
                 switch (shape) {
                     case LINE:
                         drag = new Line(x, y, penColour, panel.getWidth(), panel.getHeight());

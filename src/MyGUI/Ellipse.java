@@ -19,6 +19,8 @@ public class Ellipse extends AllShapes{
      */
     public Ellipse(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
         super(x, y, colour, fillColour);
+
+        // flips array if drawing towards up and left directions
         if (x[0] > x[1]) {
             int[] replaced = {x[1], x[0]};
             super.setX(replaced);
@@ -27,10 +29,14 @@ public class Ellipse extends AllShapes{
             int[] replaced = {y[1], y[0]};
             super.setY(replaced);
         }
+
+        // calculates ratio of the drawing based on current dimensions
         this.wratio1 = super.getX()[0]/(float)pWidth;
         this.wratio2 = super.getX()[1]/(float)pWidth;
         this.hratio1 = super.getY()[0]/(float)pHeight;
         this.hratio2 = super.getY()[1]/(float)pHeight;
+
+        // considers edge cases
         if (this.wratio1 >= 1){
             this.wratio1 = 0.999f;
         }
@@ -53,16 +59,18 @@ public class Ellipse extends AllShapes{
      * @param currentHeight integer of new panel's height
      */
     public void draw(Graphics g, int currentWidth, int currentHeight){
-        if (!toggleFill) {
-            g.setColor(super.getColour());
-            g.drawOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
-
-        } else {
+        int x = (int)(wratio1*currentWidth);
+        int y = (int)(hratio1*currentHeight);
+        int width = (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth);
+        int height = (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight);
+        // fill first if needed, then draw to prevent overlap edges
+        if (toggleFill) {
             g.setColor(super.getFillColour());
-            g.fillOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
-            g.setColor(super.getColour());
-            g.drawOval((int)(wratio1*currentWidth), (int)(hratio1*currentHeight), (int)(wratio2*currentWidth) - (int)(wratio1*currentWidth), (int)(hratio2*currentHeight) - (int)(hratio1*currentHeight));
+            g.fillOval(x,y ,width ,height );
         }
+        g.setColor(super.getColour());
+        g.drawOval(x, y, width, height);
+
     }
 
     @Override

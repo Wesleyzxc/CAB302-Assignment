@@ -16,12 +16,14 @@ public class ClearAction implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        int dialogButton = JOptionPane.YES_NO_OPTION;
+        // sets result to no in the beginning
         int dialogResult = JOptionPane.NO_OPTION;
+
         if (panel.getHistory().size() != 0) {
-            dialogResult = JOptionPane.showConfirmDialog(null, "New file will clear current drawings, continue?", "Warning", dialogButton);
+            dialogResult = JOptionPane.showConfirmDialog(null, "New file will clear current drawings, continue?", "Warning", JOptionPane.YES_NO_OPTION);
         }
         if (dialogResult == JOptionPane.YES_OPTION) {
+            panel.clearVEC();
             panel.clearHistory();
             panel.repaint();
         }

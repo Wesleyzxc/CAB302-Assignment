@@ -1,21 +1,14 @@
 package MyGUI;
 
-import com.sun.source.util.DocTreeScanner;
-
 import javax.swing.*;
 import java.awt.*;
-import java.awt.Rectangle;
-import java.awt.event.*;
-import java.awt.geom.AffineTransform;
-import java.awt.geom.Rectangle2D;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class DrawArea extends JPanel {
     private List<Dot> polygonMarker = new LinkedList<>();
     private List<AllShapes> history = new LinkedList<>(); //main history
-    private List<String> VEC = new LinkedList<>();
+    private List<String> vecHistory = new LinkedList<>();
     private AllShapes drag;
     private boolean dragging;
 
@@ -60,23 +53,31 @@ public class DrawArea extends JPanel {
     }
 
     /**
-     * Gets string of all shapes in the canvas that is converted to VEC format
-     * @return string of VEC commands separated by new line
+     * Clears vecHistory
+     */
+    public void clearVEC() {
+        vecHistory.clear();
+    }
+
+
+    /**
+     * Gets string of all shapes in the canvas that is converted to vecHistory format
+     * @return string of vecHistory commands separated by new line
      */
     public List<String> getAllVEC() {
-        return VEC;
+        return vecHistory;
     }
 
     /**
-     * Sets VEC as string
-     * @param VEC
+     * Sets vecHistory as string
+     * @param vecHistory
      */
-    public void setVEC(List<String> VEC) {
-        this.VEC = VEC;
+    public void setVecHistory(List<String> vecHistory) {
+        this.vecHistory = vecHistory;
     }
 
     /**
-     * Converts Color class colours to hex string which is used for VEC commands
+     * Converts Color class colours to hex string which is used for vecHistory commands
      * @param colour Color class colour which will be converted to hex
      * @return string of hex value of the converted Color
      * @throws NullPointerException if invalid colour
@@ -90,7 +91,7 @@ public class DrawArea extends JPanel {
     }
 
     /**
-     * Adds shape into history and converts action into command to append into the stored VEC
+     * Adds shape into history and converts action into command to append into the stored vecHistory
      * @param shape AllShapes object that has to be added to the canvas
      * @param changedPEN boolean to know if pen colour changed
      * @param changedFILL boolean to know if fill colour changed
@@ -119,7 +120,7 @@ public class DrawArea extends JPanel {
         }
 
         final_VEC = final_VEC.concat(shapeVEC);
-        VEC.add(final_VEC); //parameter - true if color changed
+        vecHistory.add(final_VEC); //parameter - true if color changed
         this.repaint();
         }
 
@@ -158,12 +159,12 @@ public class DrawArea extends JPanel {
     }
 
     /**
-     * Remove the last item from the history such that it is no longer drawn.
+     * Remove the last item from the history and vecHistory such that it is no longer drawn.
      */
     void undoHistory() {
         if (history.size() > 0) {
             history.remove(history.get(history.size()-1)); //Remove history
-            VEC.remove(VEC.get(VEC.size()-1)); //Remove VEC
+            vecHistory.remove(vecHistory.get(vecHistory.size()-1)); //Remove vecHistory
             this.repaint();
         }
     }

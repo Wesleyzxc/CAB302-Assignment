@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.image.BufferedImage;
 import java.util.LinkedList;
 import java.util.List;
@@ -34,6 +33,15 @@ public class TestCases {
     }
 
     @Test
+    void panelClearVEC(){
+        panel = new DrawArea();
+        panel.clearVEC();
+
+        DrawArea panel2 = new DrawArea();
+        assertEquals(panel.getAllVEC(), panel2.getAllVEC());
+    }
+
+    @Test
     void panelSetHistory(){
         panel = new DrawArea();
         int[] coords = {1,2,3};
@@ -59,7 +67,7 @@ public class TestCases {
         panel.addShape(dot1, false, false, false);
 
         panel.addShape(dot1, true, true, true);
-        panel.setVEC(VEC);
+        panel.setVecHistory(VEC);
         panel.undoHistory();
 
         assertEquals(panel.getHistory().size(), 1);
