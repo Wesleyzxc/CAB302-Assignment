@@ -5,7 +5,7 @@ import java.awt.*;
 public class Dot extends AllShapes {
 
     private int diameter;
-    private float hratio1, wratio1;
+    private float heightRatio, widthRatio;
 
     /**
      * Abstract parent class which accepts an array of coordinates x and y, colour of pen in Color and fillColour in Color
@@ -23,14 +23,14 @@ public class Dot extends AllShapes {
         this.diameter = diameter;
 
         // calculates ratio of the drawing based on current dimensions
-        this.wratio1 = super.getX()[0]/(float)pWidth;
-        this.hratio1 = super.getY()[0]/(float)pHeight;
+        this.widthRatio = super.getX()[0]/(float)pWidth;
+        this.heightRatio = super.getY()[0]/(float)pHeight;
         //considers edge cases
-        if (this.wratio1 >= 1){
-            this.wratio1 = 0.999f;
+        if (this.widthRatio >= 1){
+            this.widthRatio = 0.999f;
         }
-        if (this.hratio1 >= 1){
-            this.hratio1 = 0.999f;
+        if (this.heightRatio >= 1){
+            this.heightRatio = 0.999f;
         }
     }
 
@@ -43,8 +43,8 @@ public class Dot extends AllShapes {
      *
      **/
     public void draw(Graphics g, int currentWidth, int currentHeight){
-        int x = (int)(wratio1*currentWidth);
-        int y = (int)(hratio1*currentHeight);
+        int x = (int)(widthRatio *currentWidth);
+        int y = (int)(heightRatio *currentHeight);
         g.setColor(super.getColour());
         g.fillOval(x, y, diameter, diameter);
 
@@ -56,7 +56,7 @@ public class Dot extends AllShapes {
      */
     @Override
     public String getVEC(){
-        return ((String.format("PLOT %.2f %.2f",wratio1,hratio1)));
+        return ((String.format("PLOT %.2f %.2f", widthRatio, heightRatio)));
     }
 
     /**

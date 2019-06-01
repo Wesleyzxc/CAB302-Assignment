@@ -71,107 +71,124 @@ public class OpenAction implements ActionListener {
                         panel.clearVEC();
 
                         String eachLine;
-                        while ((eachLine = reader.readLine()) != null) {
-                            try {
-                                if (eachLine.contains("POLYGON")) {
-                                    String[] array = eachLine.split(" ");
-                                    int[] x = new int[array.length / 2];
-                                    int[] y = new int[array.length / 2];
-                                    for (int i = 1; i < array.length; i++) {
-                                        try {
-                                            if (i % 2 == 1) {
-                                                x[i / 2] = (int) (Double.parseDouble(array[i]) * this.panel.getWidth());
-                                            }
-                                            if (i % 2 == 0) {
-                                                y[i / 2 - 1] = (int) (Double.parseDouble(array[i]) * this.panel.getHeight());
-                                            }
-                                        } catch (Exception a) {
-                                            // shows user which line broke
-                                            JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
-                                            break;
+                        while ((eachLine = reader.readLine()) != null) try {
+                            if (eachLine.contains("POLYGON")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("POLYGON")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                int[] x = new int[array.length / 2];
+                                int y[] = new int[array.length / 2];
+                                for (int i = 1; i < array.length; i++) {
+                                    try {
+                                        if (i % 2 == 1) {
+                                            x[i / 2] = (int) (Double.parseDouble(array[i]) * this.panel.getWidth());
                                         }
+                                        if (i % 2 == 0) {
+                                            y[i / 2 - 1] = (int) (Double.parseDouble(array[i]) * this.panel.getHeight());
+                                        }
+                                    } catch (Exception a) {
+                                        // shows user which line broke
+                                        JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
+                                        break;
                                     }
-                                    panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                } else if (eachLine.contains("PEN")) {
-                                    String[] array = eachLine.split(" ");
-                                    StringBuilder sb = new StringBuilder(array[1]);
-                                    penColor = Color.decode(sb.toString());
-                                    changedPEN = true;
-                                } else if (eachLine.contains("FILL") && !eachLine.contains("OFF")) {
-                                    String[] array = eachLine.split(" ");
-                                    StringBuilder sb = new StringBuilder(array[1]);
-                                    fillColor = Color.decode(sb.toString());
+                                }
+                                panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                            } else if (eachLine.contains("PEN")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("PEN")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                penColor = Color.decode(array[1]);
+                                changedPEN = true;
+                            } else if (eachLine.contains("FILL") && !eachLine.contains("OFF")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("FILL")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                fillColor = Color.decode(array[1]);
+                                changedFILL = false;
+                                changedPEN = false;
+                                changedTOGGLE = false;
+                                toggleFill = true;
+                            } else if (eachLine.equals("FILL OFF")) {
+                                changedTOGGLE = true;
+                                toggleFill = false;
+                            } else if (eachLine.contains("LINE")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("LINE")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                try {
+                                    int[] x = parseCommand("LINE", array)[0];
+                                    int[] y = parseCommand("LINE", array)[1];
+                                    panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
                                     changedFILL = false;
                                     changedPEN = false;
                                     changedTOGGLE = false;
-                                    toggleFill = true;
-                                } else if (eachLine.contains("FILL OFF")) {
-                                    changedTOGGLE = true;
-                                    toggleFill = false;
-                                } else if (eachLine.contains("LINE")) {
-                                    String[] array = eachLine.split(" ");
-                                    try {
-                                        int[] x = parseCommand("LINE", array)[0];
-                                        int[] y = parseCommand("LINE", array)[1];
-                                        panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                        changedFILL = false;
-                                        changedPEN = false;
-                                        changedTOGGLE = false;
-                                    } catch (Exception a) {
-                                        // shows user which line broke
-                                        JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
-                                        break;
-                                    }
-                                } else if (eachLine.contains("RECTANGLE")) {
-                                    String[] array = eachLine.split(" ");
-                                    try {
-                                        int[] x = parseCommand("RECTANGLE", array)[0];
-                                        int[] y = parseCommand("RECTANGLE", array)[1];
-                                        panel.addShape(new Rectangle(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                        changedFILL = false;
-                                        changedPEN = false;
-                                        changedTOGGLE = false;
-                                    } catch (Exception a) {
-                                        // shows user which line broke
-                                        JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
-                                        break;
-                                    }
-                                } else if (eachLine.contains("ELLIPSE")) {
-                                    String[] array = eachLine.split(" ");
-                                    try {
-                                        int[] x = parseCommand("ELLIPSE", array)[0];
-                                        int[] y = parseCommand("ELLIPSE", array)[1];
-                                        panel.addShape(new Ellipse(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                        changedFILL = false;
-                                        changedPEN = false;
-                                        changedTOGGLE = false;
-                                    } catch (Exception a) {
-                                        // shows user which line broke
-                                        JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
-                                        break;
-                                    }
-                                } else if (eachLine.contains("PLOT")) {
-                                    String[] array = eachLine.split(" ");
-                                    try {
-                                        int[] x = parseCommand("PLOT", array)[0];
-                                        int[] y = parseCommand("PLOT", array)[1];
-                                        panel.addShape(new Dot(x, y, 10, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                        changedFILL = false;
-                                        changedPEN = false;
-                                        changedTOGGLE = false;
-                                    } catch (Exception a) {
-                                        // shows user which line broke
-                                        JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
-                                        break;
-                                    }
-                                } else {
+                                } catch (Exception a) {
+                                    // shows user which line broke
+                                    JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
+                                    break;
+                                }
+                            } else if (eachLine.contains("RECTANGLE")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("RECTANGLE")) {
                                     throw new InvalidCommand(eachLine);
                                 }
-                            } catch (Exception wrongFormat) {
-                                // shows user which line broke
-                                JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat);
-                                break;
+                                try {
+                                    int[] x = parseCommand("RECTANGLE", array)[0];
+                                    int[] y = parseCommand("RECTANGLE", array)[1];
+                                    panel.addShape(new Rectangle(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                                    changedFILL = false;
+                                    changedPEN = false;
+                                    changedTOGGLE = false;
+                                } catch (Exception a) {
+                                    // shows user which line broke
+                                    JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
+                                    break;
+                                }
+                            } else if (eachLine.contains("ELLIPSE")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("ELLILPSE")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                try {
+                                    int[] x = parseCommand("ELLIPSE", array)[0];
+                                    int[] y = parseCommand("ELLIPSE", array)[1];
+                                    panel.addShape(new Ellipse(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                                    changedFILL = false;
+                                    changedPEN = false;
+                                    changedTOGGLE = false;
+                                } catch (Exception a) {
+                                    // shows user which line broke
+                                    JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
+                                    break;
+                                }
+                            } else if (eachLine.contains("PLOT")) {
+                                String[] array = eachLine.split(" ");
+                                if (!array[0].equals("PLOT")) {
+                                    throw new InvalidCommand(eachLine);
+                                }
+                                try {
+                                    int[] x = parseCommand("PLOT", array)[0];
+                                    int[] y = parseCommand("PLOT", array)[1];
+                                    panel.addShape(new Dot(x, y, 10, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                                    changedFILL = false;
+                                    changedPEN = false;
+                                    changedTOGGLE = false;
+                                } catch (Exception a) {
+                                    // shows user which line broke
+                                    JOptionPane.showMessageDialog(null, "Your file has corrupted coordinates. Check the following command: \n" + eachLine);
+                                    break;
+                                }
+                            } else {
+                                throw new InvalidCommand(eachLine);
                             }
+                        } catch (Exception wrongFormat) {
+                            // shows user which line broke
+                            JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat);
+                            break;
                         }
                     }
                 } catch (IOException noFile) {

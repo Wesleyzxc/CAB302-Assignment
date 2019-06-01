@@ -1,7 +1,7 @@
 package MyGUI;
 
 public class InvalidCommand extends Exception  {
-    String line;
+    private String line;
     public InvalidCommand(String line) {
         this.line = line;
     }

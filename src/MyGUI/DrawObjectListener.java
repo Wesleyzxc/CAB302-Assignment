@@ -11,7 +11,6 @@ import java.util.ArrayList;
 public class DrawObjectListener extends MouseAdapter{
     public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;
-    private AllShapes drag;
     private int[] x = new int[2];
     private int[] y = new int[2];
     private Shape shape = Shape.LINE; //Default shape is line
@@ -65,7 +64,7 @@ public class DrawObjectListener extends MouseAdapter{
      * @param fill boolean variable for if fill is on
      */
     void toggleFill(boolean fill){
-        if (this.fill == true){
+        if (this.fill){
             changedTOGGLE = true;
         }
         this.fill = fill;
@@ -175,7 +174,7 @@ public class DrawObjectListener extends MouseAdapter{
             if (e.getModifiersEx() == MouseEvent.BUTTON1_DOWN_MASK) { //Creates dragged shape only on left click
                 switch (shape) {
                     case LINE:
-                        drag = new Line(x, y, penColour, panel.getWidth(), panel.getHeight());
+                        AllShapes drag = new Line(x, y, penColour, panel.getWidth(), panel.getHeight());
                         panel.dragLine(drag);
                         break;
                     case RECTANGLE:
