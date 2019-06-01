@@ -1,10 +1,14 @@
 package MyGUI;
 
 import javax.swing.*;
-import javax.swing.event.MenuEvent;
-import javax.swing.event.MenuListener;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.LinkedList;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.MenuEvent;
+import javax.swing.event.MenuListener;
 
 public class GUIForm{
 
@@ -39,7 +43,7 @@ public class GUIForm{
         JMenuBar MenuBar = new JMenuBar();
 
 
-         //Menu "Help" content
+        //Menu "Help" content
         JMenu help = new JMenu("Help");
         JMenuItem about = new JMenuItem("About");
         about.addActionListener(new AboutAction());
@@ -127,22 +131,30 @@ public class GUIForm{
             public void mouseClicked(MouseEvent e) {
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
-                handler.setPenColour(colour.getColor());
+                // null if user cancels
+                if (name != null ) {
+                    handler.setPenColour(colour.getColor());
+                }
+
             }
         });
         fillColourButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                handler.toggleFill(true);
                 JColorChooser colour = new JColorChooser();
                 String name = JOptionPane.showInputDialog(colour);
-                handler.setFillColour(colour.getColor());
+                // null if user cancels
+                if (name != null) {
+                    handler.toggleFill(true);
+                    handler.setFillColour(colour.getColor());
+                }
             }
         });
         clearFillButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                handler.toggleFill(false);
+                int response = JOptionPane.showConfirmDialog(null, "Are you sure you want to off fill?");
+                if (response == 0) { handler.toggleFill(false); }
             }
         });
 

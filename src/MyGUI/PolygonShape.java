@@ -1,12 +1,7 @@
 package MyGUI;
 
-import javax.swing.*;
 import java.awt.*;
 import java.lang.*;
-import java.util.Arrays;
-import java.util.Collections;
-
-import static java.lang.Math.max;
 
 public class PolygonShape extends AllShapes{
 

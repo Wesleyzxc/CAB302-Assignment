@@ -55,7 +55,6 @@ public class OpenAction implements ActionListener {
             int returnVal = fileChooser.showOpenDialog(fileChooser);
             //these variables keep track of color changes
             boolean changedPEN = false;
-            boolean changedFILL = false;
             boolean toggleFill = false;
             boolean changedTOGGLE = false;
             if (returnVal == JFileChooser.APPROVE_OPTION) {
@@ -78,7 +77,7 @@ public class OpenAction implements ActionListener {
                                     throw new InvalidCommand(eachLine);
                                 }
                                 int[] x = new int[array.length / 2];
-                                int y[] = new int[array.length / 2];
+                                int[] y = new int[array.length / 2];
                                 for (int i = 1; i < array.length; i++) {
                                     try {
                                         if (i % 2 == 1) {
@@ -93,7 +92,7 @@ public class OpenAction implements ActionListener {
                                         break;
                                     }
                                 }
-                                panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
+                                panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
                             } else if (eachLine.contains("PEN")) {
                                 String[] array = eachLine.split(" ");
                                 if (!array[0].equals("PEN")) {
@@ -107,7 +106,6 @@ public class OpenAction implements ActionListener {
                                     throw new InvalidCommand(eachLine);
                                 }
                                 fillColor = Color.decode(array[1]);
-                                changedFILL = false;
                                 changedPEN = false;
                                 changedTOGGLE = false;
                                 toggleFill = true;
@@ -122,8 +120,7 @@ public class OpenAction implements ActionListener {
                                 try {
                                     int[] x = parseCommand("LINE", array)[0];
                                     int[] y = parseCommand("LINE", array)[1];
-                                    panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                    changedFILL = false;
+                                    panel.addShape(new Line(x, y, penColor, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
                                     changedPEN = false;
                                     changedTOGGLE = false;
                                 } catch (Exception a) {
@@ -139,8 +136,7 @@ public class OpenAction implements ActionListener {
                                 try {
                                     int[] x = parseCommand("RECTANGLE", array)[0];
                                     int[] y = parseCommand("RECTANGLE", array)[1];
-                                    panel.addShape(new Rectangle(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                    changedFILL = false;
+                                    panel.addShape(new Rectangle(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
                                     changedPEN = false;
                                     changedTOGGLE = false;
                                 } catch (Exception a) {
@@ -150,14 +146,13 @@ public class OpenAction implements ActionListener {
                                 }
                             } else if (eachLine.contains("ELLIPSE")) {
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("ELLILPSE")) {
+                                if (!array[0].equals("ELLIPSE")) {
                                     throw new InvalidCommand(eachLine);
                                 }
                                 try {
                                     int[] x = parseCommand("ELLIPSE", array)[0];
                                     int[] y = parseCommand("ELLIPSE", array)[1];
-                                    panel.addShape(new Ellipse(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                    changedFILL = false;
+                                    panel.addShape(new Ellipse(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
                                     changedPEN = false;
                                     changedTOGGLE = false;
                                 } catch (Exception a) {
@@ -173,8 +168,7 @@ public class OpenAction implements ActionListener {
                                 try {
                                     int[] x = parseCommand("PLOT", array)[0];
                                     int[] y = parseCommand("PLOT", array)[1];
-                                    panel.addShape(new Dot(x, y, 10, penColor, panel.getWidth(), panel.getHeight()), changedPEN, changedFILL, changedTOGGLE);
-                                    changedFILL = false;
+                                    panel.addShape(new Dot(x, y, 10, penColor, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
                                     changedPEN = false;
                                     changedTOGGLE = false;
                                 } catch (Exception a) {

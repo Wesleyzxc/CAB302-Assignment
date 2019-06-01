@@ -70,7 +70,7 @@ public class DrawArea extends JPanel {
 
     /**
      * Sets vecHistory as string
-     * @param vecHistory
+     * @param vecHistory List<String of vecHistory with each command as a string
      */
     public void setVecHistory(List<String> vecHistory) {
         this.vecHistory = vecHistory;

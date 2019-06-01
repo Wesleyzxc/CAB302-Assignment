@@ -22,7 +22,6 @@ public class HistoryAction implements ActionListener {
 
     /**
      * Sets all previous instances of AllShapes to be visible and anything after to be invisible.
-     * @param e
      */
     @Override
     public void actionPerformed(ActionEvent e) {

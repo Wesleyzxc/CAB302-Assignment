@@ -54,7 +54,7 @@ public abstract class AllShapes {
     }
 
     /**
-     * Sets visiblity of shape on canvas
+     * Sets visibility of shape on canvas
      * @param visible boolean to determine if it will be displayed on canvas
      */
     public void setVisible(boolean visible) {
