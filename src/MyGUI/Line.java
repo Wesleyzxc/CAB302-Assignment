@@ -3,7 +3,7 @@ package MyGUI;
 import java.awt.*;
 
 /**
- *  * Child class of AllShapes for drawing lines
+ * Child class of AllShapes for drawing lines
  */
 public class Line extends AllShapes{
 
