@@ -3,6 +3,9 @@ package MyGUI;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 
+/**
+ * Controls shape buttons enabled or disabled
+ */
 public class ButtonEnable extends AbstractAction {
     private JButton clicked;
     private JButton[] remaining;

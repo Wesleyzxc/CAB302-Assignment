@@ -3,6 +3,10 @@ package MyGUI;
 import java.awt.*;
 import java.lang.*;
 
+
+/**
+ * Child class of AllShapes for drawing polygons
+ */
 public class PolygonShape extends AllShapes{
 
     private float[] xRatio, yRatio;

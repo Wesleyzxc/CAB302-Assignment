@@ -5,6 +5,9 @@ import java.awt.*;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Drawing canvas which inherits from JPanel
+ */
 public class DrawArea extends JPanel {
     private List<Dot> polygonMarker = new LinkedList<>();
     private List<AllShapes> history = new LinkedList<>(); //main history
@@ -13,16 +16,16 @@ public class DrawArea extends JPanel {
     private boolean dragging;
 
     /**
-     * Gets history of all drawings in a List<AllShapes>
-     * @return a List<AllShapes> that contains all instances of AllShapes to be drawn.
+     * Gets history of all drawings in a List
+     * @return a List that contains all instances of AllShapes to be drawn.
      */
     public List<AllShapes> getHistory() {
         return history;
     }
 
     /**
-     * Sets the history of the panel to a List<AllShape> that contains all instances of AllShapes to be drawn.
-     * @param history a List<AllShapes> that contains all instances of AllShapes to be drawn
+     * Sets the history of the panel to a List that contains all instances of AllShapes to be drawn.
+     * @param history a List that contains all instances of AllShapes to be drawn
      */
     public void setHistory(List<AllShapes> history) {
         this.history = history;
@@ -46,7 +49,7 @@ public class DrawArea extends JPanel {
     }
 
     /**
-     * Clears history of List<AllShapes>
+     * Clears history of AllShapes List
      */
     public void clearHistory() {
         history.clear();
@@ -70,7 +73,7 @@ public class DrawArea extends JPanel {
 
     /**
      * Sets vecHistory as string
-     * @param vecHistory List<String of vecHistory with each command as a string
+     * @param vecHistory List of vecHistory with each command as a string
      */
     public void setVecHistory(List<String> vecHistory) {
         this.vecHistory = vecHistory;

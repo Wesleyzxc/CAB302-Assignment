@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+/**
+ * Actions carried out for history support
+ */
 public class HistoryAction implements ActionListener {
     private String itemCount;
     private List previousHistory;

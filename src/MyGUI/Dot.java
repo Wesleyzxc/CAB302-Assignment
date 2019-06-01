@@ -2,6 +2,9 @@ package MyGUI;
 
 import java.awt.*;
 
+/**
+ * Child class of AllShapes for drawing dots
+ */
 public class Dot extends AllShapes {
 
     private int diameter;
@@ -12,6 +15,7 @@ public class Dot extends AllShapes {
      *
      * @param x array of x coordinates which will be plotted
      * @param y array of y coordinates which will be plotted
+     * @param diameter int diameter of Dot drawn
      * @param colour pen colour which is a Color class
      * @param pWidth width of the current panel which is used to calculate position ratio
      * @param pHeight height of the current panel which is used to calculate position ratio

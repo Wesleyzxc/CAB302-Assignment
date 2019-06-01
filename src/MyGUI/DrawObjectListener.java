@@ -6,7 +6,9 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 
-//Draw Listener - includes listening for dots and lines
+/**
+ * Draw Listener - includes listening for dots and lines
+ */
 public class DrawObjectListener extends MouseAdapter{
     public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;

@@ -12,6 +12,10 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.io.FileWriter;
 
+
+/**
+ * ActionListener for saving drawing in VEC and BMP
+ */
 public class SaveAction implements ActionListener {
     private DrawArea panel;
     private java.util.List<String> VEC = new LinkedList<>();

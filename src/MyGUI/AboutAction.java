@@ -4,6 +4,10 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+/**
+ * Action when About is clicked
+ */
 public class AboutAction implements ActionListener {
 
 

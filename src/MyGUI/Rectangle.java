@@ -2,6 +2,9 @@ package MyGUI;
 
 import java.awt.*;
 
+/**
+ * Child class of AllShapes for drawing rectangles
+ */
 public class Rectangle extends AllShapes {
 
     private boolean toggleFill;

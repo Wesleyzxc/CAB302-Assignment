@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * ActionListener that chooses which shape to draw
+ */
 public class ShapeChooser implements ActionListener {
 
     private DrawObjectListener handler;

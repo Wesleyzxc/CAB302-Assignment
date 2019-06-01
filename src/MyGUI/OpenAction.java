@@ -6,6 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
 
+
+/**
+ * ActionListener for opening files
+ */
 public class OpenAction implements ActionListener {
     private DrawArea panel;
     private Color penColor = new Color(0, 0,0);

@@ -2,6 +2,9 @@ package MyGUI;
 
 import java.awt.*;
 
+/**
+ * Abstract parent class for all shapes such as Dot, Rectangle, Ellipse, Polygon and Line
+ */
 public abstract class AllShapes {
     private Color colour;
     private Color fillColour;

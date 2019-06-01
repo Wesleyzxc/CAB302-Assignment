@@ -10,6 +10,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.event.MenuEvent;
 import javax.swing.event.MenuListener;
 
+/**
+ * Main GUI
+ */
 public class GUIForm{
 
     /**

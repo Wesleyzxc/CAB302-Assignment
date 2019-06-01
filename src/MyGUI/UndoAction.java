@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * ActionListener that does undo
+ */
 public class UndoAction implements ActionListener {
     private DrawArea panel;
 

@@ -4,6 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * An action listener that will accept a DrawArea as parameter clear all existing history and creates new canvas
+ */
 public class ClearAction implements ActionListener {
     private DrawArea panel;
 

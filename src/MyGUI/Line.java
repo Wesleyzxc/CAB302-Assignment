@@ -2,6 +2,9 @@ package MyGUI;
 
 import java.awt.*;
 
+/**
+ *  * Child class of AllShapes for drawing lines
+ */
 public class Line extends AllShapes{
 
     private float heightRatio1, widthRatio1, heightRatio2, widthRatio2;

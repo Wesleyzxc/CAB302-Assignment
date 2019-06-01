@@ -2,6 +2,9 @@ package MyGUI;
 
 import java.awt.*;
 
+/**
+ * Child class of AllShapes for drawing ellipses
+ */
 public class Ellipse extends AllShapes{
 
     private boolean toggleFill;
