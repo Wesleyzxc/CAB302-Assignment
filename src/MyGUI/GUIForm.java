@@ -21,12 +21,15 @@ public class GUIForm{
         boolean showPolyInstructions = true;
         JFrame frame = new JFrame("VEC DRAWER");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(600, 500));
+        frame.setLocation(new Point(300, 300));
+        frame.pack();
+        frame.setVisible(true);
 
-        //Draw area
+        //Draw area, empty canvas
         DrawArea panel = new DrawArea();
         // Container for the canvas which is used for resizing
         final JPanel container = new JPanel(new FlowLayout());
-        container.add(panel, BorderLayout.CENTER);
         container.addComponentListener(new ComponentAdapter() {
             @Override
             public void componentResized(ComponentEvent e) {
@@ -34,59 +37,50 @@ public class GUIForm{
             }
         });
 
-        frame.add(container);
-        //Display window
-        frame.setPreferredSize(new Dimension(600, 500));
-        frame.setLocation(new Point(300, 300));
-        frame.pack();
-        frame.setVisible(true);
+
 
         // Menu bar and items
         JMenuBar MenuBar = new JMenuBar();
 
-        // Help menu with random information
+
+         //Menu "Help" content
         JMenu help = new JMenu("Help");
         JMenuItem about = new JMenuItem("About");
         about.addActionListener(new AboutAction());
-        help.add(about);
 
-        // File menu with main functionalities
+
+        // Menu "File" content
+        // File menu with main functionality
         JMenu file = new JMenu("File");
 
         // New menu item
         JMenuItem clear = new JMenuItem("New File");
-        file.add(clear);
         clear.addActionListener(new ClearAction(panel));
         clear.setAccelerator(KeyStroke.getKeyStroke('N', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Open menu item
         JMenuItem open = new JMenuItem("Open File");
-        file.add(open);
         open.addActionListener(new OpenAction(panel));
         open.setAccelerator(KeyStroke.getKeyStroke('O', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Save menu item
         JMenuItem save = new JMenuItem("Save File");
-        file.add(save);
         save.addActionListener(new SaveAction(panel));
         save.setAccelerator(KeyStroke.getKeyStroke('S', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Undo menu item
         JMenuItem undo = new JMenuItem("Undo");
-        file.add(undo);
         undo.addActionListener(new UndoAction(panel));
         undo.setAccelerator(KeyStroke.getKeyStroke('Z', Toolkit.getDefaultToolkit().getMenuShortcutKeyMaskEx()));
         // Exit menu item
         JMenuItem exit = new JMenuItem("Exit");
-        file.add(exit);
         exit.addActionListener(new ExitAction());
 
 
-        //History support
+
+        // Menu "History" content
         JMenu historyButton = new JMenu("History");
         historyButton.addMenuListener(new MenuListener() {
             @Override
             public void menuSelected(MenuEvent arg0) {
-
                 historyButton.removeAll();
-                java.util.List<String> VEC  = panel.getAllVEC();
                 int counter = 1;
                 for (AllShapes shape :panel.getHistory()){
                     JMenuItem revertItem = new JMenuItem(counter + ": " + shape.getShape());
@@ -106,14 +100,10 @@ public class GUIForm{
 
         });
 
-        // Base for menubar
-        frame.setJMenuBar(MenuBar);
-        MenuBar.add(file);
-        MenuBar.add(help);
-        MenuBar.add(historyButton);
 
 
-        //JToolbar with all the buttons
+        // Button section
+        //JToolbar with all the buttons created
         JToolBar toolbar = new JToolBar();
         toolbar.setFloatable(false);
         JButton lineButton = new JButton("Line");
@@ -134,16 +124,6 @@ public class GUIForm{
         panel.addMouseMotionListener(handler);
 
         undoButton.addActionListener(new UndoAction(panel));
-
-        //Add buttons to toolbar
-        toolbar.add(lineButton);
-        toolbar.add(rectButton);
-        toolbar.add(ellipseButton);
-        toolbar.add(polyButton);
-        toolbar.add(penColourButton, BorderLayout.EAST);
-        toolbar.add(fillColourButton, BorderLayout.EAST);
-        toolbar.add(clearFillButton);
-        toolbar.add(undoButton);
 
         // Colour buttons receives output colour
         penColourButton.addMouseListener(new MouseAdapter() {
@@ -170,13 +150,12 @@ public class GUIForm{
             }
         });
 
-        // Add toolbar to frame
-        frame.add(toolbar, BorderLayout.NORTH);
+
 
         // array of all buttons of shapes
         JButton[] shapeButtons = new JButton[]{lineButton, rectButton, ellipseButton, polyButton};
-
         ShapeChooser chooseShape = new ShapeChooser(handler, lineButton, rectButton, ellipseButton, polyButton);
+        // Each button selector
         lineButton.addActionListener(chooseShape);
         lineButton.setMnemonic(KeyEvent.VK_1);
         lineButton.setToolTipText("Alt + 1 ");
@@ -197,6 +176,35 @@ public class GUIForm{
         for(JButton eachButton: shapeButtons){
             eachButton.addActionListener(new ButtonEnable(eachButton, shapeButtons));
         }
+
+
+        // Adds every component to GUI
+        frame.add(container);
+        container.add(panel, BorderLayout.CENTER);
+        file.add(clear);
+        file.add(open);
+        file.add(save);
+        file.add(undo);
+        file.add(exit);
+        help.add(about);
+        // Base for MenuBar
+        frame.setJMenuBar(MenuBar);
+        MenuBar.add(file);
+        MenuBar.add(help);
+        MenuBar.add(historyButton);
+        // Add toolbar to frame
+        frame.add(toolbar, BorderLayout.NORTH);
+        // Add buttons to toolbar
+        toolbar.add(lineButton);
+        toolbar.add(rectButton);
+        toolbar.add(ellipseButton);
+        toolbar.add(polyButton);
+        toolbar.add(penColourButton);
+        toolbar.add(fillColourButton);
+        toolbar.add(clearFillButton);
+        toolbar.add(undoButton);
+
+
     }
 
     /**
