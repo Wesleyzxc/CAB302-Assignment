@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -74,12 +76,16 @@ public class OpenAction implements ActionListener {
                         panel.clearVEC();
 
                         String eachLine;
+                        int lineCounter = 1;
                         while ((eachLine = reader.readLine()) != null) try {
                             if (eachLine.contains("POLYGON")) {
-                                String[] array = eachLine.split(" ");
-                                if (!array[0].equals("POLYGON")) {
+                                String pattern = "(POLYGON)(\\s[0-1](\\.\\d+)?\\s[0-1](\\.\\d+)?)+$";
+                                Pattern r = Pattern.compile(pattern);
+                                Matcher m = r.matcher(eachLine);
+                                if (!m.find()){
                                     throw new InvalidCommand(eachLine);
                                 }
+                                String[] array = eachLine.split(" ");
                                 int[] x = new int[array.length / 2];
                                 int[] y = new int[array.length / 2];
                                 for (int i = 1; i < array.length; i++) {
@@ -117,10 +123,13 @@ public class OpenAction implements ActionListener {
                                 changedTOGGLE = true;
                                 toggleFill = false;
                             } else if (eachLine.contains("LINE")) {
-                                String[] array = eachLine.split(" ");
-                                if (!array[0].equals("LINE")) {
+                                String pattern = "(LINE)(\\s[0-1](\\.\\d+)?){4}$";
+                                Pattern r = Pattern.compile(pattern);
+                                Matcher m = r.matcher(eachLine);
+                                if (!m.find()){
                                     throw new InvalidCommand(eachLine);
                                 }
+                                String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("LINE", array)[0];
                                     int[] y = parseCommand("LINE", array)[1];
@@ -133,10 +142,13 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("RECTANGLE")) {
-                                String[] array = eachLine.split(" ");
-                                if (!array[0].equals("RECTANGLE")) {
+                                String pattern = "(RECTANGLE)(\\s[0-1](\\.\\d+)?){4}$";
+                                Pattern r = Pattern.compile(pattern);
+                                Matcher m = r.matcher(eachLine);
+                                if (!m.find()){
                                     throw new InvalidCommand(eachLine);
                                 }
+                                String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("RECTANGLE", array)[0];
                                     int[] y = parseCommand("RECTANGLE", array)[1];
@@ -149,10 +161,13 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("ELLIPSE")) {
-                                String[] array = eachLine.split(" ");
-                                if (!array[0].equals("ELLIPSE")) {
+                                String pattern = "(ELLIPSE)(\\s[0-1](\\.\\d+)?){4}$";
+                                Pattern r = Pattern.compile(pattern);
+                                Matcher m = r.matcher(eachLine);
+                                if (!m.find()){
                                     throw new InvalidCommand(eachLine);
                                 }
+                                String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("ELLIPSE", array)[0];
                                     int[] y = parseCommand("ELLIPSE", array)[1];
@@ -165,10 +180,13 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("PLOT")) {
-                                String[] array = eachLine.split(" ");
-                                if (!array[0].equals("PLOT")) {
+                                String pattern = "(PLOT)(\\s[0-1](\\.\\d+)?){2}$";
+                                Pattern r = Pattern.compile(pattern);
+                                Matcher m = r.matcher(eachLine);
+                                if (!m.find()){
                                     throw new InvalidCommand(eachLine);
                                 }
+                                String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("PLOT", array)[0];
                                     int[] y = parseCommand("PLOT", array)[1];
@@ -183,11 +201,13 @@ public class OpenAction implements ActionListener {
                             } else {
                                 throw new InvalidCommand(eachLine);
                             }
+                            lineCounter += 1;
                         } catch (Exception wrongFormat) {
                             // shows user which line broke
-                            JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat);
+                            JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat + " at line "+ lineCounter);
                             break;
                         }
+
                     }
                 } catch (IOException noFile) {
                     noFile.printStackTrace();
