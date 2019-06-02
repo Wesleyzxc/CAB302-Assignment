@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Draw Listener - includes listening for dots and lines
  */
 public class DrawObjectListener extends MouseAdapter{
-    public enum Shape { LINE, RECTANGLE, ELLIPSE, POLYGON }
+    public enum Shape {PLOT, LINE, RECTANGLE, ELLIPSE, POLYGON }
     private DrawArea panel;
     private int[] x = new int[2];
     private int[] y = new int[2];

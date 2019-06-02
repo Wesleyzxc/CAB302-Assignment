@@ -386,4 +386,163 @@ public class TestCases {
         GUIForm guiForm = new GUIForm();
         GUIForm.main(new String[]{"run"});
     }
+
+
+    //Invalid command
+    @Test
+    void exceptionInvalidCommandPlot(){
+        panel = new DrawArea();
+        String eachLine = "PLOT 0.70 1aaa";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);});
+    }
+
+    //Ratio > 1.0
+    @Test
+    void exceptionInvalidCommandPlotWrongRatio(){
+        panel = new DrawArea();
+        String eachLine = "PLOT 0.70 1.5";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);});
+    }
+
+    //Missing Y coordinate
+    @Test
+    void exceptionInvalidCommandPlotMissingCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "PLOT 0.88";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);});
+    }
+    //Excess coordinates
+    @Test
+    void exceptionInvalidCommandPlotExcessCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "PLOT 1.00 0.22 0.88";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);});
+    }
+
+    //Invalid command
+    @Test
+    void exceptionInvalidCommandRectangle(){
+        panel = new DrawArea();
+        String eachLine = "RECTANGLE 0.70 1aaa 0.55 0.11";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);});
+    }
+    //Ratio > 1.0
+    @Test
+    void exceptionInvalidCommandRectangleWrongRatio(){
+        panel = new DrawArea();
+        String eachLine = "RECTANGLE 0.70 1.5 0.4 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);});
+    }
+    //Missing Y coordinate
+    @Test
+    void exceptionInvalidCommandRectangleMissingCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "RECTANGLE 0.88 0.12 0.7";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);});
+    }
+    //Excess coordinates
+    @Test
+    void exceptionInvalidCommandRectangleExcessCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "RECTANGLE 1.00 0.22 0.88 0.5 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);});
+    }
+
+    //Invalid command
+    @Test
+    void exceptionInvalidCommandLine(){
+        panel = new DrawArea();
+        String eachLine = "LINE 0.70 1aaa 0.55 0.11";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);});
+    }
+    //Ratio > 1.0
+    @Test
+    void exceptionInvalidCommandLineWrongRatio(){
+        panel = new DrawArea();
+        String eachLine = "LINE 0.70 1.5 0.55 0.33";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);});
+    }
+    //Missing Y coordinate
+    @Test
+    void exceptionInvalidCommandLineMissingCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "LINE 0.88 1.0 0.4";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);});
+    }
+    //Excess coordinates
+    @Test
+    void exceptionInvalidCommandLineExcessCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "LINE 1.00 0.22 0.88 0.1 0.5";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);});
+    }
+
+    //Invalid command
+    @Test
+    void exceptionInvalidCommandEllipse(){
+        panel = new DrawArea();
+        String eachLine = "ELLIPSE 0.70 1aaa 0.55 0.11";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);});
+    }
+    //Ratio > 1.0
+    @Test
+    void exceptionInvalidCommandEllipseWrongRatio(){
+        panel = new DrawArea();
+        String eachLine = "ELLIPSE 0.70 1.5 0.3 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);});
+    }
+    //Missing Y coordinate
+    @Test
+    void exceptionInvalidCommandEllipseMissingCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "ELLIPSE 0.88 0.5 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);});
+    }
+    @Test
+    void exceptionInvalidCommandEllipseExcessCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "Ellipse 1.00 0.22 0.88 0.7 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);});
+    }
+    //Invalid command
+    @Test
+    void exceptionInvalidCommandPolygon(){
+        panel = new DrawArea();
+        String eachLine = "POLYGON 0.70 1aaa 0.55 0.11 0.5 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.POLYGON, eachLine);});
+    }
+    //Ratio > 1.0
+    @Test
+    void exceptionInvalidCommandPolygonWrongRatio(){
+        panel = new DrawArea();
+        String eachLine = "POLYGON 0.70 1.5 0.5 0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.POLYGON, eachLine);});
+    }
+    //Missing Y coordinate
+    @Test
+    void exceptionInvalidCommandPolygonMissingCoordinate(){
+        panel = new DrawArea();
+        String eachLine = "POLYGON 0.88 0.7 0.34 0.4 0.6 0.4 .0.1";
+        OpenAction openVEC = new OpenAction(panel);
+        assertThrows(InvalidCommand.class, ()-> {openVEC.shapeCommandCheck(DrawObjectListener.Shape.POLYGON, eachLine);});
+    }
+
 }

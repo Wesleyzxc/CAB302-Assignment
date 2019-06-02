@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -45,6 +47,26 @@ public class OpenAction implements ActionListener {
 
     }
 
+    public void shapeCommandCheck(DrawObjectListener.Shape shape, String eachLine) throws InvalidCommand{
+        Pattern r;
+        String pattern;
+        if (shape == DrawObjectListener.Shape.LINE || shape == DrawObjectListener.Shape.RECTANGLE || shape == DrawObjectListener.Shape.ELLIPSE){
+            pattern = String.format("(%s)(\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){4}$", shape.toString());
+
+        } else if (shape == DrawObjectListener.Shape.POLYGON){
+            pattern = "(POLYGON)((\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){2})+$";
+        } else if(shape == DrawObjectListener.Shape.PLOT){
+            pattern = "(PLOT)((\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){2})$";
+        }else{
+            throw new InvalidCommand(eachLine);
+        }
+        r = Pattern.compile(pattern);
+        Matcher m = r.matcher(eachLine);
+        if (!m.find()){
+            throw new InvalidCommand(eachLine);
+        }
+    }
+
     /**
      * Warns user if canvas is not empty, then loads from selected file otherwise.
      */
@@ -74,12 +96,11 @@ public class OpenAction implements ActionListener {
                         panel.clearVEC();
 
                         String eachLine;
+                        int lineCounter = 1;
                         while ((eachLine = reader.readLine()) != null) try {
                             if (eachLine.contains("POLYGON")) {
+                                shapeCommandCheck(DrawObjectListener.Shape.POLYGON, eachLine);
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("POLYGON")) {
-                                    throw new InvalidCommand(eachLine);
-                                }
                                 int[] x = new int[array.length / 2];
                                 int[] y = new int[array.length / 2];
                                 for (int i = 1; i < array.length; i++) {
@@ -117,10 +138,8 @@ public class OpenAction implements ActionListener {
                                 changedTOGGLE = true;
                                 toggleFill = false;
                             } else if (eachLine.contains("LINE")) {
+                                shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("LINE")) {
-                                    throw new InvalidCommand(eachLine);
-                                }
                                 try {
                                     int[] x = parseCommand("LINE", array)[0];
                                     int[] y = parseCommand("LINE", array)[1];
@@ -133,10 +152,8 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("RECTANGLE")) {
+                                shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("RECTANGLE")) {
-                                    throw new InvalidCommand(eachLine);
-                                }
                                 try {
                                     int[] x = parseCommand("RECTANGLE", array)[0];
                                     int[] y = parseCommand("RECTANGLE", array)[1];
@@ -149,10 +166,8 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("ELLIPSE")) {
+                                shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("ELLIPSE")) {
-                                    throw new InvalidCommand(eachLine);
-                                }
                                 try {
                                     int[] x = parseCommand("ELLIPSE", array)[0];
                                     int[] y = parseCommand("ELLIPSE", array)[1];
@@ -165,10 +180,8 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("PLOT")) {
+                                shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("PLOT")) {
-                                    throw new InvalidCommand(eachLine);
-                                }
                                 try {
                                     int[] x = parseCommand("PLOT", array)[0];
                                     int[] y = parseCommand("PLOT", array)[1];
@@ -183,11 +196,13 @@ public class OpenAction implements ActionListener {
                             } else {
                                 throw new InvalidCommand(eachLine);
                             }
+                            lineCounter += 1;
                         } catch (Exception wrongFormat) {
                             // shows user which line broke
-                            JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat);
+                            JOptionPane.showMessageDialog(null, "Your file has corrupted commands. Check the following command: \n" + wrongFormat + " at line "+ lineCounter);
                             break;
                         }
+
                     }
                 } catch (IOException noFile) {
                     noFile.printStackTrace();
