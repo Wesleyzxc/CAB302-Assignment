@@ -118,16 +118,16 @@ public class OpenAction implements ActionListener {
                                     }
                                 }
                                 panel.addShape(new PolygonShape(x, y, penColor, fillColor, toggleFill, panel.getWidth(), panel.getHeight()), changedPEN, false, changedTOGGLE);
-                            } else if (eachLine.contains("PEN")) {
+                            } else if (eachLine.contains("PEN" )) {
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("PEN")) {
+                                if (!array[0].equals("PEN") || array[1].length() != 7) {
                                     throw new InvalidCommand(eachLine);
                                 }
                                 penColor = Color.decode(array[1]);
                                 changedPEN = true;
                             } else if (eachLine.contains("FILL") && !eachLine.contains("OFF")) {
                                 String[] array = eachLine.split(" ");
-                                if (!array[0].equals("FILL")) {
+                                if (!array[0].equals("FILL") || array[1].length() != 7) {
                                     throw new InvalidCommand(eachLine);
                                 }
                                 fillColor = Color.decode(array[1]);
