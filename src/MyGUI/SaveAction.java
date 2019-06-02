@@ -22,9 +22,9 @@ public class SaveAction implements ActionListener {
 
     /**
      * ActionListener for saving file
-     * @param panel panel that is getting saved
+     * @param panel panel that executes save
      */
-    SaveAction(DrawArea panel) {
+    public SaveAction(DrawArea panel) {
         this.panel = panel;
     }
     @Override
@@ -39,7 +39,7 @@ public class SaveAction implements ActionListener {
             VEC = panel.getAllVEC();
 
             try {
-                // file location + file name
+                // file location + name
                 FileWriter writer = new FileWriter(new File(filename + "/output.VEC"));
                 for(String str: VEC) {
                     // only draw if visible when saved
@@ -56,10 +56,10 @@ public class SaveAction implements ActionListener {
             } catch(IOException a) {
                 System.out.println("failed to save VEC");
             }
+
             // saves old size before resizing it to 4096 and creates buffer image to save
             int[] formerSize = {panel.getWidth(), panel.getHeight()};
             panel.setSize(new Dimension(4096,4096));
-            System.out.println(panel.getWidth());
             BufferedImage bImg = new BufferedImage(panel.getWidth(), panel.getHeight(), BufferedImage.TYPE_INT_RGB);
             Graphics2D cg = bImg.createGraphics();
             panel.paintAll(cg);
@@ -75,7 +75,6 @@ public class SaveAction implements ActionListener {
                 }
             } catch (IOException a) {
                 System.out.println("failed to save BMP");
-                JOptionPane.showMessageDialog(null, "Failed to save BMP.");
                 a.printStackTrace();
             }
 

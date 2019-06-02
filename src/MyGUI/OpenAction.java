@@ -12,12 +12,12 @@ import java.io.*;
  */
 public class OpenAction implements ActionListener {
     private DrawArea panel;
-    private Color penColor = new Color(0, 0,0);
+    private Color penColor = new Color(0,0,0);
     private Color fillColor = new Color(0,0,0);
 
     /**
      * ActionListener for opening file
-     * @param panel panel that is loading the file
+     * @param panel panel that is executing open file
      */
     public OpenAction(DrawArea panel) {
         this.panel = panel;

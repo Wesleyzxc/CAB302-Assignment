@@ -12,7 +12,7 @@ public class UndoAction implements ActionListener {
 
     /**
      * ActionListener for undo action
-     * @param panel panel that is executing undo
+     * @param panel panel that executes undo
      */
     public UndoAction(DrawArea panel) {
         this.panel = panel;

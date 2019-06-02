@@ -23,7 +23,7 @@ public class ShapeChooser implements ActionListener {
      * @param ellipseButton button that makes you draw ellipse
      * @param polyButton buttons that makes you draw polygons
      */
-    ShapeChooser(DrawObjectListener handler, JButton lineButton, JButton rectButton, JButton ellipseButton, JButton polyButton){
+    public ShapeChooser(DrawObjectListener handler, JButton lineButton, JButton rectButton, JButton ellipseButton, JButton polyButton){
         this.handler = handler;
         this.lineButton = lineButton;
         this.rectButton = rectButton;

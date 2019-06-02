@@ -16,7 +16,7 @@ public abstract class AllShapes {
 
     Color getFillColour(){ return fillColour; }
 
-    int[] getX() {
+    public int[] getX() {
         return x;
     }
 
@@ -24,7 +24,7 @@ public abstract class AllShapes {
         this.x = x;
     }
 
-    int[] getY() {
+    public int[] getY() {
         return y;
     }
 
@@ -41,7 +41,7 @@ public abstract class AllShapes {
      * @param fillColour fill colour which is a Color class
      *
      **/
-    AllShapes(int[] x, int[] y, Color colour, Color fillColour){
+    public AllShapes(int[] x, int[] y, Color colour, Color fillColour){
         this.x = x;
         this.y = y;
         this.colour = colour;

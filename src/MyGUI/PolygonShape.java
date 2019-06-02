@@ -23,7 +23,7 @@ public class PolygonShape extends AllShapes{
      * @param pWidth integer of panel's width when object is instantiated
      * @param pHeight integer of panel's height when object is instantiated
      */
-    PolygonShape(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
+    public PolygonShape(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
         super(x, y, colour,fillColour);
         this.toggleFill = toggleFill;
         xRatio = new float[x.length];
@@ -76,7 +76,7 @@ public class PolygonShape extends AllShapes{
     }
 
     @Override
-    String getShape() {
+    public String getShape() {
         return "Polygon";
     }
 }

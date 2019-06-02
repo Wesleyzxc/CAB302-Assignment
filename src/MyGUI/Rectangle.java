@@ -20,7 +20,7 @@ public class Rectangle extends AllShapes {
      * @param pWidth integer of panel's width when object is instantiated
      * @param pHeight integer of panel's height when object is instantiated
      */
-    Rectangle(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
+    public Rectangle(int[] x, int[] y, Color colour, Color fillColour, boolean toggleFill, int pWidth, int pHeight) {
         super(x, y, colour, fillColour);
         this.toggleFill = toggleFill;
 
@@ -86,7 +86,7 @@ public class Rectangle extends AllShapes {
     }
 
     @Override
-    String getShape() {
+    public String getShape() {
         return "Rectangle";
     }
 

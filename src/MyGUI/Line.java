@@ -17,7 +17,7 @@ public class Line extends AllShapes{
      * @param pWidth integer of panel's width when object is instantiated
      * @param pHeight integer of panel's height when object is instantiated
      */
-    Line(int[] x, int[] y, Color color, int pWidth, int pHeight) {
+    public Line(int[] x, int[] y, Color color, int pWidth, int pHeight) {
         super(x, y, color, color);
 
         // calculates ratio of the drawing based on current dimensions
