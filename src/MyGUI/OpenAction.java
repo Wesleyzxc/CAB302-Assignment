@@ -56,7 +56,7 @@ public class OpenAction implements ActionListener {
         } else if (shape == DrawObjectListener.Shape.POLYGON){
             pattern = "(POLYGON)((\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){2})+$";
         } else if(shape == DrawObjectListener.Shape.PLOT){
-            pattern = "(PLOT)(\\s[0-1](\\.\\d+)?){2}$";
+            pattern = "(PLOT)((\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){2})$";
         }else{
             throw new InvalidCommand(eachLine);
         }
