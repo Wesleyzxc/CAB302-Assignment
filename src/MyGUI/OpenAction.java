@@ -47,6 +47,26 @@ public class OpenAction implements ActionListener {
 
     }
 
+    public void shapeCommandCheck(DrawObjectListener.Shape shape, String eachLine) throws InvalidCommand{
+        Pattern r;
+        String pattern;
+        if (shape == DrawObjectListener.Shape.LINE || shape == DrawObjectListener.Shape.RECTANGLE || shape == DrawObjectListener.Shape.ELLIPSE){
+            pattern = String.format("(%s)(\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){4}$", shape.toString());
+
+        } else if (shape == DrawObjectListener.Shape.POLYGON){
+            pattern = "(POLYGON)((\\s([0](\\.\\d+))|(\\s[1](\\.[0]+))){2})+$";
+        } else if(shape == DrawObjectListener.Shape.PLOT){
+            pattern = "(PLOT)(\\s[0-1](\\.\\d+)?){2}$";
+        }else{
+            throw new InvalidCommand(eachLine);
+        }
+        r = Pattern.compile(pattern);
+        Matcher m = r.matcher(eachLine);
+        if (!m.find()){
+            throw new InvalidCommand(eachLine);
+        }
+    }
+
     /**
      * Warns user if canvas is not empty, then loads from selected file otherwise.
      */
@@ -79,12 +99,7 @@ public class OpenAction implements ActionListener {
                         int lineCounter = 1;
                         while ((eachLine = reader.readLine()) != null) try {
                             if (eachLine.contains("POLYGON")) {
-                                String pattern = "(POLYGON)(\\s[0-1](\\.\\d+)?\\s[0-1](\\.\\d+)?)+$";
-                                Pattern r = Pattern.compile(pattern);
-                                Matcher m = r.matcher(eachLine);
-                                if (!m.find()){
-                                    throw new InvalidCommand(eachLine);
-                                }
+                                shapeCommandCheck(DrawObjectListener.Shape.POLYGON, eachLine);
                                 String[] array = eachLine.split(" ");
                                 int[] x = new int[array.length / 2];
                                 int[] y = new int[array.length / 2];
@@ -123,12 +138,7 @@ public class OpenAction implements ActionListener {
                                 changedTOGGLE = true;
                                 toggleFill = false;
                             } else if (eachLine.contains("LINE")) {
-                                String pattern = "(LINE)(\\s[0-1](\\.\\d+)?){4}$";
-                                Pattern r = Pattern.compile(pattern);
-                                Matcher m = r.matcher(eachLine);
-                                if (!m.find()){
-                                    throw new InvalidCommand(eachLine);
-                                }
+                                shapeCommandCheck(DrawObjectListener.Shape.LINE, eachLine);
                                 String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("LINE", array)[0];
@@ -142,12 +152,7 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("RECTANGLE")) {
-                                String pattern = "(RECTANGLE)(\\s[0-1](\\.\\d+)?){4}$";
-                                Pattern r = Pattern.compile(pattern);
-                                Matcher m = r.matcher(eachLine);
-                                if (!m.find()){
-                                    throw new InvalidCommand(eachLine);
-                                }
+                                shapeCommandCheck(DrawObjectListener.Shape.RECTANGLE, eachLine);
                                 String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("RECTANGLE", array)[0];
@@ -161,12 +166,7 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("ELLIPSE")) {
-                                String pattern = "(ELLIPSE)(\\s[0-1](\\.\\d+)?){4}$";
-                                Pattern r = Pattern.compile(pattern);
-                                Matcher m = r.matcher(eachLine);
-                                if (!m.find()){
-                                    throw new InvalidCommand(eachLine);
-                                }
+                                shapeCommandCheck(DrawObjectListener.Shape.ELLIPSE, eachLine);
                                 String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("ELLIPSE", array)[0];
@@ -180,12 +180,7 @@ public class OpenAction implements ActionListener {
                                     break;
                                 }
                             } else if (eachLine.contains("PLOT")) {
-                                String pattern = "(PLOT)(\\s[0-1](\\.\\d+)?){2}$";
-                                Pattern r = Pattern.compile(pattern);
-                                Matcher m = r.matcher(eachLine);
-                                if (!m.find()){
-                                    throw new InvalidCommand(eachLine);
-                                }
+                                shapeCommandCheck(DrawObjectListener.Shape.PLOT, eachLine);
                                 String[] array = eachLine.split(" ");
                                 try {
                                     int[] x = parseCommand("PLOT", array)[0];
